@@ -12,10 +12,11 @@ npm install
 ```
 
 ## Usage
-on directory module generator run this command :
+On directory module generator run this command :
 ```npm
 npm run plop module
 ```
+Access http://localhost/wtc-frontend/modulename
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
