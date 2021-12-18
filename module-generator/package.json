@@ -1,0 +1,14 @@
+{
+  "name": "module-generator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "plop": "plop"
+  },
+  "dependencies": {
+    "plop": "^2.7.4"
+  },
+  "devDependencies": {
+    "plop": "^2.7.4"
+  }
+}

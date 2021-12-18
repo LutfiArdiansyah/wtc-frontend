@@ -1,0 +1,1 @@
+<p>MODULE_NAME_LOWERs work!</p>
