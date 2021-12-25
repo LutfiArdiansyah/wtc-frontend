@@ -1,4 +1,4 @@
-const controllerPath = "../application/modules/{{lowerCase moduleName}}/controllers/{{lowerCase moduleName}}.php";
+const controllerPath = "../application/modules/{{lowerCase moduleName}}/controllers/{{properCase moduleName}}.php";
 const viewPath = "../application/modules/{{lowerCase moduleName}}/views/index.php";
 
 module.exports = function (plop) {
