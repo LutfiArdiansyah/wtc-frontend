@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ministries extends MY_Controller {
+class Communities extends MY_Controller {
 
 	public function index()
 	{
