@@ -1,12 +1,13 @@
+<br/>
+<br/>
+<br/>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted" style="border-radius:25px 25px 0 0 !important;">
 	<!-- Section: Social media -->
-	<section
+<section
 	class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
 	>
-
-	<!-- Right -->
-	<div>
+	<!-- <div>
 		<a href="" class="me-4 text-reset">
 			<i class="fab fa-facebook-f"></i>
 		</a>
@@ -25,8 +26,7 @@
 		<a href="" class="me-4 text-reset">
 			<i class="fab fa-github"></i>
 		</a>
-	</div>
-	<!-- Right -->
+	</div> -->
 </section>
 <!-- Section: Social media -->
 
@@ -107,7 +107,7 @@
 
 <!-- Copyright -->
 <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-	© 2022 - <?php echo date("Y"); ?> Copyright:
+	© 2021 - <?php echo date("Y"); ?> Copyright:
 	<a class="text-reset fw-bold" href="<?php echo base_url(); ?>">WTC</a>
 </div>
 <!-- Copyright -->
@@ -115,6 +115,8 @@
 <!-- Footer -->
 
 </body>
+<script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/popper.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/scripts.js"></script>
 </html>
