@@ -70,10 +70,10 @@
 	</div>
 	<div class="row justify-content-center" >
 		<div class="col-6 text-center">
-			<button type="button" class="btn btn-primary mx-auto w-25">Learn More</button>
+			<a href="servewithin"><button type="button" class="btn btn-primary mx-auto w-25">Learn More</button></a>
 		</div>
 		<div class="col-6 text-center">
-			<button type="button" class="btn btn-primary mx-auto w-25">Learn More</button>
+			<a href="outreach"><button type="button" class="btn btn-primary mx-auto w-25">Learn More</button></a>
 		</div>
 	</div>
 </div>
