@@ -94,8 +94,8 @@
 				<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
 				<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
 				<br/>
-				<p><i class="fas fa-print me-3"></i> Tuesday - Saturday</p>
-				<p><i class="fas fa-print me-3"></i> 08:30 AM - 04:00 PM</p>
+				<p><i class="fas fa-calendar-day"></i> Tuesday - Saturday</p>
+				<p><i class="far fa-clock"></i> 08:30 AM - 04:00 PM</p>
 				
 			</div>
 			<!-- Grid column -->
