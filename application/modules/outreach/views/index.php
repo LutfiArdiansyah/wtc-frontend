@@ -39,7 +39,9 @@
 						<div class="carousel-item active">
 							<img class="d-block w-100" src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1190,w_2121,x_0,y_176/f_auto,q_auto,w_1100/v1554929522/shape/mentalfloss/538374-istock-940372528.jpg" alt="First slide">
 							<div class="carousel-caption d-none d-md-block fw-bold">
-								<h5><?php echo $value; ?></h5>
+								<a style="color:white;" href="<?php echo base_url(); ?>articles?name=<?php echo $value; ?>">
+									<h5><?php echo $value; ?></h5>
+								</a>
 							</div>
 						</div>
 					</div>

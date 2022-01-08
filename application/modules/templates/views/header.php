@@ -13,7 +13,7 @@
 </head>
 <body>
 	<ul class="nav justify-content-center menu">
-		<a class="brand-logo" href="#" style="">
+		<a class="brand-logo" href="<?php echo base_url(); ?>home" style="">
 			<img src="assets/img/logo.png" alt="" width="98" height="35">
 		</a>
 		<li class="nav-item">

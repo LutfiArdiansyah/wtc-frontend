@@ -20,3 +20,23 @@
 	margin-left: 0.5rem;
 	margin-top: 0.5rem;
 }
+
+.color-primary {
+	color: var(--bs-primary);
+}
+
+.br-5 {
+	border-radius: 5px;
+}
+
+.br-10 {
+	border-radius: 10px;
+}
+
+.br-15 {
+	border-radius: 15px;
+}
+
+.br-25 {
+	border-radius: 25px;
+}

@@ -54,13 +54,13 @@
 					About
 				</h6>
 				<p>
-					<a href="#!" class="text-reset">GBI WTC</a>
+					<a href="<?php echo base_url(); ?>about" class="text-reset">GBI WTC</a>
 				</p>
 				<p>
-					<a href="#!" class="text-reset">Leadership</a>
+					<a href="<?php echo base_url(); ?>about" class="text-reset">Leadership</a>
 				</p>
 				<p>
-					<a href="#!" class="text-reset">Values</a>
+					<a href="<?php echo base_url(); ?>about" class="text-reset">Values</a>
 				</p>
 			</div>
 			<!-- Grid column -->
@@ -72,10 +72,10 @@
 					Ministries
 				</h6>
 				<p>
-					<a href="#!" class="text-reset">Serve Within</a>
+					<a href="<?php echo base_url(); ?>servewithin" class="text-reset">Serve Within</a>
 				</p>
 				<p>
-					<a href="#!" class="text-reset">Outreach</a>
+					<a href="<?php echo base_url(); ?>outreach" class="text-reset">Outreach</a>
 				</p>
 			</div>
 			<!-- Grid column -->
@@ -94,8 +94,8 @@
 				<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
 				<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
 				<br/>
-				<p><i class="fas fa-calendar-day"></i> Tuesday - Saturday</p>
-				<p><i class="far fa-clock"></i> 08:30 AM - 04:00 PM</p>
+				<p><i class="fas fa-calendar-day me-3"></i> Tuesday - Saturday</p>
+				<p><i class="far fa-clock me-3"></i> 08:30 AM - 04:00 PM</p>
 				
 			</div>
 			<!-- Grid column -->

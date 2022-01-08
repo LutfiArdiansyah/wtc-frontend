@@ -46,7 +46,7 @@
 			<p class="mx-auto" style="color: var(--bs-primary);">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become.</p>
 		</div>
 		<div class="col-4 text-center ">
-			<button type="button" class="btn btn-primary mx-auto w-50 fw-bold btn-join">Join Now!</button>
+			<a href="<?php echo base_url(); ?>listcommunity"><button type="button" class="btn btn-primary mx-auto w-50 fw-bold btn-join">Join Now!</button></a>
 		</div>
 	</div>
 </div>
