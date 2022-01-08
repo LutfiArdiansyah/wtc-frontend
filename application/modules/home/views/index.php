@@ -34,7 +34,10 @@
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1190,w_2121,x_0,y_176/f_auto,q_auto,w_1100/v1554929522/shape/mentalfloss/538374-istock-940372528.jpg" alt="First slide">
+				<video class="w-100" height="650" controls>
+					<source src="http://wtc.a-aziz.tech:1337/uploads/sample_42108d8272.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				<div class="carousel-caption d-none d-md-block">
 					<div class="row justify-content-center">
 						<div class="col-6 hchy">
