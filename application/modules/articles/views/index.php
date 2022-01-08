@@ -138,12 +138,17 @@
 	</div>
 	<br/>
 	<br/>
-	<div class="row">
-		<?php for ($x = 0; $x <= 12; $x++) {?>
-			<div class="col-3 text-center" style="padding-bottom: 25px;">
-				<img src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2019/12/553b64f7e50ac61fc191d4686d0786c1.jpg" style="border-radius:15px;width: 240px; height: 240px;">
+	<div class="card br-15">
+		<div class="card-body">
+			<h2 class="text-center">Gallery</h2>
+			<hr/>
+			<div class="row">
+				<?php for ($x = 0; $x <= 7; $x++) {?>
+					<div class="col-3 text-center" style="padding-bottom: 25px;">
+						<img src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2019/12/553b64f7e50ac61fc191d4686d0786c1.jpg" style="border-radius:15px;width: 240px; height: 240px;">
+					</div>
+				<?php } ?>
 			</div>
-		<?php } ?>
+		</div>
 	</div>
-
 </div>
