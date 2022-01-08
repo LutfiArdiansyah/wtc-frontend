@@ -6,10 +6,7 @@
 		<div class="col-8">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
 				<p>
-					Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
-				</p>
-				<p>
-					Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+					<?php echo $data->about; ?>
 				</p>
 			</div>
 		</div>
@@ -20,10 +17,10 @@
 		<div class="col-8">
 			<div class="row justify-content-center">
 				<div class="col-6">
-					<img class="w-100 h-100" src="assets/img/logo_gbi.png">
+					<img class="w-100 h-100" src="<?php echo STRAPI_URL.$data->logo_2->url; ?>">
 				</div>
 				<div class="col-6">
-					<img class="w-100 h-100" src="assets/img/logo.png">
+					<img class="w-100 h-100" src="<?php echo STRAPI_URL.$data->logo_1->url; ?>">
 				</div>
 			</div>
 		</div>
@@ -36,7 +33,7 @@
 		<div class="col-8">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
 				<p style="color: var(--bs-primary);">
-					Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
+					<?php echo $data->vision; ?>
 				</p>
 			</div>
 		</div>
@@ -49,7 +46,7 @@
 		<div class="col-8">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
 				<p style="color: var(--bs-primary);">
-					Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
+					<?php echo $data->mission; ?>
 				</p>
 			</div>
 		</div>

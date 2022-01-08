@@ -5,8 +5,9 @@ class About extends MY_Controller {
 
 	public function index()
 	{
+		$data['data'] = $this->get('/wtc-about-us');
 		$this->load->view('templates/header');
-		$this->load->view('index');
+		$this->load->view('index', $data);
 		$this->load->view('templates/footer');
 	}
 
