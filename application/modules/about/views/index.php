@@ -1,11 +1,16 @@
+<style type="text/css">
+	p.description {
+		white-space: pre-line;
+	}
+</style>
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-4">
-			<h2>About GBI WTC</h2>
+		<div class="col-lg-4 col-sm-12">
+			<h2 class="fw-bold">About GBI WTC</h2><hr/>
 		</div>
-		<div class="col-8">
+		<div class="col-lg-8 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
-				<p>
+				<p class="description">
 					<?php echo $data->about; ?>
 				</p>
 			</div>
@@ -13,8 +18,8 @@
 	</div>
 	<br/>
 	<div class="row justify-content-center">
-		<div class="col-4"></div>
-		<div class="col-8">
+		<div class="col-lg-4 col-sm-12"></div>
+		<div class="col-lg-8 col-sm-12">
 			<div class="row justify-content-center">
 				<div class="col-6">
 					<img class="w-100 h-100" src="<?php echo STRAPI_URL.$data->logo_2->url; ?>">
@@ -27,12 +32,12 @@
 	</div>
 	<br/>
 	<div class="row justify-content-center">
-		<div class="col-4">
-			<h2>Vision</h2>
+		<div class="col-lg-4 col-sm-12">
+			<h2 class="fw-bold">Vision</h2><hr/>
 		</div>
-		<div class="col-8">
+		<div class="col-lg-8 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
-				<p style="color: var(--bs-primary);">
+				<p style="color: var(--bs-primary);"  class="description">
 					<?php echo $data->vision; ?>
 				</p>
 			</div>
@@ -40,12 +45,12 @@
 	</div>
 	<br/>
 	<div class="row justify-content-center">
-		<div class="col-4">
-			<h2>Mision</h2>
+		<div class="col-lg-4 col-sm-12">
+			<h2 class="fw-bold">Mision</h2><hr/>
 		</div>
-		<div class="col-8">
+		<div class="col-lg-8 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 15px;">
-				<p style="color: var(--bs-primary);">
+				<p style="color: var(--bs-primary);" class="description">
 					<?php echo $data->mission; ?>
 				</p>
 			</div>
@@ -53,26 +58,31 @@
 	</div>
 	<br/>
 	<div class="row justify-content-center">
-		<div class="col-4">
-			<h2>Leadership</h2>
+		<div class="col-lg-4 col-sm-12">
+			<h2 class="fw-bold">Leadership</h2><hr/>
 		</div>
-		<div class="col-8">
+		<div class="col-lg-8 col-sm-12">
 			<div class="row justify-content-center">
 				<div class="col-12">
-					<?php for ($x = 0; $x <= 3; $x++) {?>
+					<?php foreach ($data->wtc_leaderships as $key => $value) {?>
 						<div class="row justify-content-center" style="background-color:white; border-radius: 25px; padding: 15px;">
 							<div class="col-3">
-								<img src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2019/12/553b64f7e50ac61fc191d4686d0786c1.jpg" alt="..." style="border-radius:50%;width: 200px; height: 200px;">
+								<img src="<?php echo isset($value->avatar) ? STRAPI_URL.$value->avatar->url : base_url()."assets/img/avatar.svg";?>" alt="..." style="border-radius:50%;width: 100%; height: same-as-width;">
 							</div>
 							<div class="col-9">
-								<p class="fw-bold">Ps Yonathan Wiryohadi & Swissa Flora</p>
-								<p>
-									Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
+								<p class="fw-bold"><?php echo $value->name; ?></p>
+								<p  class="description">
+									<?php echo $value->description; ?>
 								</p>
 								<p class="fw-bold">
-									<span><i class="fab fa-instagram"></i>&nbsp;@wiryohadi</span>
+									<span><i class="fab fa-instagram"></i>&nbsp;
+										<a href="<?php echo $value->instagram_link_1; ?>"><?php echo $value->instagram_1; ?></a>
+
+									</span>
 									&nbsp;
-									<span><i class="fab fa-instagram"></i>&nbsp;@florawiryohadi</span>
+									<span><i class="fab fa-instagram"></i>&nbsp;
+										<a href="<?php echo $value->instagram_link_2; ?>"><?php echo $value->instagram_2; ?></a>
+									</span>
 								</p>
 							</div>
 						</div>
