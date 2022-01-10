@@ -4,7 +4,7 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted" style="border-radius:25px 25px 0 0 !important;">
 	<!-- Section: Social media -->
-<section
+	<section
 	class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
 	>
 	<!-- <div>
@@ -71,12 +71,11 @@
 				<h6 class="text-uppercase fw-bold mb-4">
 					Ministries
 				</h6>
-				<p>
-					<a href="<?php echo base_url(); ?>servewithin" class="text-reset">Serve Within</a>
-				</p>
-				<p>
-					<a href="<?php echo base_url(); ?>outreach" class="text-reset">Outreach</a>
-				</p>
+				<?php foreach ($minis_cat as $key => $value) { ?>
+					<p>
+						<a href="<?php echo base_url().'ministriescategory?cat_id='.$value->id; ?>" class="text-reset"><?php echo$value->name; ?></a>
+					</p>
+				<?php } ?>
 			</div>
 			<!-- Grid column -->
 
@@ -86,16 +85,18 @@
 				<h6 class="text-uppercase fw-bold mb-4">
 					Office
 				</h6>
-				<p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+				<p><i class="fas fa-home me-3"></i> <?php echo $head_office->address; ?></p>
 				<p>
 					<i class="fas fa-envelope me-3"></i>
-					info@example.com
+					<?php echo $head_office->email; ?>
 				</p>
-				<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-				<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+				<p><i class="fas fa-phone me-3"></i> <?php echo $head_office->phone_1; ?></p>
+				<?php if (isset($value->phone_2)) { ?>
+					<p><i class="fas fa-print me-3"></i> <?php echo $head_office->phone_2; ?></p>
+				<?php } ?>
 				<br/>
-				<p><i class="fas fa-calendar-day me-3"></i> Tuesday - Saturday</p>
-				<p><i class="far fa-clock me-3"></i> 08:30 AM - 04:00 PM</p>
+				<p><i class="fas fa-calendar-day me-3"></i> <?php echo $head_office->day; ?></p>
+				<p><i class="far fa-clock me-3"></i> <?php echo $head_office->time; ?></p>
 				
 			</div>
 			<!-- Grid column -->

@@ -8,7 +8,9 @@ class Communities extends MY_Controller {
 		$data["data"] = $this->get("/wtc-communities");
 		$this->load->view('templates/header');
 		$this->load->view('index', $data);
-		$this->load->view('templates/footer');
+		$data['head_office'] = $this->get("/wtc-worship-places/1");
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$this->load->view('templates/footer',$data);
 	}
 
 }

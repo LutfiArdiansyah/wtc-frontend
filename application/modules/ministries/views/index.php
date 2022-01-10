@@ -56,33 +56,19 @@
 	<br/>
 	<div class="row justify-content-center" >
 		<?php foreach ($data_category as $key => $value) { ?>
-			<div class="col-6 text-center">
+			<div class="col-lg-6 col-sm-12 text-center mb-4">
 				<img src="<?php echo STRAPI_URL.$value->banner->url; ?>" alt="<?php echo $value->banner->alternativeText; ?>" class="w-75 mx-auto br-25">
-			</div>
-		<?php } ?>
-	</div>
-	<br/>
-	<br/>
-	<div class="row justify-content-center" >
-		<?php foreach ($data_category as $key => $value) { ?>
-			<div class="col-6 text-center">
+				<br/>
+				<br/>
 				<h2 class="fw-bold"><?php echo $value->name; ?></h2>
-			</div>
-		<?php } ?>
-	</div>
-	<br/>
-	<div class="row justify-content-center" >
-		<?php foreach ($data_category as $key => $value) { ?>
-			<div class="col-6 text-center">
+				<br/>
 				<p class="w-50 mx-auto description"><?php echo $value->description; ?></p>
-			</div>
-		<?php } ?>
-	</div>
-	<div class="row justify-content-center" >
-		<?php foreach ($data_category as $key => $value) { ?>
-			<div class="col-6 text-center">
+				<br/>
 				<a href="<?php echo base_url().$value->button_link; ?>"><button type="button" class="btn btn-primary mx-auto w-25"><?php echo $value->button_name; ?></button></a>
 			</div>
 		<?php } ?>
 	</div>
+	<br/>
+	<br/>
+	
 </div>

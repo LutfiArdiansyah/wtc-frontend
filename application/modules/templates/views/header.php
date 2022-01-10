@@ -30,7 +30,7 @@
 			<a class="nav-link" href="<?php echo base_url(); ?>connectwithus">Connect with Us</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>articles?name=Global Church">Global Church</a>
+			<a class="nav-link" href="<?php echo base_url(); ?>articles?id=1">Global Church</a>
 		</li>
 	</ul>
 	<br/>

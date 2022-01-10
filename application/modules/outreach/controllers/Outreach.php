@@ -8,7 +8,9 @@ class Outreach extends MY_Controller {
 		$this->load->view('templates/header');
 		$data['datas'] = array("House of Bread", "RIS Hospital", "WTC Worship", "Panti Rehabilitasi", "Panti Asuhan", "Sekolah");
 		$this->load->view('index', $data);
-		$this->load->view('templates/footer');
+		$data['head_office'] = $this->get("/wtc-worship-places/1");
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$this->load->view('templates/footer',$data);
 	}
 
 }
