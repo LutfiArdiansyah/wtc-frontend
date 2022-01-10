@@ -52,13 +52,11 @@
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
-	<br/>
-	<br/>
 	<div class="row justify-content-center w-75 mx-auto" >
-		<div class="col-8" style="background-color:white; border-radius: 10px; padding:10px">
+		<div class="col-lg-8 col-sm-12  mt-5" style="background-color:white; border-radius: 10px; padding:10px">
 			<p class="mx-auto description" style="color: var(--bs-primary);"><?php echo $data->description; ?></p>
 		</div>
-		<div class="col-4 text-center ">
+		<div class="col-lg-4  col-sm-12 text-center mt-5">
 			<a href="<?php echo base_url().$data->button_link; ?>"><button type="button" class="btn btn-primary mx-auto w-50 fw-bold btn-join"><?php echo $data->button_name; ?></button></a>
 		</div>
 	</div>

@@ -97,12 +97,12 @@
 				<h2>Connect with us</h2>
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
-						<a href="<?php echo $data->instagram_link; ?>">
+						<a href="<?php echo $data->instagram_link; ?>" target="_blank">
 							<button type="button" class="btn btn-primary w-100 instagram"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></button>
 						</a>
 					</div>
 					<div class="col-lg-6 col-sm-12">
-						<a href="<?php echo $data->youtube_link; ?>">
+						<a href="<?php echo $data->youtube_link; ?>" target="_blank">
 							<button type="button" class="btn btn-primary w-100" style="background-color:#F00;"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></button>
 						</a>
 					</div>

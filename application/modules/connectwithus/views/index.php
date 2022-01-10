@@ -5,6 +5,12 @@
 	.locations {
 		padding-top: 2.5em;
 	}
+	p .address {
+		white-space: pre-line;
+	}
+	.iframe {
+		min-height: 250px;
+	}
 </style>
 <div class="container">
 	<div class="card br-15">
@@ -12,35 +18,45 @@
 			<h1 class="color-primary text-center fw-bold">Connect with Us</h1>
 			<br/>
 			<div class="row">
-				<div class="col-6">
+				<div class="col-lg-6 col-sm-12">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-lg-6 col-sm-12">
 							<h5 class="fw-bold">Office</h5>
 							<hr/>
 							<div class="row">
-								<div class="col-1"><i class="far fa-calendar color-primary"></i></div><div class="col-11"><p>Tuesday - Saturday</p></div>
-								<div class="col-1"><i class="far fa-clock color-primary"></i></div><div class="col-11"><p>08:30AM - 04:00PM</p></div>
-								<div class="col-1"><i class="far fa-map-marker-alt color-primary"></i></div><div class="col-11"><p>Ruko Golden Boulevard Blok W1 No 3, BSD City, Tangerang Selatan, Banten. Indonesia.</p></div>
+								<div class="col-1"><i class="far fa-calendar color-primary"></i></div><div class="col-11"><p><?php echo $data_worship->day; ?></p></div>
+								<div class="col-1"><i class="far fa-clock color-primary"></i></div><div class="col-11"><p><?php echo $data_worship->time; ?></p></div>
+								<div class="col-1"><i class="far fa-map-marker-alt color-primary"></i></div><div class="col-11"><p class="address"><?php echo $data_worship->address; ?></p></div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-sm-12">
 							<h5 class="fw-bold">Hotline Number</h5>
 							<hr/>
 							<div class="row">
-								<div class="col-1"><i class="far fa-phone color-primary"></i></div><div class="col-11"><p>+62 812 8016 4000</p></div>
-								<div class="col-1"><i class="far fa-phone color-primary"></i></div><div class="col-11"><p>+62 812 8017 4000</p></div>
+								<div class="col-1"><i class="far fa-phone color-primary"></i></div><div class="col-11"><p><?php echo $data_worship->phone_1; ?></p></div>
+								<?php if (isset($data_worship->phone_2)) {?>
+									<div class="col-1"><i class="far fa-phone color-primary"></i></div><div class="col-11"><p><?php echo $data_worship->phone_2; ?></p></div>									
+								<?php } ?>
 							</div>
 							<br/>
 							<h5 class="fw-bold">Social Media</h5>
 							<hr/>
 							<div class="row">
-								<div class="col-1"><i class="fab fa-instagram color-primary"></i></div><div class="col-11"><p>gbiwtcserpong</p></div>
-								<div class="col-1"><i class="fab fa-youtube color-primary"></i></div><div class="col-11"><p>GBI WTC Serpong</p></div>
+								<div class="col-1"><i class="fab fa-instagram color-primary"></i></div>
+								<div class="col-11">
+									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank"><p><?php echo $data_worship->instagram_name; ?></p></a>
+								</div>
+								<div class="col-1"><i class="fab fa-youtube color-primary"></i></div>
+								<div class="col-11">
+									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank"><p><?php echo $data_worship->youtube_name; ?></p></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-6 text-center">Map</div>
+				<div class="col-lg-6 col-sm-12 text-center">
+					<iframe class="w-100 iframe" src="<?php echo $data_worship->maps_link; ?>"></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -49,53 +65,69 @@
 		<br/>
 		<div class="row  justify-content-md-center">
 			<div class="col-4">
-				<select class="form-select br-10" aria-label="Default select example">
+				<select class="form-select br-10">
 					<option selected disabled>Select Area</option>
-					<option class="fw-bold" value="Banten">Banten</option>
-					<option class="fw-bold" value="DKI Jakarta">DKI Jakarta</option>
-					<option class="fw-bold" value="Jawa Barat">Jawa Barat</option>
-					<option class="fw-bold" value="Jawa Tengah">Jawa Tengah</option>
-					<option class="fw-bold" value="Jawa Timur">Jawa Timur</option>
+					<?php foreach ($areas as $key => $value) { ?>
+						<option class="fw-bold" value="<?php echo $value->id; ?>"><?php echo $value->area; ?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
 		<br/>
 		<div class="row  justify-content-md-center">
-			<div class="col-8">
-				<div class="card br-15">
-					<div class="card-body">
-						<div class="row ">
-							<div class="col-6">
-								<h5 class="color-primary">WTC</h5>
-								<h5 class="fw-bold color-primary">Ballroom</h5>
+			<?php foreach ($worship as $key => $value) {?>
+				
+				<div class="col-lg-8 col-sm-12 mt-4">
+					<div class="card br-15">
+						<div class="card-body">
+							<div class="row ">
+								<div class="col-lg-6 col-sm-12">
+									<h5 class="color-primary">WTC</h5>
+									<h5 class="fw-bold color-primary"><?php echo $value->name; ?></h5>
+								</div>
+								<div class="col-lg-6 col-sm-12">
+									<h5 class="color-primary text-end"><a class="color-primary" href="tel:<?php echo $value->phone_1; ?>">Contact</a></h5>
+								</div>
 							</div>
-							<div class="col-6">
-								<h5 class="color-primary text-end"><a class="color-primary" href="tel:+496170961709">Contact</a></h5>
-							</div>
-						</div>
-						<br/>
-						<div class="row ">
-							<div class="col-4">
-								<p class="fw-bold">Address</p>
-								<p>Mall WTC Serpong, Hall Ballroom Jl. Raya Serpong</p>
-							</div>
-							<div class="col-2">
-								<p class="fw-bold">Times</p>
-								<p>Sunday</p>
-								<p>09:00 AM</p>
-							</div>
-							<div class="col-3">
-								<p class="fw-bold">Campus Pastor</p>
-								<p>Ps. Djuhardi Hardja</p>
-							</div>
-							<div class="col-3 text-end">
-								<img src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2019/12/553b64f7e50ac61fc191d4686d0786c1.jpg" style="border-radius:50%;width: 100px; height: 100px;">
+							<br/>
+							<div class="row ">
+								<div class="col-4">
+									<p class="fw-bold">Address</p>
+									<p><?php echo $value->address; ?></p>
+								</div>
+								<div class="col-2">
+									<p class="fw-bold">Times</p>
+									<p><?php echo $value->day; ?></p>
+									<p><?php echo $value->time; ?></p>
+								</div>
+								<div class="col-3">
+									<p class="fw-bold">Campus Pastor</p>
+									<p><?php echo $value->pastor_name; ?></p>
+								</div>
+								<div class="col-3 text-end">
+									<img src="<?php echo isset($value->pastor_avatar) ? STRAPI_URL.$value->pastor_avatar->url : base_url()."assets/img/avatar.svg";?>" style="border-radius:50%;width: 100px; height: 100px;">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+
+			<?php } ?>
+
 		</div>
 		
 	</div>
 </div>
+<script type="text/javascript">
+	$( document ).ready(function() {
+		const urlParams = new URLSearchParams(window.location.search);
+		const areaId = urlParams.get('area_id');
+		if (areaId) {
+			$('select').val(areaId)
+		}
+		$('select').on('change', function() {
+			window.location.href = window.location.href.split('?')[0] + "?area_id=" + this.value;
+		});
+	});
+	
+</script>

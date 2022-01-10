@@ -76,13 +76,16 @@
 								</p>
 								<p class="fw-bold">
 									<span><i class="fab fa-instagram"></i>&nbsp;
-										<a href="<?php echo $value->instagram_link_1; ?>"><?php echo $value->instagram_1; ?></a>
+										<a href="<?php echo $value->instagram_link_1; ?>" target="_blank"><?php echo $value->instagram_1; ?></a>
 
 									</span>
-									&nbsp;
-									<span><i class="fab fa-instagram"></i>&nbsp;
-										<a href="<?php echo $value->instagram_link_2; ?>"><?php echo $value->instagram_2; ?></a>
-									</span>
+									<?php if (isset($value->instagram_2)) {?>
+										
+										&nbsp;
+										<span><i class="fab fa-instagram"></i>&nbsp;
+											<a href="<?php echo $value->instagram_link_2; ?>" target="_blank"><?php echo $value->instagram_2; ?></a>
+										</span>
+									<?php } ?>
 								</p>
 							</div>
 						</div>
