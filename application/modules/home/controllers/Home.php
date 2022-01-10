@@ -5,8 +5,9 @@ class Home extends MY_Controller {
 
 	public function index()
 	{
+		$data['data'] = $this->get("/wtc-landing-page");
 		$this->load->view('templates/header');
-		$this->load->view('index');
+		$this->load->view('index', $data);
 		$this->load->view('templates/footer');
 	}
 
