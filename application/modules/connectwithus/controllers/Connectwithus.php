@@ -12,7 +12,7 @@ class Connectwithus extends MY_Controller {
 			$data["worship"] = $this->get("/wtc-worship-places?id_ne=1");
 		}
 		$data["data_worship"] = $this->get("/wtc-worship-places/1");
-		$data["areas"] = $this->get("/wtc-location-areas");
+		$data["areas"] = $this->get("/wtc-location-areas?id_ne=1");
 		$this->load->view('templates/header');
 		$this->load->view('index', $data);
 		$this->load->view('templates/footer');
