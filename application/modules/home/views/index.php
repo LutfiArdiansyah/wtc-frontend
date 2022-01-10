@@ -35,7 +35,7 @@
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<?php if (str_contains($data->banner->mime, "image")) { ?>
+				<?php if (!strpos($data->banner->mime, "image")) { ?>
 					<img class="w-100" style="height:650px" src="<?php echo STRAPI_URL.$data->banner->url;?>">
 				<?php } else {?>
 					<video class="w-100" height="650" controls>
