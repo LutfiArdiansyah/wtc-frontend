@@ -2,28 +2,41 @@
 	.carousel-inner, .br-25 { 
 		border-radius: 25px;
 	}
+	p .description {
+		white-space: pre-line;
+	}
 </style>
 <div class="container">
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<?php foreach ($data->banner as $key => $value) { ?>
+				<?php if ($key == 0) { ?>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $key; ?>" class="active" aria-current="true" aria-label="<?php echo $value->alternativeText; ?>"></button>
+				<?php } else { ?>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $key; ?>" aria-label="<?php echo $value->alternativeText; ?>"></button>
+				<?php } ?>
+			<?php } ?>
 		</div>
 		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="d-block w-100" src="https://ychef.files.bbci.co.uk/1600x900/p0b66smr.webp" alt="First slide">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Ministries</h5>
-					<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img class="d-block w-100" src="https://ychef.files.bbci.co.uk/1600x900/p0b66smr.webp" alt="Second slide">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Ministries</h5>
-					<p>Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-				</div>
-			</div>
+			<?php foreach ($data->banner as $key => $value) { ?>
+				<?php if ($key == 0) { ?>
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<div class="carousel-caption d-none d-md-block">
+							<h5><?php echo $data->title; ?></h5>
+						</div>
+					</div>
+				<?php } else { ?>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<div class="carousel-caption d-none d-md-block">
+							<h5><?php echo $data->title; ?></h5>
+						</div>
+					</div>
+				<?php } ?>
+
+
+			<?php } ?>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -37,43 +50,39 @@
 	<br/>
 	<br/>
 	<div class="text-center d-flex">
-		<p class="fw-bold w-75 mx-auto">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+		<p class="fw-bold w-75 mx-auto description"><?php echo $data->description; ?></p>
 	</div>
 	<br/>
 	<br/>
 	<div class="row justify-content-center" >
-		<div class="col-6 text-center">
-			<img src="https://cicikresti.com/wp-content/uploads/2019/11/Serve-from-heart-CRC-Cicik-Resti-768x510.jpg" alt="..." class="w-75 mx-auto br-25">
-		</div>
-		<div class="col-6 text-center ">
-			<img src="https://searchengineland.com/figz/wp-content/seloads/2014/09/outreach-hands-ss-1920-800x450.jpg" alt="..." class="w-75 mx-auto br-25">
-		</div>
+		<?php foreach ($data_category as $key => $value) { ?>
+			<div class="col-6 text-center">
+				<img src="<?php echo STRAPI_URL.$value->banner->url; ?>" alt="<?php echo $value->banner->alternativeText; ?>" class="w-75 mx-auto br-25">
+			</div>
+		<?php } ?>
 	</div>
 	<br/>
 	<br/>
 	<div class="row justify-content-center" >
-		<div class="col-6 text-center">
-			<h2 class="fw-bold">Serve Within</h2>
-		</div>
-		<div class="col-6 text-center">
-			<h2 class="fw-bold">Outreach</h2>
-		</div>
+		<?php foreach ($data_category as $key => $value) { ?>
+			<div class="col-6 text-center">
+				<h2 class="fw-bold"><?php echo $value->name; ?></h2>
+			</div>
+		<?php } ?>
 	</div>
 	<br/>
 	<div class="row justify-content-center" >
-		<div class="col-6 text-center">
-			<p class="w-50 mx-auto"> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-		</div>
-		<div class="col-6 text-center">
-			<p class="w-50 mx-auto"> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-		</div>
+		<?php foreach ($data_category as $key => $value) { ?>
+			<div class="col-6 text-center">
+				<p class="w-50 mx-auto description"><?php echo $value->description; ?></p>
+			</div>
+		<?php } ?>
 	</div>
 	<div class="row justify-content-center" >
-		<div class="col-6 text-center">
-			<a href="servewithin"><button type="button" class="btn btn-primary mx-auto w-25">Learn More</button></a>
-		</div>
-		<div class="col-6 text-center">
-			<a href="outreach"><button type="button" class="btn btn-primary mx-auto w-25">Learn More</button></a>
-		</div>
+		<?php foreach ($data_category as $key => $value) { ?>
+			<div class="col-6 text-center">
+				<a href="<?php echo base_url().$value->button_link; ?>"><button type="button" class="btn btn-primary mx-auto w-25"><?php echo $value->button_name; ?></button></a>
+			</div>
+		<?php } ?>
 	</div>
 </div>
