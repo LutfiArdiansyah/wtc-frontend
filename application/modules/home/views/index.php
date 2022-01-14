@@ -1,7 +1,6 @@
 <style type="text/css">
 	.size-img-carousel {
 		width: 100vw;
-		height: 700px;
 	}
 	.carousel-inner { 
 		border-radius: 25px;
@@ -36,9 +35,9 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<?php if (!strpos($data->banner->mime, "image")) { ?>
-					<img class="w-100" style="height:650px" src="<?php echo STRAPI_URL.$data->banner->url;?>">
+					<img class="w-100" src="<?php echo STRAPI_URL.$data->banner->url;?>">
 				<?php } else {?>
-					<video class="w-100" height="650" controls>
+					<video class="w-100" height="555" controls>
 						<source src="<?php echo STRAPI_URL.$data->banner->url;?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
@@ -46,16 +45,20 @@
 					<div class="carousel-caption d-none d-md-block">
 						<div class="row justify-content-center">
 							<div class="col-6 hchy">
-								<button type="button" class="btn btn-primary w-100" style="background-color: #fff; color:#000;">Register Onsite Service</button>
+								<a href="http://ruangan.info/onsite" target="_blank">
+									<button type="button" class="btn btn-primary w-100" style="background-color: #fff; color:#000;">Register Onsite Service</button>
+								</a>
 							</div>
 							<div class="col-6 hchy">
-								<button type="button" class="btn btn-primary w-100" style="background-color: #fff; color:#000;">Watch Online Service</button>
+								<a href="<?php echo $data->youtube_link; ?>">
+									<button type="button" class="btn btn-primary w-100" style="background-color: #fff; color:#000;">Watch Online Service</button>
+								</a>
 							</div>
 						</div>
 					</div>
 					<div class="carousel-welcome text-center">
 						<h1>Welcome to</h1>
-						<h1><?php echo $data->title; ?></h1>
+						<h1 class="fw-bold"><?php echo $data->title; ?></h1>
 					</div>
 				</div>
 			</div>
