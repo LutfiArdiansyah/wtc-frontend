@@ -43,7 +43,7 @@
 
 
 	.full-torradeira {
-		
+
 	}
 	.torradeira {
 	}
@@ -58,13 +58,13 @@
 	}
 
 	.olho-esq {
-		
+
 		animation: sad 2s alternate infinite;
 		transform-origin: center;
 	}
 
 	.olho-dir {
-		
+
 		animation: sad 2s alternate infinite;
 		transform-origin: center;
 	}
@@ -388,7 +388,7 @@
  }
 
  @keyframes leftright{
- 	
+
  	0%{
  		transform: rotateZ( 0deg)
  	}
@@ -735,7 +735,7 @@ mask="url(#prefix__H)"
 	Woops! <br>Something went wrong :(
 </h1>
 <h2 class="error-subtitle">
-	Have you tried turning it off and on again?
+	Have you tried turning it off and on again?<br/><a href="<?php echo base_url(); ?>">Home Page</a>
 </h2>
 
 
