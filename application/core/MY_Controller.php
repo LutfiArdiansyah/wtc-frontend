@@ -59,6 +59,12 @@ class MY_Controller extends MX_Controller
         curl_close($curl);
 
         if ($err) {
+          $filename = LOG_PATH.DIRECTORY_SEPARATOR.'error.log';
+          fopen($filename, 'w');
+          file_put_contents($filename, $err.PHP_EOL , FILE_APPEND | LOCK_EX);
+          header('Location: '.base_url().'internalservererror');
+          return;
+          // throw new Exception("Get error");
           // echo "cURL Error #:" . $err;
         } else {
           return json_decode($response);
