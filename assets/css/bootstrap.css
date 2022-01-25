@@ -3010,12 +3010,12 @@ textarea.form-control-lg {
 .btn-primary {
   color: #fff;
   background-color: var(--bs-primary);
-  border-color: #000;
+  /*border-color: #000;*/
 }
 .btn-primary:hover {
   color: #000;
   background-color: var(--bs-primary);
-  border-color: #000;
+  /*border-color: #000;*/
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;

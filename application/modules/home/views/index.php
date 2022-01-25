@@ -20,7 +20,8 @@
 	.hchy button {
 		margin-top: 25px;
 		border-radius: 10px;
-		padding: 10px;
+		padding: 1.3em 0 1.3em;
+		font-weight: 900;
 	}
 	.instagram{ 
 		background: #f09433; 
