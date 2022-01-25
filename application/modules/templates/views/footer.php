@@ -119,7 +119,7 @@ i.black {
 <!-- Section: Links  -->
 
 <!-- Copyright -->
-<div class="p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+<div class="p-4 border-top">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-sm-12">
