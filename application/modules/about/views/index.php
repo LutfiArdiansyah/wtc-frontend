@@ -75,7 +75,7 @@
 				<div class="col-12">
 					<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
 						<div class="row justify-content-center" style="background-color:white; border-radius: 25px; padding: 15px;">
-							<div class="col-4 text-center d-flex flex-wrap align-items-center">
+							<div class="col-4 text-center d-flex flex-wrap align-items-center mx-auto">
 								<img src="<?php echo isset($value->avatar) ? STRAPI_URL . $value->avatar->url : base_url() . "assets/img/avatar.svg"; ?>" alt="..." style="border-radius:50%;width: 85%; height: same-as-width;">
 							</div>
 							<div class="col-8">
