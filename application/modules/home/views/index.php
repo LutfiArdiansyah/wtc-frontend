@@ -38,9 +38,9 @@
 	}
 
 	.home-button {
-		height: 3.3rem;
+		height: 4rem;
 		border-radius: 11px;
-		font-size: 1.15rem;
+		font-size: 1.35rem;
 	}
 </style>
 <div class="container">
