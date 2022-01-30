@@ -123,7 +123,7 @@
 		</div>
 		<div class="col-lg-3 col-sm-12">
 			<div>
-				<a href="<?php echo base_url()."spiritualjourney"; ?>" target="_blank">
+				<a href="<?php echo base_url()."spiritualjourney"; ?>">
 					<button type="button" class="btn btn-primary w-100 br-10 ratio-height" style="background-color: color-primary; color:#fff;">Learn More</button>
 				</a>
 			</div>
