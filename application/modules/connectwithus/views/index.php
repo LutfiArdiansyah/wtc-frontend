@@ -118,6 +118,8 @@
 		
 	</div>
 </div>
+<br/>
+<br/>
 <script type="text/javascript">
 	$( document ).ready(function() {
 		const urlParams = new URLSearchParams(window.location.search);

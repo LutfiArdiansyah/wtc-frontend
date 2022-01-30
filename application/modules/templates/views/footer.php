@@ -3,9 +3,6 @@
 		color: black;
 	}
 </style>
-<br />
-<br />
-<br />
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
 	<!-- Section: Social media -->

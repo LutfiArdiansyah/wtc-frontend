@@ -10,7 +10,7 @@
     }
 
     .parallax {
-        height: 100vh;
+        height: 95vh;
     }
 
     div.title-parallax {
@@ -39,7 +39,6 @@
 
     .content-parallax {
         color: white;
-        margin-top: 10%;
     }
 
     .header-content-parallax {
@@ -56,38 +55,42 @@
 </div>
 <br />
 <br />
-<div class="parallax bg-parallax" style="background-image: url(http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png);">
+<div>
     <div class="title-parallax pt-4">
         <div class="container">
             <p class="title-parallax">Spiritual Journey / Lahir Baru -></p>
         </div>
     </div>
-    <div class="container content-parallax align-middle">
-        <h1 class="fw-bold header-content-parallax">Lahir Baru</h1>
-        <div class="row mt-5">
-            <div class="col-lg-6 cols-sm-12">
-                <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
-            </div>
-            <div class="col-lg-6 cols-sm-12">
-                <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+    <div class="parallax bg-parallax d-flex align-items-center" style="background-image: url(http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png);">
+        <div class="container content-parallax">
+            <h1 class="fw-bold header-content-parallax">Lahir Baru</h1>
+            <div class="row mt-5">
+                <div class="col-lg-6 cols-sm-12">
+                    <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+                </div>
+                <div class="col-lg-6 cols-sm-12">
+                    <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="parallax bg-parallax" style="background-image: url(http://wtc.a-aziz.tech:1337/uploads/5_34fa626da1.png);">
+<div>
     <div class="title-parallax pt-4">
         <div class="container">
             <p class="title-parallax">Spiritual Journey / Baptis -></p>
         </div>
     </div>
-    <div class="container content-parallax align-middle">
-        <h1 class="fw-bold header-content-parallax">Baptis</h1>
-        <div class="row mt-5">
-            <div class="col-lg-6 cols-sm-12">
-                <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
-            </div>
-            <div class="col-lg-6 cols-sm-12">
-                <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+    <div class="parallax bg-parallax d-flex align-items-center" style="background-image: url(http://wtc.a-aziz.tech:1337/uploads/5_34fa626da1.png);">
+        <div class="container content-parallax">
+            <h1 class="fw-bold header-content-parallax">Baptis</h1>
+            <div class="row mt-5">
+                <div class="col-lg-6 cols-sm-12">
+                    <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+                </div>
+                <div class="col-lg-6 cols-sm-12">
+                    <p class="description">To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.</p>
+                </div>
             </div>
         </div>
     </div>
