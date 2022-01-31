@@ -154,7 +154,7 @@
 					</a>
 					<!-- &nbsp; -->
 					<a href="<?php echo base_url(); ?>">
-						<i class="fab fa-facebook black"></i>
+						<i class="fab fa-facebook-square black"></i>
 					</a>
 				</div>
 				<div class="col-lg-6 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;font-family: 'Nunito Sans', sans-serif;">
