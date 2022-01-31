@@ -1,10 +1,26 @@
 <style type="text/css">
 	i.black {
+		color: #7C8DB0;
+		height: 33px;
+		width: 33px;
+	}
+	a {
+		text-decoration: none;
+		color: black !important;
+		font-family: 'Fira Sans', sans-serif;
+		font-size: 1.25rem;
+	}
+	p {
 		color: black;
+		font-size: 1.25rem;
+	}
+	h6 {
+		font-size: 1.25rem;
+		font-weight: bold;
 	}
 </style>
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start bg-white text-muted">
 	<!-- Section: Social media -->
 	<section class="d-flex justify-content-center justify-content-lg-between p-4">
 		<!-- <div>
@@ -89,7 +105,7 @@
 							<p>
 								<a href="<?php echo base_url(); ?>" class="text-reset">WTC for IOS</a>
 							</p>
-							<br/>
+							<br />
 							<p>
 								<img src="<?php echo base_url() . 'assets/img/android.png'; ?>" />
 							</p>
@@ -101,18 +117,17 @@
 							<h6 class="fw-bold mb-4 color-primary">
 								Office
 							</h6>
-							<p><i class="fas fa-home me-3"></i> <?php echo $head_office->address; ?></p>
+							<p><?php echo $head_office->address; ?></p>
 							<p>
-								<i class="fas fa-envelope me-3"></i>
 								<?php echo $head_office->email; ?>
 							</p>
-							<p><i class="fas fa-phone me-3"></i> <?php echo $head_office->phone_1; ?></p>
+							<p><?php echo $head_office->phone_1; ?></p>
 							<?php if (isset($value->phone_2)) { ?>
-								<p><i class="fas fa-print me-3"></i> <?php echo $head_office->phone_2; ?></p>
+								<p><?php echo $head_office->phone_2; ?></p>
 							<?php } ?>
 							<br />
-							<p><i class="fas fa-calendar-day me-3"></i> <?php echo $head_office->day; ?></p>
-							<p><i class="far fa-clock me-3"></i> <?php echo $head_office->time; ?></p>
+							<p><?php echo $head_office->day; ?></p>
+							<p><?php echo $head_office->time; ?></p>
 						</div>
 					</div>
 				</div>
@@ -133,16 +148,16 @@
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-twitter black"></i>
 					</a>
-					&nbsp;
+					<!-- &nbsp; -->
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-instagram black"></i>
 					</a>
-					&nbsp;
+					<!-- &nbsp; -->
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-facebook black"></i>
 					</a>
 				</div>
-				<div class="col-lg-6 col-sm-12 text-end">
+				<div class="col-lg-6 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;">
 					©<?php echo date("Y"); ?>
 					<a class="text-reset fw-bold" href="<?php echo base_url(); ?>">World Transformation Church</a>
 				</div>
