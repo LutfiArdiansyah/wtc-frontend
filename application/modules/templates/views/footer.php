@@ -82,7 +82,7 @@
 						</div>
 						<div class="col-lg-3 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Komunitas
+								Commuinities
 							</h6>
 							<p>
 								<a href="<?php echo base_url(); ?>" class="text-reset">Nextgen</a>
@@ -118,13 +118,13 @@
 								Office
 							</h6>
 							<p><?php echo $head_office->address; ?></p>
-							<p>
+							<!-- <p>
 								<?php echo $head_office->email; ?>
 							</p>
 							<p><?php echo $head_office->phone_1; ?></p>
 							<?php if (isset($value->phone_2)) { ?>
 								<p><?php echo $head_office->phone_2; ?></p>
-							<?php } ?>
+							<?php } ?> -->
 							<br />
 							<p><?php echo $head_office->day; ?></p>
 							<p><?php echo $head_office->time; ?></p>
@@ -157,7 +157,7 @@
 						<i class="fab fa-facebook black"></i>
 					</a>
 				</div>
-				<div class="col-lg-6 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;">
+				<div class="col-lg-6 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;font-family: 'Nunito Sans', sans-serif;">
 					©<?php echo date("Y"); ?>
 					<a class="text-reset fw-bold" href="<?php echo base_url(); ?>">World Transformation Church</a>
 				</div>

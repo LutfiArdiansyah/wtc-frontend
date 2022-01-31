@@ -13,6 +13,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
 	<style type="text/css">
 		.internationalization {
@@ -58,7 +59,7 @@
 <body>
 	<ul class="nav justify-content-center menu">
 		<a class="brand-logo" href="<?php echo base_url(); ?>home" style="">
-			<img src="assets/img/logo.png" alt="" width="98" height="35">
+			<img src="assets/img/logo.png" alt="" width="168" height="60">
 		</a>
 		<li class="nav-item">
 			<a class="nav-link" href="<?php echo base_url(); ?>about">About Us</a>
