@@ -8,7 +8,8 @@
 		text-decoration: none;
 		color: black !important;
 		font-family: 'Fira Sans', sans-serif;
-		font-size: 1.25rem;
+		font-size: 1.00rem;
+		font-weight: bold;
 	}
 	p {
 		color: black;
@@ -53,26 +54,27 @@
 			<div class="row mt-3 mb-5">
 				<div class="col-lg-6 col-sm-12">
 					<div class="row">
+					<div class="col-lg-2 col-sm-12"></div>
 						<div class="col-lg-3 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								About Us
+								Tentang Kami
 							</h6>
 							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">About WTC</a>
+								<a href="<?php echo base_url(); ?>about" class="text-reset">Tentang WTC</a>
 							</p>
 							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Leadership</a>
+								<a href="<?php echo base_url(); ?>about" class="text-reset">Kepemimpinan</a>
 							</p>
 							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Values</a>
+								<a href="<?php echo base_url(); ?>about" class="text-reset">Nilai-nilai</a>
 							</p>
 							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Spritual Journey</a>
+								<a href="<?php echo base_url(); ?>about" class="text-reset">Spiritual Journey</a>
 							</p>
 						</div>
 						<div class="col-lg-3 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Ministries
+								Ministri
 							</h6>
 							<?php foreach ($minis_cat as $key => $value) { ?>
 								<p>
@@ -80,9 +82,9 @@
 								</p>
 							<?php } ?>
 						</div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-4 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Commuinities
+								Komunitas
 							</h6>
 							<p>
 								<a href="<?php echo base_url(); ?>" class="text-reset">Nextgen</a>
@@ -95,15 +97,15 @@
 				</div>
 				<div class="col-lg-6 col-sm-12">
 					<div class="row">
-						<div class="col-lg-6 col-sm-12">
+						<div class="col-lg-5 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Download Apps
+								Dapatkan Aplikasi
 							</h6>
 							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">WTC for Android</a>
+								<a href="<?php echo base_url(); ?>" class="text-reset">WTC App untuk Android</a>
 							</p>
 							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">WTC for IOS</a>
+								<a href="<?php echo base_url(); ?>" class="text-reset">WTC App untuk IOS</a>
 							</p>
 							<br />
 							<p>
@@ -113,11 +115,11 @@
 								<img src="<?php echo base_url() . 'assets/img/ios.png'; ?>" />
 							</p>
 						</div>
-						<div class="col-lg-6 col-sm-12">
+						<div class="col-lg-5 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Office
+								Sekretariat Gereja
 							</h6>
-							<p><?php echo $head_office->address; ?></p>
+							<p><a class="text-reset"><?php echo $head_office->address; ?></a></p>
 							<!-- <p>
 								<?php echo $head_office->email; ?>
 							</p>
@@ -126,8 +128,8 @@
 								<p><?php echo $head_office->phone_2; ?></p>
 							<?php } ?> -->
 							<br />
-							<p><?php echo $head_office->day; ?></p>
-							<p><?php echo $head_office->time; ?></p>
+							<p><a class="text-reset"><?php echo $head_office->day; ?></a></p>
+							<p><a class="text-reset"><?php echo $head_office->time; ?></a></p>
 						</div>
 					</div>
 				</div>

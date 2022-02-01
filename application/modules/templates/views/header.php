@@ -80,7 +80,7 @@
 			<i class="fas fa-sign-in-alt color-primary"></i>&nbsp;Login
 		</a>
 	</ul>
-	<div class="dropdown internationalization">
+	<!-- <div class="dropdown internationalization">
 		<button class="btn dropdown-toggle color-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 			<i class="fas fa-globe"></i>
 		</button>
@@ -88,6 +88,6 @@
 			<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">EN</span></a></li>
 			<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">ID</span></a></li>
 		</ul>
-	</div>
+	</div> -->
 	<br />
 	<br />

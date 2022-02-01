@@ -49,7 +49,9 @@
 	}
 </style>
 <div class="container">
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+	<div class="row">
+		<div class="col-lg-1 col-sm-12  mt-4"></div>
+	<div id="carouselExampleIndicators" class="carousel slide col-lg-10 col-sm-12" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<?php if (!strpos($data->banner->mime, "image")) { ?>
@@ -79,7 +81,9 @@
 					<h1 class="fw-bold"><?php echo $data->title; ?></h1>
 				</div>
 			</div>
-		</div>
+		</div>	
+		<div class="col-lg-1 col-sm-12  mt-4"></div>
+	</div>
 	</div>
 	<br />
 	<br />
@@ -118,7 +122,10 @@
 			<h2 class="fw-bold">Social Media</h2>
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 mt-4">
-					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?>&nbsp;&nbsp;<i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></button>
+					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;">
+					<a href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
+					</button>
 				</div>
 			</div>
 		</div>
