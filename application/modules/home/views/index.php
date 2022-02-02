@@ -36,59 +36,74 @@
 	}
 
 	.btn-carousel {
-		border-radius: 13px;
-		height: 5.336rem;
+		border-radius: 1.071rem;
+		height: 5.8rem;
 		font-size: 1.785rem;
 		font-weight: bold;
+		width: 26rem;
 	}
+
 	.welcome {
 		font-size: 2.343rem;
 	}
+
 	.home-button {
 		height: 4rem;
 		border-radius: 11px;
 		font-size: 1.499rem;
 	}
+
 	.sosmed-location {
 		font-size: 2.577rem;
+	}
+
+	.carousel-caption {
+		right: 10%;
+		bottom: 1.25rem;
+		left: 10%;
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+		color: #fff;
+		text-align: center;
+		width: 80%;
 	}
 </style>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-1 col-sm-12  mt-4"></div>
-	<div id="carouselExampleIndicators" class="carousel slide col-lg-10 col-sm-12" data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<?php if (!strpos($data->banner->mime, "image")) { ?>
-					<img class="w-100" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
-				<?php } else { ?>
-					<video class="w-100" height="555" controls>
-						<source src="<?php echo STRAPI_URL . $data->banner->url; ?>" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				<?php } ?>
-				<div class="carousel-caption d-none d-md-block">
-					<div class="row justify-content-center">
-						<div class="col-6">
-							<a href="http://ruangan.info/onsite" target="_blank">
-								<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Register Onsite Service</button>
-							</a>
-						</div>
-						<div class="col-6">
-							<a href="<?php echo $data->youtube_link; ?>">
-								<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Watch Online Service</button>
-							</a>
+		<div id="carouselExampleIndicators" class="carousel slide col-lg-10 col-sm-12" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<?php if (!strpos($data->banner->mime, "image")) { ?>
+						<img class="w-100" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
+					<?php } else { ?>
+						<video class="w-100" height="555" controls>
+							<source src="<?php echo STRAPI_URL . $data->banner->url; ?>" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					<?php } ?>
+					<div class="carousel-caption d-none d-md-block">
+						<div class="row justify-content-center">
+							<div class="col-6">
+								<a href="http://ruangan.info/onsite" target="_blank">
+									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Register Onsite Service</button>
+								</a>
+							</div>
+							<div class="col-6">
+								<a href="<?php echo $data->youtube_link; ?>">
+									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Watch Online Service</button>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="carousel-welcome text-center">
-					<h1 class="welcome">Welcome to</h1>
-					<h1 class="welcome fw-bold"><?php echo $data->title; ?></h1>
+					<div class="carousel-welcome text-center">
+						<h1 class="welcome">Welcome to</h1>
+						<h1 class="welcome fw-bold"><?php echo $data->title; ?></h1>
+					</div>
 				</div>
 			</div>
-		</div>	
-		<div class="col-lg-1 col-sm-12  mt-4"></div>
-	</div>
+			<div class="col-lg-1 col-sm-12  mt-4"></div>
+		</div>
 	</div>
 	<br />
 	<br />
@@ -128,8 +143,8 @@
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 mt-4">
 					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;">
-					<a href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
+						<a href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
 					</button>
 				</div>
 			</div>
