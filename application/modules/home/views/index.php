@@ -38,14 +38,19 @@
 	.btn-carousel {
 		border-radius: 13px;
 		height: 5.336rem;
-		font-size: 1.575rem;
+		font-size: 1.785rem;
 		font-weight: bold;
 	}
-
+	.welcome {
+		font-size: 2.343rem;
+	}
 	.home-button {
 		height: 4rem;
 		border-radius: 11px;
-		font-size: 1.35rem;
+		font-size: 1.499rem;
+	}
+	.sosmed-location {
+		font-size: 2.577rem;
 	}
 </style>
 <div class="container">
@@ -77,8 +82,8 @@
 					</div>
 				</div>
 				<div class="carousel-welcome text-center">
-					<h1>Welcome to</h1>
-					<h1 class="fw-bold"><?php echo $data->title; ?></h1>
+					<h1 class="welcome">Welcome to</h1>
+					<h1 class="welcome fw-bold"><?php echo $data->title; ?></h1>
 				</div>
 			</div>
 		</div>	
@@ -89,7 +94,7 @@
 	<br />
 	<br />
 	<div class="text-center">
-		<h1 class="fw-bold">How can we help you?</h1>
+		<h1 class="sosmed-location fw-bold">How can we help you?</h1>
 	</div>
 	<br />
 	<div class="row justify-content-center">
@@ -119,7 +124,7 @@
 	</div>
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
-			<h2 class="fw-bold">Social Media</h2>
+			<h2 class="sosmed-location fw-bold">Social Media</h2>
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 mt-4">
 					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;">
@@ -130,7 +135,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
-			<h2 class="fw-bold">Locations Church</h2>
+			<h2 class="sosmed-location fw-bold">Locations Church</h2>
 			<a href="<?php echo base_url() . "connectwithus" ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><i class="far fa-map"></i>&nbsp;Find your area</button>
 			</a>
