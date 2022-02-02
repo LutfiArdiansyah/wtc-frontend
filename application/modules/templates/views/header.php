@@ -79,7 +79,7 @@
 		</li>
 		<div class="dropdown login-btn">
 			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				<i class="fas fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;">ID</span>
+				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;">ID</span>
 			</button>
 			<ul class="dropdown-menu list-dropdown" aria-labelledby="dropdownMenuButton1">
 				<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">EN</span></a></li>
