@@ -152,7 +152,7 @@
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
 			<h2 class="sosmed-location fw-bold">Locations Church</h2>
 			<a href="<?php echo base_url() . "connectwithus" ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><i class="far fa-map"></i>&nbsp;Find your area</button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><img src="<?php echo base_url().'assets/icons/map.svg' ?>"/>&nbsp;Find your area</button>
 			</a>
 		</div>
 	</div>
