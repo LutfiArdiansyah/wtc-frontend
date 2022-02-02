@@ -8,7 +8,7 @@
 		text-decoration: none;
 		color: black !important;
 		font-family: 'Fira Sans', sans-serif;
-		font-size: 1.00rem;
+		font-size: 0.938rem;
 		font-weight: bold;
 	}
 	p {
@@ -16,8 +16,14 @@
 		font-size: 1.25rem;
 	}
 	h6 {
-		font-size: 1.25rem;
+		font-size: 0.938rem;
 		font-weight: bold;
+	}
+	.apps-logo {
+		height: 2.344rem;
+	}
+	.copyrieghts {
+		font-size: 0.844rem;
 	}
 </style>
 <!-- Footer -->
@@ -109,10 +115,10 @@
 							</p>
 							<br />
 							<p>
-								<img src="<?php echo base_url() . 'assets/img/android.png'; ?>" />
+								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/android.png'; ?>" />
 							</p>
 							<p>
-								<img src="<?php echo base_url() . 'assets/img/ios.png'; ?>" />
+								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/ios.png'; ?>" />
 							</p>
 						</div>
 						<div class="col-lg-5 col-sm-12">
@@ -146,7 +152,8 @@
 	<div class="p-4 border-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-sm-12">
+			<div class="col-lg-1 col-sm-12"></div>
+				<div class="col-lg-5 col-sm-12">
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-twitter black"></i>
 					</a>
@@ -159,9 +166,9 @@
 						<i class="fab fa-facebook-square black"></i>
 					</a>
 				</div>
-				<div class="col-lg-6 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;font-family: 'Nunito Sans', sans-serif;">
-					©<?php echo date("Y"); ?>
-					<a class="text-reset fw-bold" href="<?php echo base_url(); ?>">World Transformation Church</a>
+				<div class="col-lg-5 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;font-family: 'Nunito Sans', sans-serif;">
+					<!-- ©<?php echo date("Y"); ?> -->
+					<a class="text-reset" href="<?php echo base_url(); ?>">©<?php echo date("Y"); ?> World Transformation Church</a>
 				</div>
 			</div>
 		</div>
