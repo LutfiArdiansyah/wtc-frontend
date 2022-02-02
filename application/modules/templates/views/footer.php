@@ -22,8 +22,10 @@
 	.apps-logo {
 		height: 2.344rem;
 	}
-	.copyrieghts {
-		font-size: 0.844rem;
+	.copyright {
+		color: #7C8DB0; 
+		font-size:0.844rem;
+		font-family: 'Nunito Sans', sans-serif;
 	}
 </style>
 <!-- Footer -->
@@ -166,9 +168,8 @@
 						<i class="fab fa-facebook-square black"></i>
 					</a>
 				</div>
-				<div class="col-lg-5 col-sm-12 text-end" style="color: #7C8DB0; font-size:18px;font-family: 'Nunito Sans', sans-serif;">
-					<!-- ©<?php echo date("Y"); ?> -->
-					<a class="text-reset" href="<?php echo base_url(); ?>">©<?php echo date("Y"); ?> World Transformation Church</a>
+				<div class="col-lg-5 col-sm-12 text-end">
+					<span class="copyright fw-bold">©<?php echo date("Y"); ?> World Transformation Church</span>
 				</div>
 			</div>
 		</div>
