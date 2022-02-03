@@ -67,6 +67,10 @@
 		text-align: center;
 		width: 80%;
 	}
+	.banner-carousel {
+		min-width: 70.276rem;
+		min-height: 39.542rem;
+	}
 </style>
 <div class="container">
 	<div class="row">
@@ -75,9 +79,9 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<?php if (!strpos($data->banner->mime, "image")) { ?>
-						<img class="w-100" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
+						<img class="banner-carousel" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
 					<?php } else { ?>
-						<video class="w-100" height="555" controls>
+						<video class="banner-carousel" controls>
 							<source src="<?php echo STRAPI_URL . $data->banner->url; ?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
