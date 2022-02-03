@@ -107,11 +107,9 @@
 	</div>
 	<br />
 	<br />
-	<br />
 	<div class="text-center">
 		<h1 class="sosmed-location fw-bold">How can we help you?</h1>
 	</div>
-	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_1; ?>">
@@ -124,7 +122,6 @@
 			</a>
 		</div>
 	</div>
-	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_3; ?>">
@@ -137,6 +134,7 @@
 			</a>
 		</div>
 	</div>
+	<br>
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
 			<h2 class="sosmed-location fw-bold">Social Media</h2>

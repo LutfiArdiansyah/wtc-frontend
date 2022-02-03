@@ -28,6 +28,7 @@
 		font-family: 'Nunito Sans', sans-serif;
 	}
 </style>
+<br><br><br>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
 	<!-- Section: Social media -->
