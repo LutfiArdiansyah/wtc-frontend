@@ -100,7 +100,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-welcome text-center">
+					<div class="carousel-welcome text-center"><br><br>
 						<h1 class="welcome">Welcome to</h1>
 						<h1 class="welcome fw-bold"><?php echo $data->title; ?></h1>
 					</div>
