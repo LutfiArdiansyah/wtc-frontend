@@ -3,6 +3,7 @@
 		white-space: pre-line;
 		font-family: 'Fira Sans', sans-serif;
 		font-size: 0.938rem;
+		line-height: 1.25rem;
 	}
 
 	p.description-spirit {
@@ -31,10 +32,12 @@
 	}
 
 	.title-about {
-		font-size: 2.063rem;
+		font-size: 2.063rem !important;
+		font-weight: 600 !important;
+		line-height: 2.875rem;
 	}
 
-	.container {
+	.content {
 		max-width: 69.141rem !important;
 	}
 
@@ -55,17 +58,16 @@
 		font-size: 1.406rem;
 	}
 </style>
-<div class="container">
+<div class="container content">
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">About GBI WTC</h2>
+			<p class="fw-bold title-about">Tentang </br>GBI WTC</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 1.172rem; padding: 0 1.641rem 0.984rem 1.594rem;">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
 						<p class="description">
-							<!-- <?php echo $data->about; ?> -->
 							GBI WTC lahir dari visi yang Tuhan sampaikan langsung kepada Pdt. Dr. Ir. Yonathan Wiryohadi (Senior Pastor) untuk membangun mezbah baru bagi Tuhan. Mezbah berbicara tentang tempat kesukaan Tuhan, dimana Tuhan dapat memanifestasikan diri kepada umat-Nya sehingga berkesempatan mengalami perjumpaan dengan Tuhan untuk kemudian bertumbuh, mengalami perubahan hidup, dan menjadi berkat bagi komunitas, kota dan bangsanya.
 
 							Bersama Pdt. Djuhardi Hardja, SE (Associate Senior Pastor), Pdt. Ir. Bebas Pinem, MM. MTH (Associate Senior Pastor), Pdp. Lie Darmawan, S.Kom (Associate Senior Pastor) dan beberapa anggota lainnya, GBI WTC melaksanakan ibadah perdana pada 22 Februari 2004. Ibadah yang semula dihadiri oleh sekitar 300 jemaat, terus mengalami pertambahan dan pertumbuhan jiwa yang amat signifikan.
@@ -73,7 +75,6 @@
 					</div>
 					<div class="col-lg-6 col-sm-12">
 						<p class="description">
-							<!-- <?php echo $data->about; ?> -->
 							Saat ini terhitung ada 15.000 lebih orang percaya dan 57 gereja cabang yang Tuhan percayakan kepada GBI WTC, dan itu akan terus bertambah dan bertumbuh!
 
 Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (Pilar Spiritual dan Sosial, Pilar Keluarga, Pilar Bisnis, Pilar Pendidikan, Pilar Pemerintahan dan Politik, Pilar Seni dan Hiburan, Pilar Media). Di dalam bimbingan Senior Pastor, seluruh pelayanan ministri bersinergi untuk menjangkau jiwa-jiwa dan berkontribusi positif bagi penyelesaian berbagai masalah yang terjadi dalam komunitas, kota maupun bangsa selaras keinginan hati Tuhan, sehingga Kerajaan surga bisa ditegakkan di muka bumi. 
@@ -100,7 +101,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">Vision</h2>
+			<p class="fw-bold title-about">Vision</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
@@ -113,7 +114,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">Mision</h2>
+			<p class="fw-bold title-about">Mision</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
@@ -126,7 +127,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">Leadership</h2>
+			<p class="fw-bold title-about">Leadership</p>
 		</div>
 		<div class="col-lg-9 col-sm-12 row">
 			<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
@@ -162,7 +163,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">Values</h2>
+			<p class="fw-bold title-about">Values</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
@@ -175,7 +176,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<h2 class="fw-bold title-about">Spiritual Journey</h2>
+			<p class="fw-bold title-about">Spiritual Journey</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
