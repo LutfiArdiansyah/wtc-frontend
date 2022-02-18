@@ -89,11 +89,12 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 		<div class="col-lg-3 col-sm-12"></div>
 		<div class="col-lg-9 col-sm-12">
 			<div class="row justify-content-center">
-				<div class="col-6 d-flex flex-wrap align-items-center">
-					<img class="w-100 " src="<?php echo STRAPI_URL . $data->logo_2->url; ?>">
+				<div class="col-5 d-flex flex-wrap align-items-center">
+					<img class="" src="<?php echo STRAPI_URL . $data->logo_2->url; ?>">
 				</div>
-				<div class="col-6 d-flex flex-wrap align-items-center">
-					<img class="w-100" src="<?php echo STRAPI_URL . $data->logo_1->url; ?>">
+				<div class="col-2"></div>
+				<div class="col-5 d-flex flex-wrap align-items-center">
+					<img class="" src="<?php echo STRAPI_URL . $data->logo_1->url; ?>">
 				</div>
 			</div>
 		</div>
