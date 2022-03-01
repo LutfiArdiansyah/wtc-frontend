@@ -93,6 +93,7 @@
 							</div>
 						</div>
 						<hr />
+						<br/>
 						<div class="row">
 							<div class="col-lg-4 col-sm-12">
 								<p class="fw-bold mx-auto" style="font-size: 1.547rem;line-height: 1.774rem;">Tentang QRIS</p>
