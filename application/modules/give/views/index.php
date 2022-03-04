@@ -8,7 +8,9 @@
 		color: #000000;
 		border: 1.5px solid #000000;
 	}
-
+	.card {
+		border: none !important;
+	}
 	.container-card {
 		margin-left: 11.125rem;
 		margin-right: 11.125rem;

@@ -54,6 +54,22 @@
 			margin-top: 0.7rem;
 			font-weight: bold;
 		}
+
+		.container-breadcrumb {
+			width: 70.25rem;
+			padding-bottom: 0.3rem;
+		}
+
+		.breadcrumb-text {
+			font-size: 0.938rem !important;
+			font-style: bold;
+			color: var(--bs-primary) !important;
+			font-family: var(--bs-body-font-family) !important;
+		}
+
+		.breadcrumb-item+.breadcrumb-item::before {
+			color: black;
+		}
 	</style>
 </head>
 
@@ -98,4 +114,26 @@
 		</ul>
 	</div> -->
 	<br />
-	<br />
+	<div class="container">
+		<div class="container-breadcrumb mx-auto">
+			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { ?>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<?php for ($i = 0; $i < count($breadcrumb); $i++) { ?>
+							<li class="breadcrumb-item">
+								<?php
+								if ($i == 0) {
+									echo '<i class="fas fa-caret-left"></i>&nbsp;&nbsp;';
+								}
+								?>
+								<a href="#" class="breadcrumb-text">
+									<?php echo $breadcrumb[$i]['name']; ?>
+								</a>
+							</li>
+						<?php } ?>
+
+					</ol>
+				</nav>
+			<?php } ?>
+		</div>
+	</div>
