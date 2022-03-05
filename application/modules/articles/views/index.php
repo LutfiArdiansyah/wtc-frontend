@@ -37,6 +37,11 @@
 		font-size: 2.578rem;
 		line-height: 2.875rem;
 	}
+
+	.img-carousel {
+		width: 1125px !important;
+		height: 633px !important;
+	}
 </style>
 <div class="container mx-auto">
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -53,14 +58,14 @@
 			<?php foreach ($article->banner as $key => $value) { ?>
 				<?php if ($key == 0) { ?>
 					<div class="carousel-item active">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
+						<img class="d-block w-100 img-carousel" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
 							<h5 class="title-banner"><?php echo $article->title; ?></h5>
 						</div>
 					</div>
 				<?php } else { ?>
 					<div class="carousel-item">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
+						<img class="d-block w-100 img-carousel" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
 							<h5><?php echo $article->title; ?></h5>
 						</div>

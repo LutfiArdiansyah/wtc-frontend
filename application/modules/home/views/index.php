@@ -40,7 +40,6 @@
 		height: 5.8rem;
 		font-size: 1.785rem;
 		font-weight: bold;
-		width: 26rem;
 	}
 
 	.welcome {
@@ -67,9 +66,13 @@
 		text-align: center;
 		width: 80%;
 	}
+
 	.banner-carousel {
-		min-width: 70.276rem;
-		min-height: 39.542rem;
+	}
+
+	.img-carousel {
+		width: 1125px !important;
+		height: 633px !important;
 	}
 </style>
 <div class="container">
@@ -79,7 +82,7 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<?php if (!strpos($data->banner->mime, "image")) { ?>
-						<img class="banner-carousel" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
+						<img class="banner-carousel img-carousel" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
 					<?php } else { ?>
 						<video class="banner-carousel" controls>
 							<source src="<?php echo STRAPI_URL . $data->banner->url; ?>" type="video/mp4">
@@ -154,7 +157,7 @@
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
 			<h2 class="sosmed-location fw-bold">Locations Church</h2>
 			<a href="<?php echo base_url() . "connectwithus" ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><img src="<?php echo base_url().'assets/icons/map.svg' ?>"/>&nbsp;Find your area</button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><img src="<?php echo base_url() . 'assets/icons/map.svg' ?>" />&nbsp;Find your area</button>
 			</a>
 		</div>
 	</div>

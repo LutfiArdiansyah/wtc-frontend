@@ -62,9 +62,6 @@
 		border: none;
 		color: white;
 	}
-	.home-carousel{
-		min-height: 39.563rem;
-	}
 	.carousel-cat {
 		min-height: 20.625rem;
 	}
@@ -73,6 +70,10 @@
 		font-weight: 600;
 		font-size: 4.677rem;
 		line-height: 2.875rem;
+	}
+	.img-carousel {
+		width: 1125px !important;
+		height: 633px !important;
 	}
 </style>
 <div class="container content">
@@ -90,14 +91,14 @@
 			<?php foreach ($data->banner as $key => $value) { ?>
 				<?php if ($key == 0) { ?>
 					<div class="carousel-item active">
-						<img class="d-block w-100 home-carousel" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<img class="d-block w-100 img-carousel" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
 							<h5 class="title-carousel"><?php echo $data->title; ?></h5>
 						</div>
 					</div>
 				<?php } else { ?>
 					<div class="carousel-item">
-						<img class="d-block w-100 home-carousel" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<img class="d-block w-100 img-carousel" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
 							<h5 class="title-carousel"><?php echo $data->title; ?></h5>
 						</div>
