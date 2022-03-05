@@ -1,13 +1,14 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class CLASS_NAME extends MY_Controller
+class Newchristianity extends MY_Controller
 {
 
 	public function index()
 	{
 		$data['breadcrumb'] = array(
-			array('name' => 'Home')
+			array('name' => 'Home'),
+			array('name' => 'Baru dalam Kekristenan')
 		);
 		$this->load->view('templates/header', $data);
 		$this->load->view('index');
