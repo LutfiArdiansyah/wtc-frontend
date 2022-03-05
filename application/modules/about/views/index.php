@@ -130,9 +130,9 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 		<div class="col-lg-3 col-sm-12">
 			<p class="fw-bold title-about">Leadership</p>
 		</div>
-		<div class="col-lg-9 col-sm-12 row">
+		<div class="col-lg-9 col-sm-12">
 			<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
-				<div class="justify-content-center d-flex align-items-center text-center" style="background-color:white; border-radius: 25px; padding: 15px;">
+				<div class="justify-content-center d-flex align-items-center text-center mb-3" style="background-color:white; border-radius: 25px; padding: 15px;">
 					<div class="col-4 text-center">
 						<img src="<?php echo isset($value->avatar) ? STRAPI_URL . $value->avatar->url : base_url() . "assets/img/avatar.svg"; ?>" alt="..." style="border-radius:50%;width: 85%; height: same-as-width;">
 					</div>
