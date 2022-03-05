@@ -10,7 +10,7 @@ class Articles extends MY_Controller
 			header('Location: ' . base_url());
 			return;
 		}
-		$data['article'] = $this->get("/wtc-articles/" . $_GET["id"]);
+		$data['article'] = $this->get("/wtc-ministries-lists/" . $_GET["id"]);
 		$data['breadcrumb'] = array(
 			array('name'=>'Home'),
 			array('name'=>'Persembahan')

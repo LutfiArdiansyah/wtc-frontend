@@ -83,8 +83,7 @@
 		<div class="card-body">
 			<h1 class="title text-center fw-bold mx-auto">Tentang</h1>
 			<p class="description mx-auto text-center">
-				<?php //echo $article->content; ?>
-				Dibentuk untuk memberi makan kota dengan memenuhi kebutuhan akan makanan sehat. Untuk itu HOB mengembangkan sistem pertanian yang terintegrasi, terdiri dari pertanian sayuran dan buah-buahan organik dan hidroponik dengan Green House, juga perternakan ikan nila.
+				<?php echo $article->about; ?>
 			</p>
 		</div>
 	</div>
@@ -92,7 +91,7 @@
 		<div class="card-body">
 			<h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
 			<p class="description mx-auto text-center">
-				Pdt. Ir. Bebas Pinem sebagai Ketua Pengurus
+				<?php echo $article->leadership; ?>
 			</p>
 		</div>
 	</div>
