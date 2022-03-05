@@ -1,12 +1,44 @@
 <style type="text/css">
-	.carousel-inner, .br-25 { 
+	.carousel-inner,
+	.br-25 {
 		border-radius: 25px;
 	}
-	p .description {
+
+	.description {
 		white-space: pre-line;
+		font-family: 'Fira Sans', sans-serif;
+		width: 62.016rem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.125rem;
+		line-height: 1.375rem;
+	}
+
+	.container {
+		width: 70.313rem !important;
+	}
+
+	.title-banner {
+		color: white;
+		font-weight: bold;
+		font-size: 4.688rem !important;
+		line-height: 2.875rem !important;
+	}
+
+	.card {
+		border: none;
+		margin-top: 2.156rem;
+		border-radius: 0.938rem;
+	}
+
+	.title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.578rem;
+		line-height: 2.875rem;
 	}
 </style>
-<div class="container">
+<div class="container mx-auto">
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<?php foreach ($article->banner as $key => $value) { ?>
@@ -21,14 +53,14 @@
 			<?php foreach ($article->banner as $key => $value) { ?>
 				<?php if ($key == 0) { ?>
 					<div class="carousel-item active">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<img class="d-block w-100" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
-							<h5><?php echo $article->title; ?></h5>
+							<h5 class="title-banner"><?php echo $article->title; ?></h5>
 						</div>
 					</div>
 				<?php } else { ?>
 					<div class="carousel-item">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
+						<img class="d-block w-100" src="<?php echo STRAPI_URL . $value->url; ?>" alt="<?php echo STRAPI_URL . $value->alternativeText; ?>">
 						<div class="carousel-caption d-none d-md-block">
 							<h5><?php echo $article->title; ?></h5>
 						</div>
@@ -47,139 +79,21 @@
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
-	<br/>
-	<br/>
-	<div class="row justify-content-center">
-		<div class="col-lg-4 col-sm-12">
-			<h2>About <?php echo $article->title; ?></h2>
-		</div>
-		<div class="col-lg-8 col-sm-12">
-			<div style="background-color:white; border-radius: 25px; padding: 15px;">
-				<p style="white-space: pre-line;">
-					<?php echo $article->content; ?>
-				</p>
-			</div>
+	<div class="card mx-auto">
+		<div class="card-body">
+			<h1 class="title text-center fw-bold mx-auto">Tentang</h1>
+			<p class="description mx-auto text-center">
+				<?php //echo $article->content; ?>
+				Dibentuk untuk memberi makan kota dengan memenuhi kebutuhan akan makanan sehat. Untuk itu HOB mengembangkan sistem pertanian yang terintegrasi, terdiri dari pertanian sayuran dan buah-buahan organik dan hidroponik dengan Green House, juga perternakan ikan nila.
+			</p>
 		</div>
 	</div>
-	<?php if (count($article->wtc_leaderships) > 0) {?>
-
-		<br/>
-		<br/>
-		<div class="row justify-content-center">
-			<div class="col-lg-4  col-sm-12">
-				<h2>Leadership</h2>
-			</div>
-			<div class="col-lg-8 col-sm-12">
-				<div class="row justify-content-center">
-					<?php foreach ($article->wtc_leaderships as $key => $value) {?>
-						<div class="row justify-content-center" style="background-color:white; border-radius: 25px; padding: 15px;">
-							<div class="col-3">
-								<img src="<?php echo isset($value->avatar) ? STRAPI_URL.$value->avatar->url : base_url()."assets/img/avatar.svg";?>" alt="..." style="border-radius:50%;width: 100%; height: same-as-width;">
-							</div>
-							<div class="col-9">
-								<p class="fw-bold"><?php echo $value->name; ?></p>
-								<p  class="description">
-									<?php echo $value->description; ?>
-								</p>
-								<p class="fw-bold">
-									<span><i class="fab fa-instagram"></i>&nbsp;
-										<a href="<?php echo $value->instagram_link_1; ?>" target="_blank"><?php echo $value->instagram_1; ?></a>
-
-									</span>
-									<?php if (isset($value->instagram_2)) {?>
-
-										&nbsp;
-										<span><i class="fab fa-instagram"></i>&nbsp;
-											<a href="<?php echo $value->instagram_link_2; ?>" target="_blank"><?php echo $value->instagram_2; ?></a>
-										</span>
-									<?php } ?>
-								</p>
-							</div>
-						</div>
-						<br/>
-					<?php } ?>
-				</div>
-			</div>
+	<div class="card mx-auto">
+		<div class="card-body">
+			<h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
+			<p class="description mx-auto text-center">
+				Pdt. Ir. Bebas Pinem sebagai Ketua Pengurus
+			</p>
 		</div>
-	<?php } ?>
-
-	<?php if (count($article->wtc_worship_places) > 0) {?>
-		<br/>
-		<br/>
-		<div class="row justify-content-center">
-			<div class="col-lg-4 col-sm-12">
-				<h2>Services</h2>
-			</div>
-			<div class="col-lg-8 col-sm-12">
-				<?php foreach ($article->wtc_worship_places as $key => $value) { ?>
-					<div class="row  justify-content-md-center">
-						<div class="col-12">
-							<div class="card br-15">
-								<div class="card-body">
-									<div class="row ">
-										<div class="col-6">
-											<h5 class="color-primary">WTC</h5>
-											<h5 class="fw-bold color-primary"><?php echo $value->name; ?></h5>
-										</div>
-										<div class="col-6">
-											<div class="row">
-												<div class="col-8 text-end">
-													<button type="button" class="btn btn-primary">Get Involved</button>
-												</div>
-												<div class="col-4">
-													<h5 class="color-primary text-end"><a class="color-primary" href="tel:<?php echo $value->phone_1; ?>">Contact</a></h5>
-												</div>
-											</div>
-										</div>
-									</div>
-									<br/>
-									<div class="row ">
-										<div class="col-4">
-											<p class="fw-bold">Address</p>
-											<p style="white-space:pre-line;"><?php echo $value->address; ?></p>
-										</div>
-										<div class="col-2">
-											<p class="fw-bold">Times</p>
-											<p><?php echo $value->day; ?></p>
-											<p><?php echo $value->time; ?></p>
-										</div>
-										<div class="col-3">
-											<p class="fw-bold">Campus Pastor</p>
-											<p><?php echo $value->pastor_name; ?></p>
-										</div>
-										<div class="col-3 text-end">
-											<img src="<?php echo isset($value->pastor_avatar) ? STRAPI_URL.$value->pastor_avatar->url : base_url()."assets/img/avatar.svg";?>" style="border-radius:50%;width: 100px; height: 100px;">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<br/>
-				<?php } ?>
-			</div>
-		</div>
-	<?php } ?>
-	
-	<?php if (count($article->gallery) > 0) {?>
-
-		<br/>
-		<br/>
-		<div class="card br-15">
-			<div class="card-body">
-				<h2 class="text-center">Gallery</h2>
-				<hr/>
-				<div class="row">
-					<?php foreach ($article->gallery as $key => $value) { ?>
-						<div class="col-lg-3 col-sm-12 text-center" style="padding-bottom: 25px;">
-							<img src="<?php echo STRAPI_URL.$value->url; ?>" style="border-radius:15px;width: 240px; height: 240px;">
-						</div>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-	<?php } ?>
-
+	</div>
 </div>
-<br/>
-<br/>
