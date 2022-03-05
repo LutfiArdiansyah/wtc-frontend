@@ -12,7 +12,7 @@ class Ministriescategory extends MY_Controller
 		}
 		$data['data'] = $this->get("/wtc-ministries-categories/" . $_GET['cat_id']);
 		if (!isset($_GET['search']) || empty($_GET['search'])) {
-			$data['articles'] = $this->get("/wtc-articles?wtc_ministries_category.id=" . $_GET['cat_id']);
+			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id']);
 		} else {
 		}
 		$data['breadcrumb'] = array(
