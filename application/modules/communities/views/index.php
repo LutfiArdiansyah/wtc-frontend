@@ -72,7 +72,7 @@
 						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
 					</div>
 					<div class="col-3">
-						<a href="#">
+						<a href="./communitydetail?id=Nextgen">
 							<button class="btn-learn-more">Learn More</button>
 						</a>
 					</div>
@@ -92,7 +92,7 @@
 						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
 					</div>
 					<div class="col-3">
-						<a href="#">
+						<a href="./communitydetail?id=Carecell">
 							<button class="btn-learn-more">Learn More</button>
 						</a>
 					</div>
@@ -112,7 +112,7 @@
 						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
 					</div>
 					<div class="col-3">
-						<a href="#">
+						<a href="./communitydetail?id=Global%20Church">
 							<button class="btn-learn-more">Learn More</button>
 						</a>
 					</div>
