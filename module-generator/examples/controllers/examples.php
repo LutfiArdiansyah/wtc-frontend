@@ -5,9 +5,12 @@ class CLASS_NAME extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->view('templates/header');
+		$data['breadcrumb'] = array();
+		$this->load->view('templates/header', $data);
 		$this->load->view('index');
-		$this->load->view('templates/footer');
+		$data['head_office'] = $this->get("/wtc-worship-places/1");
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$this->load->view('templates/footer', $data);
 	}
 
 }
