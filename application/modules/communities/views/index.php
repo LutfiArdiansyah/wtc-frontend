@@ -1,65 +1,123 @@
 <style type="text/css">
-	.carousel-inner, .br-25 { 
-		border-radius: 25px;
+	.container {
+		width: 70.313rem !important;
 	}
-	.btn-join {
-		padding-top: 15px;
-		padding-bottom: 15px;
-		border-radius: 10px;
+
+	.title {
+		margin-top: 5.672rem;
+		font-size: 4.688rem;
+		line-height: 2.875rem;
 	}
-	p .description {
-		white-space: pre-line;
+
+	.desciprtion-title {
+		margin-top: 2.906rem;
+		margin-bottom: 4.797rem;
+		width: 52.313rem;
+		text-align: center;
+		font-family: 'Fira Sans', sans-serif;
+	}
+
+	.card {
+		width: 67.063rem;
+		height: 21.563rem;
+		background-color: #E8E8E8;
+		border: none;
+		border-radius: 2.344rem;
+		margin-bottom: 1.875rem;
+	}
+
+	.container-card {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 56.906rem;
+	}
+
+	.title-communities {
+		font-size: 2.578rem;
+		line-height: 2.875rem;
+	}
+
+	.description-communities {
+		font-size: 0.938rem;
+		line-height: 1.25rem;
+		font-family: 'Fira Sans', sans-serif;
+	}
+
+	.btn-learn-more {
+		width: 11.688rem;
+		height: 3.344rem;
+		background-color: var(--bs-primary);
+		color: white;
+		border-radius: 0.938rem;
+		border: none;
+		font-weight: 600;
+		font-size: 1.406rem;
+		line-height: 2.875rem;
 	}
 </style>
 <div class="container">
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-indicators">
-			<?php foreach ($data->banner as $key => $value) { ?>
-				<?php if ($key == 0) { ?>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $key; ?>" class="active" aria-current="true" aria-label="<?php echo $value->alternativeText; ?>"></button>
-				<?php } else { ?>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $key; ?>" aria-label="<?php echo $value->alternativeText; ?>"></button>
-				<?php } ?>
-			<?php } ?>
-		</div>
-		<div class="carousel-inner">
-			<?php foreach ($data->banner as $key => $value) { ?>
-				<?php if ($key == 0) { ?>
-					<div class="carousel-item active">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
-						<div class="carousel-caption d-none d-md-block">
-							<h5><?php echo $data->title; ?></h5>
-						</div>
+	<h1 class="title fw-bold color-primary mx-auto text-center"><?php echo $data->title; ?></h1>
+	<p class="desciprtion-title mx-auto fw-bold"><?php echo $data->description; ?></p>
+	<div class="card mx-auto">
+		<div class="card-body">
+			<div class="container-card mx-auto">
+				<div class="row">
+					<div class="col-3">
+						<p class="title-communities fw-bold">Nextgen</p>
 					</div>
-				<?php } else { ?>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="<?php echo STRAPI_URL.$value->url; ?>" alt="<?php echo STRAPI_URL.$value->alternativeText; ?>">
-						<div class="carousel-caption d-none d-md-block">
-							<h5><?php echo $data->title; ?></h5>
-						</div>
+					<div class="col-6">
+						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
 					</div>
-				<?php } ?>
-
-
-			<?php } ?>
+					<div class="col-3">
+						<a href="#">
+							<button class="btn-learn-more">Learn More</button>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
 	</div>
-	<div class="row justify-content-center w-75 mx-auto" >
-		<div class="col-lg-8 col-sm-12  mt-5" style="background-color:white; border-radius: 10px; padding:10px">
-			<p class="mx-auto description" style="color: var(--bs-primary);"><?php echo $data->description; ?></p>
+
+	<div class="card mx-auto">
+		<div class="card-body">
+			<div class="container-card mx-auto">
+				<div class="row">
+					<div class="col-3">
+						<p class="title-communities fw-bold">Carecell</p>
+					</div>
+					<div class="col-6">
+						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
+					</div>
+					<div class="col-3">
+						<a href="#">
+							<button class="btn-learn-more">Learn More</button>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-lg-4  col-sm-12 text-center mt-5">
-			<a href="<?php echo base_url().$data->button_link; ?>"><button type="button" class="btn btn-primary mx-auto w-50 fw-bold btn-join"><?php echo $data->button_name; ?></button></a>
+	</div>
+
+	<div class="card mx-auto">
+		<div class="card-body">
+			<div class="container-card mx-auto">
+				<div class="row">
+					<div class="col-3">
+						<p class="title-communities fw-bold">Global Church</p>
+					</div>
+					<div class="col-6">
+						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
+					</div>
+					<div class="col-3">
+						<a href="#">
+							<button class="btn-learn-more">Learn More</button>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-<br/>
-<br/>
