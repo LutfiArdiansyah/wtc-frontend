@@ -3,15 +3,57 @@
 		padding-top: 25px;
 		border-radius: 25px;
 	}
+
 	p .description {
 		white-space: pre-line;
 	}
+
+	.container {
+		width: 70.313rem !important;
+	}
+
+	.title {
+		margin-top: 2.906rem;
+		font-weight: 600;
+		font-size: 4.688rem;
+		line-height: 2.875rem;
+	}
+
+	.subtitle {
+		margin-top: 2.906rem;
+		width: 52.313rem;
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: bold;
+		font-size: 1.313rem;
+		line-height: 1.938rem;
+	}
+
+	.card {
+		background-color: var(--bs-primary);
+		border: none;
+		border-radius: 0.703rem;
+		height: 11.672rem;
+		margin-bottom: 1.078rem;
+	}
+
+	.title-content {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 600;
+		font-size: 2.578rem;
+		line-height: 2.875rem;
+		white-space: pre-line;
+		color: white;
+		font-family: var(--bs-body-font-family) !important;
+	}
 </style>
 <div class="container text-center">
-	<h1 class="fw-bold" style="color: var(--bs-primary);"><?php echo $data->name; ?></h1>
-	<br/>
-	<p class="w-75 fw-bold mx-auto description"><?php echo $data->description; ?></p>
-	<br/>
+	<h1 class="fw-bold color-primary title"><?php echo $data->name; ?></h1>
+	<p class="subtitle mx-auto"><?php echo $data->description; ?></p>
+	<br />
 	<div class="text-center w-50 mx-auto">
 		<div class="row">
 			<div class="col-12">
@@ -33,26 +75,18 @@
 			</div>
 		</div>
 	</div>
-	<br/>
+	<br />
 	<div class="row">
-		<?php foreach ($articles as $key => $value) {?>
+		<?php foreach ($articles as $key => $value) { ?>
 			<div class="col-6 text-center">
-				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img class="d-block w-100 br-25" src="<?php echo STRAPI_URL.$value->banner[0]->url; ?>" alt="<?php $value->banner[0]->alternativeText; ?>">
-							<div class="carousel-caption d-none d-md-block fw-bold">
-								<a style="color:white;" href="<?php echo base_url(); ?>articles?id=<?php echo $value->id; ?>">
-									<h5><?php echo $value->title; ?></h5>
-								</a>
-							</div>
-						</div>
+				<div class="card mx-auto">
+					<div class="card-body">
+						<a style="color:white;" href="<?php echo base_url(); ?>articles?id=<?php echo $value->id; ?>">
+							<h1 class="title-content"><?php echo $value->title; ?></h1>
+						</a>
 					</div>
 				</div>
 			</div>
-			
 		<?php } ?>
 	</div>
 </div>
-<br/>
-<br/>
