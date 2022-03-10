@@ -11,7 +11,8 @@ class Newchristianity extends MY_Controller
 			array('name' => 'Baru dalam Kekristenan')
 		);
 		$this->load->view('templates/header', $data);
-		$this->load->view('index');
+		$data['datas'] = $this->get("/wtc-new-to-christianity");
+		$this->load->view('index', $data);
 		$data['head_office'] = $this->get("/wtc-worship-places/1");
 		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
 		$this->load->view('templates/footer', $data);

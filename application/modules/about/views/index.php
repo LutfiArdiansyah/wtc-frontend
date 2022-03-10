@@ -6,6 +6,13 @@
 		line-height: 1.25rem;
 	}
 
+	.description p {
+		margin-top: 1.25rem;
+		font-family: 'Fira Sans', sans-serif;
+		font-size: 0.938rem;
+		line-height: 1.25rem !important;
+	}
+
 	p.description-spirit {
 		white-space: pre-line;
 		font-family: 'Fira Sans', sans-serif;
@@ -67,19 +74,22 @@
 			<div style="background-color:white; border-radius: 1.172rem; padding: 0 1.641rem 0.984rem 1.594rem;">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
-						<p class="description">
-							GBI WTC lahir dari visi yang Tuhan sampaikan langsung kepada Pdt. Dr. Ir. Yonathan Wiryohadi (Senior Pastor) untuk membangun mezbah baru bagi Tuhan. Mezbah berbicara tentang tempat kesukaan Tuhan, dimana Tuhan dapat memanifestasikan diri kepada umat-Nya sehingga berkesempatan mengalami perjumpaan dengan Tuhan untuk kemudian bertumbuh, mengalami perubahan hidup, dan menjadi berkat bagi komunitas, kota dan bangsanya.
-
-							Bersama Pdt. Djuhardi Hardja, SE (Associate Senior Pastor), Pdt. Ir. Bebas Pinem, MM. MTH (Associate Senior Pastor), Pdp. Lie Darmawan, S.Kom (Associate Senior Pastor) dan beberapa anggota lainnya, GBI WTC melaksanakan ibadah perdana pada 22 Februari 2004. Ibadah yang semula dihadiri oleh sekitar 300 jemaat, terus mengalami pertambahan dan pertumbuhan jiwa yang amat signifikan.
-						</p>
+						<div class="description">
+							<?php echo $this->markdown->parse($data->about);?>
+						</div>
 					</div>
 					<div class="col-lg-6 col-sm-12">
+						<div class="description">
+							<?php echo $this->markdown->parse($data->about);?>
+						</div>
+					</div>
+					<!-- <div class="col-lg-6 col-sm-12">
 						<p class="description">
 							Saat ini terhitung ada 15.000 lebih orang percaya dan 57 gereja cabang yang Tuhan percayakan kepada GBI WTC, dan itu akan terus bertambah dan bertumbuh!
 
-Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (Pilar Spiritual dan Sosial, Pilar Keluarga, Pilar Bisnis, Pilar Pendidikan, Pilar Pemerintahan dan Politik, Pilar Seni dan Hiburan, Pilar Media). Di dalam bimbingan Senior Pastor, seluruh pelayanan ministri bersinergi untuk menjangkau jiwa-jiwa dan berkontribusi positif bagi penyelesaian berbagai masalah yang terjadi dalam komunitas, kota maupun bangsa selaras keinginan hati Tuhan, sehingga Kerajaan surga bisa ditegakkan di muka bumi. 
+							Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (Pilar Spiritual dan Sosial, Pilar Keluarga, Pilar Bisnis, Pilar Pendidikan, Pilar Pemerintahan dan Politik, Pilar Seni dan Hiburan, Pilar Media). Di dalam bimbingan Senior Pastor, seluruh pelayanan ministri bersinergi untuk menjangkau jiwa-jiwa dan berkontribusi positif bagi penyelesaian berbagai masalah yang terjadi dalam komunitas, kota maupun bangsa selaras keinginan hati Tuhan, sehingga Kerajaan surga bisa ditegakkan di muka bumi.
 						</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -141,7 +151,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 						<p class="description">
 							<?php echo $value->description; ?>
 						</p>
-						<br/>
+						<br />
 						<p class="fw-bold">
 							<span><i class="fab fa-instagram"></i>&nbsp;
 								<a href="<?php echo $value->instagram_link_1; ?>" target="_blank"><?php echo $value->instagram_1; ?></a>
@@ -169,7 +179,7 @@ Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p class="description-values">
-				To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.
+					To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.
 				</p>
 			</div>
 		</div>

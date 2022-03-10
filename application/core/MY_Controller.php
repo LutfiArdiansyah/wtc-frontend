@@ -32,6 +32,8 @@ class MY_Controller extends MX_Controller
 
         // Copyright
         $this->data['copyright'] = $date;
+
+      	$this->load->library('markdown');
     }
 
     public function get($url='')

@@ -4,13 +4,13 @@
 		border-radius: 25px;
 	}
 
-	.description {
+	.description p {
 		white-space: pre-line;
 		font-family: 'Fira Sans', sans-serif;
 		width: 62.016rem;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 1.125rem;
+		font-size: 1.125rem !important;
 		line-height: 1.375rem;
 	}
 
@@ -87,17 +87,17 @@
 	<div class="card mx-auto">
 		<div class="card-body">
 			<h1 class="title text-center fw-bold mx-auto">Tentang</h1>
-			<p class="description mx-auto text-center">
-				<?php echo $article->about; ?>
-			</p>
+			<div class="description mx-auto text-center">
+				<?php echo $this->markdown->parse($article->about); ?>
+			</div>
 		</div>
 	</div>
 	<div class="card mx-auto">
 		<div class="card-body">
 			<h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
-			<p class="description mx-auto text-center">
-				<?php echo $article->leadership; ?>
-			</p>
+			<div class="description mx-auto text-center">
+				<?php echo $this->markdown->parse($article->leadership); ?>
+			</div>
 		</div>
 	</div>
 </div>
