@@ -13,7 +13,8 @@
 		font-size: 1.125rem !important;
 		line-height: 1.375rem;
 		margin: 0 auto;
-		padding-bottom: 1rem;
+		padding-top: 0.75rem;
+		padding-bottom: 0.5rem;
 	}
 
 	.container {
