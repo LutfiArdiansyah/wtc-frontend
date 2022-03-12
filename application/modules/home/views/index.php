@@ -92,13 +92,13 @@
 					<div class="carousel-caption d-none d-md-block">
 						<div class="row justify-content-center">
 							<div class="col-6">
-								<a href="http://ruangan.info/onsite" target="_blank">
-									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Register Onsite Service</button>
+								<a href="<?php echo $data->banner_button_link_1; ?>" target="_blank">
+									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_1; ?></button>
 								</a>
 							</div>
 							<div class="col-6">
-								<a href="<?php echo $data->youtube_link; ?>">
-									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;">Watch Online Service</button>
+								<a href="<?php echo $data->banner_button_link_2; ?>" target="_blank">
+									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_2; ?></button>
 								</a>
 							</div>
 						</div>
