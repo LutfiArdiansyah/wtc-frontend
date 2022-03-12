@@ -38,14 +38,12 @@
     }
 </style>
 <div class="container">
-    <h1 class="title-page fw-bold color-primary text-center"><?php echo $data['title']; ?></h1>
+    <h1 class="title-page fw-bold color-primary text-center"><?php echo $data[0]->title; ?></h1>
     <div class="card mx-auto">
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Tentang</h1>
             <p class="description mx-auto text-center">
-                <?php //echo $article->content; 
-                ?>
-                Dibentuk untuk memberi makan kota dengan memenuhi kebutuhan akan makanan sehat. Untuk itu HOB mengembangkan sistem pertanian yang terintegrasi, terdiri dari pertanian sayuran dan buah-buahan organik dan hidroponik dengan Green House, juga perternakan ikan nila.
+                <?php echo $data[0]->about; ?>
             </p>
         </div>
     </div>
@@ -53,17 +51,17 @@
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
             <p class="description mx-auto text-center">
-                Pdt. Ir. Bebas Pinem sebagai Ketua Pengurus
+                <?php echo $this->markdown->parse($data[0]->leadership); ?>
             </p>
         </div>
     </div>
     <div class="card mx-auto">
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Sosial Media</h1>
-            <a class="color-primary" href="#">
+            <a class="color-primary" href="<?php echo $data[0]->social_media_link; ?>">
                 <u class="color-primary">
                     <p class="description mx-auto text-center color-primary">
-                        Facebook Group
+                        <?php echo $data[0]->social_media_name; ?>
                     </p>
                 </u>
             </a>

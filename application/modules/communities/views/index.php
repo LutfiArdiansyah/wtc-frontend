@@ -61,38 +61,20 @@
 <div class="container">
 	<h1 class="title fw-bold color-primary mx-auto text-center"><?php echo $data->title; ?></h1>
 	<p class="desciprtion-title mx-auto fw-bold"><?php echo $data->description; ?></p>
-	<div class="card mx-auto">
-		<div class="card-body">
-			<div class="container-card mx-auto">
-				<div class="row">
-					<div class="col-3">
-						<p class="title-communities fw-bold">Nextgen</p>
-					</div>
-					<div class="col-6">
-						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
-					</div>
-					<div class="col-3">
-						<a href="./communitydetail?id=Nextgen">
-							<button class="btn-learn-more">Learn More</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
+	<?php foreach ($lists as $key => $value) { ?>
 	<div class="card mx-auto">
 		<div class="card-body">
 			<div class="container-card mx-auto">
 				<div class="row">
 					<div class="col-3">
-						<p class="title-communities fw-bold">Carecell</p>
+						<p class="title-communities fw-bold"><?php echo $value->title;?></p>
 					</div>
 					<div class="col-6">
-						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
+						<p class="description-communities"><?php echo $value->about;?></p>
 					</div>
 					<div class="col-3">
-						<a href="./communitydetail?id=Carecell">
+						<a href="./communitydetail?id=<?php echo $value->id;?>">
 							<button class="btn-learn-more">Learn More</button>
 						</a>
 					</div>
@@ -100,24 +82,6 @@
 			</div>
 		</div>
 	</div>
+	<?php } ?>
 
-	<div class="card mx-auto">
-		<div class="card-body">
-			<div class="container-card mx-auto">
-				<div class="row">
-					<div class="col-3">
-						<p class="title-communities fw-bold">Global Church</p>
-					</div>
-					<div class="col-6">
-						<p class="description-communities">Melayani kebutuhan jemaat dan memperlengkapi mereka untuk terlibat dalam pekerjaan Tuhan bagi hidup yang diberkati dan memberkati.</p>
-					</div>
-					<div class="col-3">
-						<a href="./communitydetail?id=Global%20Church">
-							<button class="btn-learn-more">Learn More</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>

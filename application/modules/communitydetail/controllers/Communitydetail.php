@@ -15,7 +15,7 @@ class Communitydetail extends MY_Controller
 			array('name' => $_GET['id'])
 		);
 		$this->load->view('templates/header', $data);
-		$data['data'] = array('title' => $_GET['id']);
+		$data['data'] = $this->get("/wtc-communities-lists?_where[id]=".$_GET['id']);
 		$this->load->view('index',  $data);
 		$data['head_office'] = $this->get("/wtc-worship-places/1");
 		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
