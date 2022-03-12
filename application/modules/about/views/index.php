@@ -75,12 +75,12 @@
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
 						<div class="description">
-							<?php echo $this->markdown->parse($data->about);?>
+							<?php echo $this->markdown->parse($data->about_left);?>
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 						<div class="description">
-							<?php echo $this->markdown->parse($data->about);?>
+							<?php echo $this->markdown->parse($data->about_right);?>
 						</div>
 					</div>
 					<!-- <div class="col-lg-6 col-sm-12">
@@ -179,7 +179,7 @@
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p class="description-values">
-					To reach people with the gospel, to disciple them by inculcating the Kingdom of Heaven to become a breakthrough church, to send them as an effective witness in the world.
+					<?php echo $data->values; ?>
 				</p>
 			</div>
 		</div>
