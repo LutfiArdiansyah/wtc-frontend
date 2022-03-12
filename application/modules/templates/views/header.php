@@ -91,7 +91,7 @@
 			<a class="nav-link" href="<?php echo base_url(); ?>connectwithus">Connect with Us</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>articles?id=1">Global Church</a>
+			<a class="nav-link" href="<?php echo base_url(); ?>communitydetail?id=3">Global Church</a>
 		</li>
 		<div class="dropdown login-btn">
 			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

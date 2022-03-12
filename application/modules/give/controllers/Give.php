@@ -11,7 +11,8 @@ class Give extends MY_Controller
 			array('name'=>'Persembahan')
 		);
 		$this->load->view('templates/header', $data);
-		$this->load->view('index');
+		$data["data"] = $this->get("/wtc-online-giving");
+		$this->load->view('index', $data);
 		$data['head_office'] = $this->get("/wtc-worship-places/1");
 		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
 		$this->load->view('templates/footer', $data);
