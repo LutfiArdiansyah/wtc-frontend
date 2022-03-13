@@ -73,26 +73,47 @@
 	</style>
 </head>
 
+<?php
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+		CURLOPT_PORT => "1337",
+		CURLOPT_URL => STRAPI_URL . '/wtc-menus',
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => "",
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 30,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => "GET",
+		CURLOPT_HTTPHEADER => array(
+		"cache-control: no-cache",
+	),
+	));
+
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
+
+	curl_close($curl);
+
+	if ($err) {
+		header('Location: '.base_url().'internalservererror');
+		return;
+	} else {
+		$menus = json_decode($response);
+	}
+?>
+
 <body>
 	<ul class="nav justify-content-center menu">
 		<a class="brand-logo" href="<?php echo base_url(); ?>home" style="">
 			<img src="assets/img/logo.png" alt="" width="168" height="60">
 		</a>
+		<?php foreach ($menus as $key => $value) { ?>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>about">About Us</a>
+			<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
 		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>ministries">Ministries</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>communities">Communities</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>connectwithus">Connect with Us</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>communitydetail?id=3">Global Church</a>
-		</li>
+		<?php } ?>
+
 		<div class="dropdown login-btn">
 			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;">ID</span>
