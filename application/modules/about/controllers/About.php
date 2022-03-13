@@ -6,6 +6,7 @@ class About extends MY_Controller {
 	public function index()
 	{
 		$data['data'] = $this->get('/wtc-about-us');
+		$data['spiritual_journey'] = $this->get('/wtc-spiritual-journey');
 		$this->load->view('templates/header');
 		$this->load->view('index', $data);
 		$data['head_office'] = $this->get("/wtc-worship-places/1");

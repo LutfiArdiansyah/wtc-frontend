@@ -192,7 +192,7 @@
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p class="description-spirit">
-					Help and encourage the congregation to actively participate in the journey of spiritual growth in the church and be involved in the church according to their calling. Churches and congregations are connected to each other without limits to synergize together and grow as one unitary Body of Christ.
+					<?php echo $spiritual_journey->description; ?>
 				</p>
 			</div>
 		</div>
@@ -203,8 +203,8 @@
 		</div>
 		<div class="col-lg-3 col-sm-12">
 			<div>
-				<a href="<?php echo base_url() . "spiritualjourney"; ?>">
-					<button type="button" class="btn btn-primary btn-learnmore fw-bold" style="background-color: color-primary; color:#fff;">Learn More</button>
+				<a href="<?php echo base_url() . $spiritual_journey->button_link; ?>">
+					<button type="button" class="btn btn-primary btn-learnmore fw-bold" style="background-color: color-primary; color:#fff;"><?php echo $spiritual_journey->button_name; ?></button>
 				</a>
 			</div>
 		</div>
