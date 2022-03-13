@@ -74,7 +74,6 @@
 </head>
 
 <?php
-
 	$curl = curl_init();
 
 	curl_setopt_array($curl, array(
@@ -109,21 +108,12 @@
 		<a class="brand-logo" href="<?php echo base_url(); ?>home" style="">
 			<img src="assets/img/logo.png" alt="" width="168" height="60">
 		</a>
+		<?php foreach ($menus as $key => $value) { ?>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>about">About Us</a>
+			<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
 		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>ministries">Ministries</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>communities">Communities</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>connectwithus">Connect with Us</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>communitydetail?id=3">Global Church</a>
-		</li>
+		<?php } ?>
+
 		<div class="dropdown login-btn">
 			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;">ID</span>
