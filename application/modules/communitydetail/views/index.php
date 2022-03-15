@@ -20,6 +20,17 @@
         line-height: 1.375rem;
     }
 
+    .description p {
+        white-space: pre-line;
+        font-family: 'Fira Sans', sans-serif;
+        width: 62.016rem;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin: 0 auto;
+    }
+
     .card {
         border: none;
         margin-top: 2.156rem;
@@ -50,9 +61,9 @@
     <div class="card mx-auto">
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
-            <p class="description mx-auto text-center">
+            <div class="description mx-auto text-center">
                 <?php echo $this->markdown->parse($data[0]->leadership); ?>
-            </p>
+            </div>
         </div>
     </div>
     <div class="card mx-auto">
