@@ -123,7 +123,7 @@
             <?php
             if ($index === 0) { ?>
                 <div class="carousel-item active">
-                    <img src="http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png" class="d-block w-100" alt="...">
+                    <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
                             <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
@@ -145,7 +145,7 @@
                 </div>
             <?php } else { ?>
                 <div class="carousel-item">
-                    <img src="http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png" class="d-block w-100" alt="...">
+                    <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
                             <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
