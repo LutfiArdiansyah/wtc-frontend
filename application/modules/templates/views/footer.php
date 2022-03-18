@@ -135,7 +135,7 @@
 							</h6>
 							<?php foreach ($data->download_list as $key => $value) { ?>
 								<p>
-									<a href="<?php echo $value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+									<a href="<?php echo $value->link; ?>" class="text-reset" target="_blank"><?php echo $value->name; ?></a>
 								</p>
 							<?php } ?>
 
