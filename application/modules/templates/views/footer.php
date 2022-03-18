@@ -29,6 +29,37 @@
 	}
 </style>
 <br><br><br>
+
+<?php
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+		CURLOPT_PORT => "1337",
+		CURLOPT_URL => STRAPI_URL . '/wtc-footer',
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => "",
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 30,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => "GET",
+		CURLOPT_HTTPHEADER => array(
+		"cache-control: no-cache",
+	),
+	));
+
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
+
+	curl_close($curl);
+
+	if ($err) {
+		header('Location: '.base_url().'internalservererror');
+		return;
+	} else {
+		$data = json_decode($response);
+	}
+?>
+
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
 	<!-- Section: Social media -->
@@ -66,41 +97,33 @@
 					<div class="col-lg-2 col-sm-12"></div>
 						<div class="col-lg-3 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Tentang Kami
+								<?php echo $data->about; ?> <!-- About Section -->
 							</h6>
-							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Tentang WTC</a>
-							</p>
-							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Kepemimpinan</a>
-							</p>
-							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Nilai-nilai</a>
-							</p>
-							<p>
-								<a href="<?php echo base_url(); ?>about" class="text-reset">Spiritual Journey</a>
-							</p>
+							<?php foreach ($data->about_list as $key => $value) { ?>
+								<p>
+									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+								</p>
+							<?php } ?>
 						</div>
 						<div class="col-lg-3 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Ministri
+								<?php echo $data->ministry; ?> <!-- Ministry Section -->
 							</h6>
-							<?php foreach ($minis_cat as $key => $value) { ?>
+							<?php foreach ($data->ministry_list as $key => $value) { ?>
 								<p>
-									<a href="<?php echo base_url() . 'ministriescategory?cat_id=' . $value->id; ?>" class="text-reset"><?php echo $value->name; ?></a>
+									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
 								</p>
 							<?php } ?>
 						</div>
 						<div class="col-lg-4 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Komunitas
+								<?php echo $data->community; ?> <!-- Community Section -->
 							</h6>
-							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">Nextgen</a>
-							</p>
-							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">Carecell</a>
-							</p>
+							<?php foreach ($data->community_list as $key => $value) { ?>
+								<p>
+									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+								</p>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -108,15 +131,14 @@
 					<div class="row">
 						<div class="col-lg-5 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Dapatkan Aplikasi
+								<?php echo $data->download; ?> <!-- Download Section -->
 							</h6>
-							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">WTC App untuk Android</a>
-							</p>
-							<p>
-								<a href="<?php echo base_url(); ?>" class="text-reset">WTC App untuk IOS</a>
-							</p>
-							<br />
+							<?php foreach ($data->download_list as $key => $value) { ?>
+								<p>
+									<a href="<?php echo $value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+								</p>
+							<?php } ?>
+
 							<p>
 								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/android.png'; ?>" />
 							</p>
@@ -126,7 +148,7 @@
 						</div>
 						<div class="col-lg-5 col-sm-12">
 							<h6 class="fw-bold mb-4 color-primary">
-								Sekretariat Gereja
+								<?php echo $data->secretary_office; ?> <!-- Secretary Office Section -->
 							</h6>
 							<p><a class="text-reset"><?php echo $head_office->address; ?></a></p>
 							<!-- <p>

@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="carousel-welcome text-center"><br><br>
-						<h1 class="welcome">Welcome to</h1>
+						<h1 class="welcome"><?php echo $data->caption_welcome; ?></h1>
 						<h1 class="welcome fw-bold"><?php echo $data->title; ?></h1>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 	<br />
 	<br />
 	<div class="text-center">
-		<h1 class="sosmed-location fw-bold">How can we help you?</h1>
+		<h1 class="sosmed-location fw-bold"><?php echo $data->caption_help; ?></h1>
 	</div>
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12  mt-4">
@@ -144,7 +144,7 @@
 	<br>
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
-			<h2 class="sosmed-location fw-bold">Social Media</h2>
+			<h2 class="sosmed-location fw-bold"><?php echo $data->caption_socmed; ?></h2>
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 mt-4">
 					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;">
@@ -155,7 +155,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
-			<h2 class="sosmed-location fw-bold">Locations Church</h2>
+			<h2 class="sosmed-location fw-bold"><?php echo $data->caption_location; ?></h2>
 			<a href="<?php echo base_url() . "connectwithus" ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><img src="<?php echo base_url() . 'assets/icons/map.svg' ?>" />&nbsp;Find your area</button>
 			</a>

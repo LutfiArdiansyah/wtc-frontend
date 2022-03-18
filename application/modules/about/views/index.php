@@ -138,7 +138,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Leadership</p>
+			<p id="leadership" class="fw-bold title-about">Leadership</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
@@ -174,7 +174,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Values</p>
+			<p id="values" class="fw-bold title-about">Values</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
@@ -187,7 +187,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Spiritual Journey</p>
+			<p id="spiritual-journey" class="fw-bold title-about">Spiritual Journey</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
