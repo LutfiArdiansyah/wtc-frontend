@@ -3,7 +3,7 @@
         font-size: 6.25rem;
     }
 
-    div.title-parallax {
+    div .active div.title-parallax {
         width: 99.1vw;
         height: 5.375rem;
         background-color: var(--bs-primary);
@@ -12,7 +12,7 @@
         z-index: 99;
     }
 
-    p.title-parallax {
+    div .active p.title-parallax {
         color: white !important;
         font-family: 'Fira Sans', sans-serif;
         font-style: normal;
@@ -22,7 +22,7 @@
         align-items: center;
     }
 
-    .title-content {
+    div .active .title-content {
         position: absolute;
         top: 0;
         z-index: 99;
@@ -35,7 +35,7 @@
         align-items: center;
     }
 
-    .div-description-content {
+    div .active .div-description-content {
         position: absolute;
         top: 0;
         z-index: 99;
@@ -112,52 +112,62 @@
 </p>
 <br />
 <br />
+
+
+
 <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png" class="d-block w-100" alt="...">
-            <div class="title-parallax pt-4" style="">
-                <div class="container">
-                    <p class="title-parallax">Spiritual Journey / Lahir Baru -></p>
-                    <p class="title-content">Lahir Baru</p>
-                    <div class="div-description-content row">
-                        <div class="col-5">
-                            <p class="description-content">Tanpa Kelahiran Baru seseorang tidak akan beroleh selamat. Keselamatan di dalam Kristus harus melewati proses Lahir Baru: Mengaku dosa, Meminta Pengampunan Dosa, Mengaku, Percaya Yesus, dan Menerima Yesus sebagai Juruselamat pribadi.</p>
+        <?php
+        $index = 0;
+        foreach ($datas as $key => $value) { ?>
+            <?php
+            if ($index === 0) { ?>
+                <div class="carousel-item active">
+                    <img src="http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png" class="d-block w-100" alt="...">
+                    <div class="title-parallax pt-4" style="">
+                        <div class="container">
+                            <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
+                            <p class="title-content"><?php echo $value->title; ?></p>
+                            <div class="div-description-content row">
+                                <div class="col-5">
+                                    <p class="description-content"><?php echo $value->description_1; ?></p>
+                                </div>
+                                <div class="col-5">
+                                    <p class="description-content"><?php echo $value->description_2; ?></p>
+                                </div>
+                            </div>
+                            <div class="footer-hr">
+                                <p class="badge-number mx-auto"><?php echo $index + 1; ?></p>
+                                <div class="line"></div>
+                            </div>
                         </div>
-                        <div class="col-5">
-                            <p class="description-content">Kelahiran baru tidak bisa ditunda, sebab itu pastikan Anda sudah lahir baru. Anda percaya sudah diselamatkan dan memiliki hidup kekal di dalam Yesus. Anda sudah hidup sebagai manusia yang baru, yaitu dengan roh dan hati yang baru, menjadi pribadi yang taat Firman-Nya.</p>
-                        </div>
-                    </div>
-                    <div class="footer-hr">
-                        <p class="badge-number mx-auto">1</p>
-                        <div class="line"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- <div class="carousel-item active">
-            <img src="http://wtc.a-aziz.tech:1337/uploads/5_34fa626da1.png" class="d-block w-100" alt="...">
-            <div class="title-parallax pt-4" style="">
-                <div class="container">
-                    <p class="title-parallax">Spiritual Journey / Baptis -></p>
-                    <p class="title-content">Baptis</p>
-                    <div class="div-description-content row">
-                        <div class="col-5">
-                            <p class="description-content">Tanpa Kelahiran Baru seseorang tidak akan beroleh selamat. Keselamatan di dalam Kristus harus melewati proses Lahir Baru: Mengaku dosa, Meminta Pengampunan Dosa, Mengaku, Percaya Yesus, dan Menerima Yesus sebagai Juruselamat pribadi.</p>
+            <?php } else { ?>
+                <div class="carousel-item">
+                    <img src="http://wtc.a-aziz.tech:1337/uploads/7_01d87a7a9b.png" class="d-block w-100" alt="...">
+                    <div class="title-parallax pt-4" style="">
+                        <div class="container">
+                            <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
+                            <p class="title-content"><?php echo $value->title; ?></p>
+                            <div class="div-description-content row">
+                                <div class="col-5">
+                                    <p class="description-content"><?php echo $value->description_1; ?></p>
+                                </div>
+                                <div class="col-5">
+                                    <p class="description-content"><?php echo $value->description_2; ?></p>
+                                </div>
+                            </div>
+                            <div class="footer-hr">
+                                <p class="badge-number mx-auto"><?php echo $index + 1; ?></p>
+                                <div class="line"></div>
+                            </div>
                         </div>
-                        <div class="col-5">
-                            <p class="description-content">Kelahiran baru tidak bisa ditunda, sebab itu pastikan Anda sudah lahir baru. Anda percaya sudah diselamatkan dan memiliki hidup kekal di dalam Yesus. Anda sudah hidup sebagai manusia yang baru, yaitu dengan roh dan hati yang baru, menjadi pribadi yang taat Firman-Nya.</p>
-                        </div>
-                    </div>
-                    <div class="footer-hr">
-                        <p class="badge-number mx-auto">2</p>
-                        <div class="line"></div>
                     </div>
                 </div>
-            </div>
-        </div> -->
-        <!-- <div class="carousel-item">
-            <img src="http://wtc.a-aziz.tech:1337/uploads/5_34fa626da1.png" class="d-block w-100" alt="...">
-        </div> -->
+            <?php } ?>
+        <?php
+            $index++;
+        } ?>
     </div>
 </div>
