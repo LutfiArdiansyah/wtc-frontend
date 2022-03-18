@@ -57,10 +57,10 @@
 	<div class="text-center w-50 mx-auto">
 		<div class="row">
 			<div class="col-12">
-				<form class="d-flex">
+				<form class="d-flex" action="<?php echo base_url().'ministriescategory?cat_id='.$data->id;?>" method="POST">
 					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-						<button class="btn btn-primary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+						<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" name="search" value="<?php echo $search;?>">
+						<button class="btn btn-primary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
 					</div>
 					&nbsp;
 					<div class="dropdown">
@@ -68,7 +68,8 @@
 							<i class="fas fa-sort"></i>&nbsp;Sort By
 						</button>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-							<li><a class="dropdown-item" href="#">Name</a></li>
+							<li><a class="dropdown-item" href="<?php echo base_url().'ministriescategory?cat_id='.$data->id;?>&sort=asc">Ascending</a></li>
+							<li><a class="dropdown-item" href="<?php echo base_url().'ministriescategory?cat_id='.$data->id;?>&sort=desc">Descending</a></li>
 						</ul>
 					</div>
 				</form>

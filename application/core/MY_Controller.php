@@ -2,74 +2,94 @@
 
 class MY_Controller extends MX_Controller
 {
-    //
-    public $CI;
+  //
+  public $CI;
 
-    /**
-     * An array of variables to be passed through to the
-     * view, layout,....
-     */
-    protected $data = array();
+  /**
+   * An array of variables to be passed through to the
+   * view, layout,....
+   */
+  protected $data = array();
 
-    /**
-     * [__construct description]
-     *
-     * @method __construct
-     */
-    public function __construct()
-    {
-        // To inherit directly the attributes of the parent class.
-        parent::__construct();
+  /**
+   * [__construct description]
+   *
+   * @method __construct
+   */
+  public function __construct()
+  {
+    // To inherit directly the attributes of the parent class.
+    parent::__construct();
 
-        // This function returns the main CodeIgniter object.
-        // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
-        $CI =& get_instance();
+    // This function returns the main CodeIgniter object.
+    // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
+    $CI = &get_instance();
 
-        // Copyright year calculation for the footer
-        $begin = 2019;
-        $end =  date("Y");
-        $date = "$begin - $end";
+    // Copyright year calculation for the footer
+    $begin = 2019;
+    $end =  date("Y");
+    $date = "$begin - $end";
 
-        // Copyright
-        $this->data['copyright'] = $date;
+    // Copyright
+    $this->data['copyright'] = $date;
 
-      	$this->load->library('markdown');
+    $this->load->library('markdown');
+
+    if (isset($_GET['locale'])) {
+      $newdata = array(
+        'locale'  => $_GET['locale']
+      );
+
+      $this->session->set_userdata($newdata);
     }
 
-    public function get($url='')
-    {
+    if ($this->session->userdata('locale') == null) {
+      $newdata = array(
+        'locale'  => 'en'
+      );
 
-        $curl = curl_init();
+      $this->session->set_userdata($newdata);
+    }
+  }
 
-        curl_setopt_array($curl, array(
-          CURLOPT_PORT => "1337",
-          CURLOPT_URL => STRAPI_URL . $url,
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 30,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "GET",
-          CURLOPT_HTTPHEADER => array(
-            "cache-control: no-cache",
-        ),
-      ));
+  public function get($url = '')
+  {
 
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
+    $curl = curl_init();
 
-        curl_close($curl);
+    curl_setopt_array($curl, array(
+      CURLOPT_PORT => "1337",
+      CURLOPT_URL => STRAPI_URL . $url,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => "",
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 30,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => "GET",
+      CURLOPT_HTTPHEADER => array(
+        "cache-control: no-cache",
+      ),
+    ));
 
-        if ($err) {
-          $filename = LOG_PATH.DIRECTORY_SEPARATOR.'error.log';
-          fopen($filename, 'w');
-          file_put_contents($filename, $err.PHP_EOL , FILE_APPEND | LOCK_EX);
-          header('Location: '.base_url().'internalservererror');
-          return;
-          // throw new Exception("Get error");
-          // echo "cURL Error #:" . $err;
-        } else {
-          return json_decode($response);
-      }
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+      $filename = LOG_PATH . DIRECTORY_SEPARATOR . 'error.log';
+      fopen($filename, 'w');
+      file_put_contents($filename, $err . PHP_EOL, FILE_APPEND | LOCK_EX);
+      header('Location: ' . base_url() . 'internalservererror');
+      return;
+      // throw new Exception("Get error");
+      // echo "cURL Error #:" . $err;
+    } else {
+      return json_decode($response);
+    }
+  }
+
+  public function getLocale() {
+    return "_locale=".$this->session->userdata('locale');
   }
 }

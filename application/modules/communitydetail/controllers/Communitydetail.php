@@ -10,15 +10,12 @@ class Communitydetail extends MY_Controller
 			header('Location: ' . base_url());
 			return;
 		}
-		$data['breadcrumb'] = array(
-			array('name' => 'Komunitas'),
-			array('name' => $_GET['id'])
-		);
+		$data['data'] = $this->get("/wtc-communities-lists/".$_GET['id'] .'?'.$this->getLocale());
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=".urlencode($data['data']->title)."&_sort=sort:asc&".$this->getLocale());
 		$this->load->view('templates/header', $data);
-		$data['data'] = $this->get("/wtc-communities-lists?_where[id]=".$_GET['id']);
 		$this->load->view('index',  $data);
-		$data['head_office'] = $this->get("/wtc-worship-places/1");
-		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$data['head_office'] = $this->get("/wtc-worship-places/1?".$this->getLocale());
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories?".$this->getLocale());
 		$this->load->view('templates/footer', $data);
 	}
 }

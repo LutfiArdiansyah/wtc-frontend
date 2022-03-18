@@ -74,33 +74,33 @@
 </head>
 
 <?php
-	$curl = curl_init();
+$curl = curl_init();
 
-	curl_setopt_array($curl, array(
-		CURLOPT_PORT => "1337",
-		CURLOPT_URL => STRAPI_URL . '/wtc-menus',
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_ENCODING => "",
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 30,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => "GET",
-		CURLOPT_HTTPHEADER => array(
+curl_setopt_array($curl, array(
+	CURLOPT_PORT => "1337",
+	CURLOPT_URL => STRAPI_URL . '/wtc-menus',
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "GET",
+	CURLOPT_HTTPHEADER => array(
 		"cache-control: no-cache",
 	),
-	));
+));
 
-	$response = curl_exec($curl);
-	$err = curl_error($curl);
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-	curl_close($curl);
+curl_close($curl);
 
-	if ($err) {
-		header('Location: '.base_url().'internalservererror');
-		return;
-	} else {
-		$menus = json_decode($response);
-	}
+if ($err) {
+	header('Location: ' . base_url() . 'internalservererror');
+	return;
+} else {
+	$menus = json_decode($response);
+}
 ?>
 
 <body>
@@ -109,18 +109,18 @@
 			<img src="assets/img/logo.png" alt="" width="168" height="60">
 		</a>
 		<?php foreach ($menus as $key => $value) { ?>
-		<li class="nav-item">
-			<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
-		</li>
+			<li class="nav-item">
+				<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
+			</li>
 		<?php } ?>
 
 		<div class="dropdown login-btn">
 			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;">ID</span>
+				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;"><?php echo strtoupper($this->session->userdata('locale')) ?></span>
 			</button>
 			<ul class="dropdown-menu list-dropdown" aria-labelledby="dropdownMenuButton1">
-				<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">EN</span></a></li>
-				<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">ID</span></a></li>
+				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url().'?locale=en'?>"><span class="list-language">EN</span></a></li>
+				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url().'?locale=id'?>"><span class="list-language">ID</span></a></li>
 			</ul>
 		</div>
 
@@ -137,6 +137,7 @@
 	<br />
 	<div class="container">
 		<div class="container-breadcrumb mx-auto">
+			
 			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { ?>
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
@@ -147,8 +148,8 @@
 									echo '<i class="fas fa-caret-left"></i>&nbsp;&nbsp;';
 								}
 								?>
-								<a href="#" class="breadcrumb-text">
-									<?php echo $breadcrumb[$i]['name']; ?>
+								<a href="<?php echo base_url().$breadcrumb[$i]->url; ?>" class="breadcrumb-text">
+									<?php echo $breadcrumb[$i]->name; ?>
 								</a>
 							</li>
 						<?php } ?>

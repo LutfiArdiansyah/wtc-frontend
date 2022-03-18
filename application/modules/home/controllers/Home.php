@@ -5,11 +5,11 @@ class Home extends MY_Controller {
 
 	public function index()
 	{
-		$data['data'] = $this->get("/wtc-landing-page");
+		$data['data'] = $this->get("/wtc-landing-page?".$this->getLocale());
 		$this->load->view('templates/header');
 		$this->load->view('index', $data);
-		$data['head_office'] = $this->get("/wtc-worship-places/1");
-		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$data['head_office'] = $this->get("/wtc-worship-places/1?".$this->getLocale());
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories?".$this->getLocale());
 		$this->load->view('templates/footer',$data);
 	}
 

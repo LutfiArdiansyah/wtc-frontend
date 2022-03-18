@@ -6,16 +6,16 @@ class Connectwithus extends MY_Controller {
 	public function index()
 	{
 		if (isset($_GET['area_id'])) {
-			$data["worship"] = $this->get("/wtc-worship-places?id_ne=1&wtc_location_area.id=".$_GET['area_id']);
+			$data["worship"] = $this->get("/wtc-worship-places?id_ne=1&wtc_location_area.id=".$_GET['area_id'].'&'.$this->getLocale());
 		} else {
-			$data["worship"] = $this->get("/wtc-worship-places?id_ne=1");
+			$data["worship"] = $this->get("/wtc-worship-places?id_ne=1".'&'.$this->getLocale());
 		}
-		$data["data_worship"] = $this->get("/wtc-worship-places/1");
+		$data["data_worship"] = $this->get("/wtc-worship-places/1?".$this->getLocale());
 		$data["areas"] = $this->get("/wtc-location-areas?id_ne=1");
 		$this->load->view('templates/header');
 		$this->load->view('index', $data);
-		$data['head_office'] = $this->get("/wtc-worship-places/1");
-		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
+		$data['head_office'] = $this->get("/wtc-worship-places/1?".$this->getLocale());
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories?".$this->getLocale());
 		$this->load->view('templates/footer',$data);
 	}
 

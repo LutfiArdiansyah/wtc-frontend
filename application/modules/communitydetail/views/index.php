@@ -49,12 +49,12 @@
     }
 </style>
 <div class="container">
-    <h1 class="title-page fw-bold color-primary text-center"><?php echo $data[0]->title; ?></h1>
+    <h1 class="title-page fw-bold color-primary text-center"><?php echo $data->title; ?></h1>
     <div class="card mx-auto">
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Tentang</h1>
             <p class="description mx-auto text-center">
-                <?php echo $data[0]->about; ?>
+                <?php echo $data->about; ?>
             </p>
         </div>
     </div>
@@ -62,17 +62,17 @@
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
             <div class="description mx-auto text-center">
-                <?php echo $this->markdown->parse($data[0]->leadership); ?>
+                <?php echo $this->markdown->parse($data->leadership); ?>
             </div>
         </div>
     </div>
     <div class="card mx-auto">
         <div class="card-body">
             <h1 class="title text-center fw-bold mx-auto">Sosial Media</h1>
-            <a class="color-primary" href="<?php echo $data[0]->social_media_link; ?>">
+            <a class="color-primary" href="<?php echo $data->social_media_link; ?>">
                 <u class="color-primary">
                     <p class="description mx-auto text-center color-primary">
-                        <?php echo $data[0]->social_media_name; ?>
+                        <?php echo $data->social_media_name; ?>
                     </p>
                 </u>
             </a>
