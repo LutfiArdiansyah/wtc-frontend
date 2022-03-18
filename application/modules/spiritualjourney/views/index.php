@@ -99,7 +99,7 @@
     }
 
     .line {
-        width: 1162px;
+        width: 1160px;
         color: var(--bs-primary);
         border-bottom: 1px solid;
         display: inline-block;

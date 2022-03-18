@@ -16,10 +16,6 @@
 		padding: 34px;
 	}
 
-	.container {
-		width: 70.313rem !important;
-	}
-
 	.btn-list {
 		height: 70px;
 		border-radius: 0;
@@ -93,8 +89,12 @@
 		top: 34px;
 		right: 34px;
 	}
+
+	.content {
+		max-width: 69.141rem !important;
+	}
 </style>
-<div class="container">
+<div class="content mx-auto">
 	<div class="card br-15">
 		<div class="card-body">
 			<h1 class="color-primary text-center fw-bold">Connect with Us</h1>
@@ -106,16 +106,16 @@
 							<h5 class="fw-bold">Office</h5>
 							<hr />
 							<div class="row">
-								<div class="col-1"><i class="far fa-calendar color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="far fa-calendar color-primary"></i></div>
+								<div class="col-10">
 									<p><?php echo $data_worship->day; ?></p>
 								</div>
-								<div class="col-1"><i class="far fa-clock color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="far fa-clock color-primary"></i></div>
+								<div class="col-10">
 									<p><?php echo $data_worship->time; ?></p>
 								</div>
-								<div class="col-1"><i class="far fa-map-marker-alt color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="far fa-map-marker-alt color-primary"></i></div>
+								<div class="col-10">
 									<p class="address"><?php echo $data_worship->address; ?></p>
 								</div>
 							</div>
@@ -124,13 +124,13 @@
 							<h5 class="fw-bold">Hotline Number</h5>
 							<hr />
 							<div class="row">
-								<div class="col-1"><i class="far fa-phone color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="far fa-phone color-primary"></i></div>
+								<div class="col-10">
 									<p><?php echo $data_worship->phone_1; ?></p>
 								</div>
 								<?php if (isset($data_worship->phone_2)) { ?>
-									<div class="col-1"><i class="far fa-phone color-primary"></i></div>
-									<div class="col-11">
+									<div class="col-2"><i class="far fa-phone color-primary"></i></div>
+									<div class="col-10">
 										<p><?php echo $data_worship->phone_2; ?></p>
 									</div>
 								<?php } ?>
@@ -139,14 +139,14 @@
 							<h5 class="fw-bold">Social Media</h5>
 							<hr />
 							<div class="row">
-								<div class="col-1"><i class="fab fa-instagram color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="fab fa-instagram color-primary"></i></div>
+								<div class="col-10">
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
 										<p><?php echo $data_worship->instagram_name; ?></p>
 									</a>
 								</div>
-								<div class="col-1"><i class="fab fa-youtube color-primary"></i></div>
-								<div class="col-11">
+								<div class="col-2"><i class="fab fa-youtube color-primary"></i></div>
+								<div class="col-10">
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
 										<p><?php echo $data_worship->youtube_name; ?></p>
 									</a>
@@ -180,9 +180,9 @@
 
 	<div class="row">
 		<?php foreach ($worship as $key => $value) { ?>
-			<div class="col-6">
+			<div class="col-6 mb-4">
 				<button class="btn btn-primary w-100 btn-list fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $value->id; ?>" aria-expanded="false" aria-controls="collapseExample">
-					WTC Ballroom
+					<?php echo $value->name; ?>
 					<span class="carret-dropdown">&nbsp;</span>
 				</button>
 				<div class="collapse" id="collapse<?php echo $value->id; ?>">
