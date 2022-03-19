@@ -7,7 +7,6 @@
 	.description p {
 		white-space: pre-line;
 		font-family: 'Fira Sans', sans-serif;
-		width: 62.016rem;
 		font-style: normal;
 		font-weight: normal;
 		font-size: 1.125rem !important;
@@ -17,9 +16,7 @@
 		padding-bottom: 0.5rem;
 	}
 
-	.container {
-		width: 70.313rem !important;
-	}
+	.container {}
 
 	.title-banner {
 		color: white;
@@ -42,8 +39,22 @@
 	}
 
 	.img-carousel {
-		width: 1125px !important;
 		height: 633px !important;
+	}
+
+	@media (min-width: 992px) {
+		.img-carousel {
+			width: 1125px !important;
+			height: 633px !important;
+		}
+
+		.container {
+			width: 70.313rem !important;
+		}
+
+		.description p {
+			width: 62.016rem;
+		}
 	}
 </style>
 <div class="container mx-auto">

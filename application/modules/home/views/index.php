@@ -67,12 +67,17 @@
 		width: 80%;
 	}
 
-	.banner-carousel {
-	}
+	.banner-carousel {}
 
 	.img-carousel {
-		width: 70vw !important;
 		height: 633px !important;
+	}
+
+	@media (min-width: 992px) {
+		.img-carousel {
+			width: 1125px !important;
+			height: 633px !important;
+		}
 	}
 </style>
 <div class="container">
