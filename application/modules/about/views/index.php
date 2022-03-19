@@ -83,13 +83,6 @@
 							<?php echo $this->markdown->parse($data->about_right); ?>
 						</div>
 					</div>
-					<!-- <div class="col-lg-6 col-sm-12">
-						<p class="description">
-							Saat ini terhitung ada 15.000 lebih orang percaya dan 57 gereja cabang yang Tuhan percayakan kepada GBI WTC, dan itu akan terus bertambah dan bertumbuh!
-
-							Beragam ministri lahir untuk menduduki dan melayani di ketujuh pilar kehidupan (Pilar Spiritual dan Sosial, Pilar Keluarga, Pilar Bisnis, Pilar Pendidikan, Pilar Pemerintahan dan Politik, Pilar Seni dan Hiburan, Pilar Media). Di dalam bimbingan Senior Pastor, seluruh pelayanan ministri bersinergi untuk menjangkau jiwa-jiwa dan berkontribusi positif bagi penyelesaian berbagai masalah yang terjadi dalam komunitas, kota maupun bangsa selaras keinginan hati Tuhan, sehingga Kerajaan surga bisa ditegakkan di muka bumi.
-						</p>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -112,10 +105,10 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about"><?php echo $data->caption_vision; ?></p>
+			<p class="fw-bold title-about"><?php echo $data->caption_vision; ?></p> <!-- Section Vision -->
 		</div>
 		<div class="col-lg-9 col-sm-12">
-			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
+			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p style="color: var(--bs-primary);" class="visimisi fw-bold">
 					<?php echo $data->vision; ?>
 				</p>
@@ -125,10 +118,10 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about"><?php echo $data->caption_mission; ?></p>
+			<p class="fw-bold title-about"><?php echo $data->caption_mission; ?></p> <!-- Section Mission -->
 		</div>
 		<div class="col-lg-9 col-sm-12">
-			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
+			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p style="color: var(--bs-primary);" class="visimisi  fw-bold">
 					<?php echo $data->mission; ?>
 				</p>
@@ -176,7 +169,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p id="values" class="fw-bold title-about"><?php echo $data->caption_values; ?></p>
+			<p id="values" class="fw-bold title-about"><?php echo $data->caption_values; ?></p> <!-- Section Values -->
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
