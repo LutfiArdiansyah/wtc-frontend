@@ -4,6 +4,7 @@
 		height: 33px;
 		width: 33px;
 	}
+
 	a {
 		text-decoration: none;
 		color: black !important;
@@ -11,53 +12,57 @@
 		font-size: 0.938rem;
 		font-weight: bold;
 	}
+
 	p {
 		color: black;
 		font-size: 1.25rem;
 	}
+
 	h6 {
 		font-size: 0.938rem;
 		font-weight: bold;
 	}
+
 	.apps-logo {
 		height: 2.344rem;
 	}
+
 	.copyright {
-		color: #7C8DB0; 
-		font-size:0.844rem;
+		color: #7C8DB0;
+		font-size: 0.844rem;
 		font-family: 'Nunito Sans', sans-serif;
 	}
 </style>
 <br><br><br>
 
 <?php
-	$curl = curl_init();
+$curl = curl_init();
 
-	curl_setopt_array($curl, array(
-		CURLOPT_PORT => "1337",
-		CURLOPT_URL => STRAPI_URL . '/wtc-footer?_locale='.$this->session->userdata('locale'),
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_ENCODING => "",
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 30,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => "GET",
-		CURLOPT_HTTPHEADER => array(
+curl_setopt_array($curl, array(
+	CURLOPT_PORT => "1337",
+	CURLOPT_URL => STRAPI_URL . '/wtc-footer?_locale=' . $this->session->userdata('locale'),
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "GET",
+	CURLOPT_HTTPHEADER => array(
 		"cache-control: no-cache",
 	),
-	));
+));
 
-	$response = curl_exec($curl);
-	$err = curl_error($curl);
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-	curl_close($curl);
+curl_close($curl);
 
-	if ($err) {
-		header('Location: '.base_url().'internalservererror');
-		return;
-	} else {
-		$data = json_decode($response);
-	}
+if ($err) {
+	header('Location: ' . base_url() . 'internalservererror');
+	return;
+} else {
+	$data = json_decode($response);
+}
 ?>
 
 <!-- Footer -->
@@ -94,34 +99,37 @@
 			<div class="row mt-3 mb-5">
 				<div class="col-lg-6 col-sm-12">
 					<div class="row">
-					<div class="col-lg-2 col-sm-12"></div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-2 col-sm-12"></div>
+						<div class="col-lg-3 col-sm-4">
 							<h6 class="fw-bold mb-4 color-primary">
-								<?php echo $data->about; ?> <!-- About Section -->
+								<?php echo $data->about; ?>
+								<!-- About Section -->
 							</h6>
 							<?php foreach ($data->about_list as $key => $value) { ?>
 								<p>
-									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+									<a href="<?php echo base_url() . $value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
 								</p>
 							<?php } ?>
 						</div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-3 col-sm-4">
 							<h6 class="fw-bold mb-4 color-primary">
-								<?php echo $data->ministry; ?> <!-- Ministry Section -->
+								<?php echo $data->ministry; ?>
+								<!-- Ministry Section -->
 							</h6>
 							<?php foreach ($data->ministry_list as $key => $value) { ?>
 								<p>
-									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+									<a href="<?php echo base_url() . $value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
 								</p>
 							<?php } ?>
 						</div>
-						<div class="col-lg-4 col-sm-12">
+						<div class="col-lg-4 col-sm-4">
 							<h6 class="fw-bold mb-4 color-primary">
-								<?php echo $data->community; ?> <!-- Community Section -->
+								<?php echo $data->community; ?>
+								<!-- Community Section -->
 							</h6>
 							<?php foreach ($data->community_list as $key => $value) { ?>
 								<p>
-									<a href="<?php echo base_url().$value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
+									<a href="<?php echo base_url() . $value->link; ?>" class="text-reset"><?php echo $value->name; ?></a>
 								</p>
 							<?php } ?>
 						</div>
@@ -129,9 +137,10 @@
 				</div>
 				<div class="col-lg-6 col-sm-12">
 					<div class="row">
-						<div class="col-lg-5 col-sm-12">
+						<div class="col-lg-5 col-sm-4">
 							<h6 class="fw-bold mb-4 color-primary">
-								<?php echo $data->download; ?> <!-- Download Section -->
+								<?php echo $data->download; ?>
+								<!-- Download Section -->
 							</h6>
 							<?php foreach ($data->download_list as $key => $value) { ?>
 								<p>
@@ -146,9 +155,10 @@
 								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/ios.png'; ?>" />
 							</p>
 						</div>
-						<div class="col-lg-5 col-sm-12">
+						<div class="col-lg-5 col-sm-8">
 							<h6 class="fw-bold mb-4 color-primary">
-								<?php echo $data->secretary_office; ?> <!-- Secretary Office Section -->
+								<?php echo $data->secretary_office; ?>
+								<!-- Secretary Office Section -->
 							</h6>
 							<p><a class="text-reset"><?php echo $head_office->adress; ?></a></p>
 							<!-- <p>
@@ -177,7 +187,7 @@
 	<div class="p-4 border-top">
 		<div class="container">
 			<div class="row">
-			<div class="col-lg-1 col-sm-12"></div>
+				<div class="col-lg-1 col-sm-12"></div>
 				<div class="col-lg-5 col-sm-12">
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-twitter black"></i>
