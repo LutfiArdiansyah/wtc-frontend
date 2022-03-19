@@ -12,15 +12,6 @@
 	font-weight: bold;
 }
 
-.brand-logo {
-	display: inline-block !important; 
-	top: 0 !important; 
-	left: 0 !important; 
-	position: absolute !important;
-	margin-left: 7.5rem;
-	/* margin-top: 0.5rem; */
-}
-
 .color-primary {
 	color: var(--bs-primary);
 }
