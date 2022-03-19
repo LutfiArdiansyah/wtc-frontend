@@ -97,13 +97,13 @@
 <div class="content mx-auto">
 	<div class="card br-15">
 		<div class="card-body">
-			<h1 class="color-primary text-center fw-bold">Connect with Us</h1>
+			<h1 class="color-primary text-center fw-bold"><?php echo $contact->title; ?></h1>
 			<br />
 			<div class="row">
 				<div class="col-lg-6 col-sm-12">
 					<div class="row">
 						<div class="col-lg-6 col-sm-12">
-							<h5 class="fw-bold">Office</h5>
+							<h5 class="fw-bold"><?php echo $contact->caption_office; ?></h5>
 							<hr />
 							<div class="row">
 								<div class="col-2"><i class="far fa-calendar color-primary"></i></div>
@@ -116,12 +116,12 @@
 								</div>
 								<div class="col-2"><i class="far fa-map-marker-alt color-primary"></i></div>
 								<div class="col-10">
-									<p class="address"><?php echo $data_worship->address; ?></p>
+									<p class="address"><?php echo $data_worship->adress; ?></p>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-sm-12">
-							<h5 class="fw-bold">Hotline Number</h5>
+							<h5 class="fw-bold"><?php echo $contact->caption_hotline_number; ?></h5>
 							<hr />
 							<div class="row">
 								<div class="col-2"><i class="far fa-phone color-primary"></i></div>
@@ -136,7 +136,7 @@
 								<?php } ?>
 							</div>
 							<br />
-							<h5 class="fw-bold">Social Media</h5>
+							<h5 class="fw-bold"><?php echo $contact->caption_socmed; ?></h5>
 							<hr />
 							<div class="row">
 								<div class="col-2"><i class="fab fa-instagram color-primary"></i></div>
@@ -156,18 +156,18 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12 text-center">
-					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="https://www.openstreetmap.org/?mlat=-6.27652&amp;mlon=106.66338#map=19/-6.27652/106.66338" target="_blank">View Larger Map</a></small>
+					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="https://www.openstreetmap.org/?mlat=-6.27652&amp;mlon=106.66338#map=19/-6.27652/106.66338" target="_blank"><?php echo $contact->caption_maps; ?></a></small>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="locations">
-		<h1 class="color-primary text-center fw-bold">Locations</h1>
+		<h1 class="color-primary text-center fw-bold"><?php echo $contact->caption_location; ?></h1>
 		<br />
 		<div class="row  justify-content-md-center">
 			<div class="col-12 text-center">
 				<select class="form-select br-10 mx-auto">
-					<option selected disabled>Select Area</option>
+					<option selected disabled><?php echo $contact->caption_select_area; ?></option>
 					<?php foreach ($areas as $key => $value) { ?>
 						<option class="fw-bold" value="<?php echo $value->id; ?>"><?php echo $value->area; ?></option>
 					<?php } ?>
@@ -188,17 +188,17 @@
 				<div class="collapse" id="collapse<?php echo $value->id; ?>">
 					<div class="card card-body">
 						<div class="text-card">
-							<p class="title-card">Address</p>
+							<p class="title-card"><?php echo $contact->caption_address; ?></p>
 							<p class="description-card"><?php echo $value->adress; ?></p>
 							<br />
-							<p class="title-card">Services</p>
+							<p class="title-card"><?php echo $contact->caption_service; ?></p>
 							<p class="description-card"><?php echo $value->day; ?></p>
 							<p class="description-card"><?php echo $value->time; ?></p>
 							<br />
-							<p class="title-card">Campus Pastor</p>
+							<p class="title-card"><?php echo $contact->caption_campus_pastor; ?></p>
 							<p class="description-card"><?php echo $value->pastor_name; ?></p>
 							<br />
-							<p class="title-card">Contact</p>
+							<p class="title-card"><?php echo $contact->caption_contact; ?></p>
 							<p class="description-card"><?php echo $value->email; ?></p>
 							<p class="description-card"><?php echo $value->phone_1; ?></p>
 						</div>
