@@ -76,6 +76,14 @@
 		.breadcrumb-item+.breadcrumb-item::before {
 			color: black;
 		}
+
+		.ff-poppin {
+			font-family: "Poppins", sans-serif !important;
+		}
+
+		.ff-fira {
+			font-family: 'Fira Sans', sans-serif;
+		}
 	</style>
 </head>
 
@@ -116,7 +124,7 @@ if ($err) {
 		</a>
 		<?php foreach ($menus as $key => $value) { ?>
 			<li class="nav-item">
-				<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
+				<a class="nav-link ff-poppin" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
 			</li>
 		<?php } ?>
 

@@ -52,10 +52,10 @@
 							<div class="col-lg-6 col-sm-12" style="margin-top: 3.625rem;">
 								<h1 style="white-space:pre-line;font-size:4.688rem; font-weight: 600; line-height: 4.394rem;" class="fw-bold color-primary">Online <br /> Giving</h1>
 								<br />
-								<p style="font-size: 1.313rem;"><?php echo $data->description; ?></p>
+								<p style="font-size: 1.313rem;" class="ff-fira"><?php echo $data->description; ?></p>
 							</div>
 							<div class="col-lg-6 col-sm-12 text-center" style="margin-top: 2.719rem;">
-								<a rel='nofollow' href='http://wtc.a-aziz.tech/' border='0' style='cursor:default' target="_blank"><img src='<?php echo STRAPI_URL . $data->qc_code->url; ?>'></a>
+								<a rel='nofollow' href='<?php echo base_url(); ?>' border='0' style='cursor:default' target="_blank"><img style="width: 250px; height: 250px;" src='<?php echo STRAPI_URL . $data->qc_code->url; ?>'></a>
 							</div>
 						</div>
 						<br />

@@ -4,7 +4,6 @@
     }
 
     div .active div.title-parallax {
-        width: 99.1vw;
         height: 5.375rem;
         background-color: var(--bs-primary);
         position: absolute;
@@ -66,24 +65,15 @@
         font-size: 24px;
         line-height: 34px;
         /* or 140% */
-        width: 1067px;
         text-align: center;
         white-space: pre-line;
     }
 
-    #carousel {
-        width: calc(100vw - 15px);
-        height: 100vh;
-    }
+    #carousel {}
 
-    #carousel img {
-        width: calc(100vw - 15px);
-        height: 100vh;
-    }
+    #carousel img {}
 
-    div .container {
-        max-width: 69.141rem !important;
-    }
+    div .container {}
 
     .badge-number {
         width: 86px;
@@ -99,11 +89,39 @@
     }
 
     .line {
-        width: 1160px;
         color: var(--bs-primary);
         border-bottom: 1px solid;
         display: inline-block;
         margin-bottom: 15px;
+    }
+
+
+    #carousel {
+        width: calc(100vw - 15px);
+        height: 100vh;
+    }
+
+    #carousel img {
+        width: calc(100vw - 15px);
+        height: 100vh;
+    }
+
+    div .active div.title-parallax {
+        width: 99.1vw;
+    }
+
+    @media (min-width: 992px) {
+        .line {
+            width: 1160px;
+        }
+
+        .description {
+            width: 1067px;
+        }
+
+        div .container {
+            max-width: 69.141rem !important;
+        }
     }
 </style>
 <h1 class="fw-bold text-center color-primary title"><?php echo $spiritual_journey->title; ?></h1>
@@ -123,7 +141,7 @@
             <?php
             if ($index === 0) { ?>
                 <div class="carousel-item active">
-                    <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
+                    <img src="<?php echo STRAPI_URL . $value->banner->url; ?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
                             <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
@@ -145,7 +163,7 @@
                 </div>
             <?php } else { ?>
                 <div class="carousel-item">
-                    <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
+                    <img src="<?php echo STRAPI_URL . $value->banner->url; ?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
                             <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
