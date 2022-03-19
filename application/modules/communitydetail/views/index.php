@@ -52,7 +52,7 @@
     <h1 class="title-page fw-bold color-primary text-center"><?php echo $data->title; ?></h1>
     <div class="card mx-auto">
         <div class="card-body">
-            <h1 class="title text-center fw-bold mx-auto">Tentang</h1>
+            <h1 class="title text-center fw-bold mx-auto"><?php echo $community->caption_about; ?></h1>
             <p class="description mx-auto text-center">
                 <?php echo $data->about; ?>
             </p>
@@ -60,7 +60,7 @@
     </div>
     <div class="card mx-auto">
         <div class="card-body">
-            <h1 class="title text-center fw-bold mx-auto">Kepemimpinan</h1>
+            <h1 class="title text-center fw-bold mx-auto"><?php echo $community->caption_leadership; ?></h1>
             <div class="description mx-auto text-center">
                 <?php echo $this->markdown->parse($data->leadership); ?>
             </div>
@@ -68,7 +68,7 @@
     </div>
     <div class="card mx-auto">
         <div class="card-body">
-            <h1 class="title text-center fw-bold mx-auto">Sosial Media</h1>
+            <h1 class="title text-center fw-bold mx-auto"><?php echo $community->caption_socmed; ?></h1>
             <a class="color-primary" href="<?php echo $data->social_media_link; ?>">
                 <u class="color-primary">
                     <p class="description mx-auto text-center color-primary">
