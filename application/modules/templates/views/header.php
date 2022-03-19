@@ -50,7 +50,7 @@
 			top: 0 !important;
 			right: 0 !important;
 			position: absolute !important;
-			margin-right: 7.5rem;
+			margin-right: 0;
 			margin-top: 0.7rem;
 			font-weight: bold;
 		}
@@ -63,6 +63,10 @@
 			.container-breadcrumb {
 				width: 70.25rem;
 				padding-bottom: 0.3rem;
+			}
+
+			.login-btn {
+				margin-right: 7.5rem;
 			}
 		}
 
@@ -83,6 +87,21 @@
 
 		.ff-fira {
 			font-family: 'Fira Sans', sans-serif;
+		}
+
+		.brand-logo {
+			display: inline-block !important;
+			top: 0 !important;
+			left: 0 !important;
+			position: absolute !important;
+			/* margin-top: 0.5rem; */
+			margin-left: 0;
+		}
+
+		@media (min-width: 992px) {
+			.brand-logo {
+				margin-left: 7.5rem;
+			}
 		}
 	</style>
 </head>

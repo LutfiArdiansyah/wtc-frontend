@@ -72,6 +72,7 @@
 		font-size: 20px;
 		line-height: 34px;
 		margin-bottom: 0;
+		width: 75%;
 	}
 
 	.title-card {
