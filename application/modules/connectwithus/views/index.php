@@ -125,20 +125,20 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_office; ?></h5>
 							<hr />
 							<div class="row">
-								<div class="col-2"><i class="far fa-calendar color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="far fa-calendar color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<p class="description"><?php echo $data_worship->day; ?></p>
 								</div>
-								<div class="col-2"><i class="far fa-clock color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="far fa-clock color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<p class="description"><?php echo $data_worship->time; ?></p>
 								</div>
-								<div class="col-2"><i class="far fa-map-marker-alt color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="far fa-map-marker-alt color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<p class="address description"><?php echo $data_worship->adress; ?></p>
 								</div>
-								<div class="col-2"><i class="far fa-solid fa-envelope color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="far fa-solid fa-envelope color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<p class="address description"><?php echo $data_worship->email; ?></p>
 								</div>
 							</div>
@@ -147,13 +147,13 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_hotline_number; ?></h5>
 							<hr />
 							<div class="row">
-								<div class="col-2"><i class="far fa-phone color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="far fa-phone color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<p  class="description"><?php echo $data_worship->phone_1; ?></p>
 								</div>
 								<?php if (isset($data_worship->phone_2)) { ?>
-									<div class="col-2"><i class="far fa-phone color-primary"></i></div>
-									<div class="col-10">
+									<div class="col-2 col-sm-1"><i class="far fa-phone color-primary"></i></div>
+									<div class="col-10 col-sm-11">
 										<p class="description"><?php echo $data_worship->phone_2; ?></p>
 									</div>
 								<?php } ?>
@@ -162,14 +162,14 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
 							<hr />
 							<div class="row">
-								<div class="col-2"><i class="fab fa-instagram color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="fab fa-instagram color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
 										<p class="description"><?php echo $data_worship->instagram_name; ?></p>
 									</a>
 								</div>
-								<div class="col-2"><i class="fab fa-youtube color-primary"></i></div>
-								<div class="col-10">
+								<div class="col-2 col-sm-1"><i class="fab fa-youtube color-primary"></i></div>
+								<div class="col-10 col-sm-11">
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
 										<p class="description"><?php echo $data_worship->youtube_name; ?></p>
 									</a>
