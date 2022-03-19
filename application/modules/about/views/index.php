@@ -40,7 +40,7 @@
 
 	.title-about {
 		font-size: 2.063rem !important;
-		font-weight: 800 !important;
+		font-weight: bold !important;
 		line-height: 2.875rem;
 	}
 
@@ -75,12 +75,12 @@
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
 						<div class="description">
-							<?php echo $this->markdown->parse($data->about_left);?>
+							<?php echo $this->markdown->parse($data->about_left); ?>
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 						<div class="description">
-							<?php echo $this->markdown->parse($data->about_right);?>
+							<?php echo $this->markdown->parse($data->about_right); ?>
 						</div>
 					</div>
 					<!-- <div class="col-lg-6 col-sm-12">
@@ -153,15 +153,17 @@
 						</p>
 						<br />
 						<p class="fw-bold">
-							<span><i class="fab fa-instagram"></i>&nbsp;
-								<a href="<?php echo $value->instagram_link_1; ?>" target="_blank"><?php echo $value->instagram_1; ?></a>
+							<?php if (isset($value->instagram_1)) { ?>
+								<span><i class="fab fa-instagram"></i>&nbsp;
+									<a href="<?php echo $value->instagram_link_1; ?>" target="_blank" class="ff-poppin"><?php echo $value->instagram_1; ?></a>
 
-							</span>
+								</span>
+							<?php } ?>
 							<?php if (isset($value->instagram_2)) { ?>
 
 								&nbsp;
 								<span><i class="fab fa-instagram"></i>&nbsp;
-									<a href="<?php echo $value->instagram_link_2; ?>" target="_blank"><?php echo $value->instagram_2; ?></a>
+									<a href="<?php echo $value->instagram_link_2; ?>" target="_blank" class="ff-poppin"><?php echo $value->instagram_2; ?></a>
 								</span>
 							<?php } ?>
 						</p>
