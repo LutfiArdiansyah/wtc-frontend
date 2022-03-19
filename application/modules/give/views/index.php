@@ -50,7 +50,7 @@
 					<div class="container-card">
 						<div class="row">
 							<div class="col-lg-6 col-sm-12" style="margin-top: 3.625rem;">
-								<h1 style="white-space:pre-line;font-size:4.688rem; font-weight: 600; line-height: 4.394rem;" class="fw-bold color-primary">Online <br /> Giving</h1>
+								<h1 style="white-space:pre-line;font-size:4.688rem; font-weight: 600; line-height: 4.394rem;" class="fw-bold color-primary"><?php echo $data->title; ?></h1>
 								<br />
 								<p style="font-size: 1.313rem;"><?php echo $data->description; ?></p>
 							</div>

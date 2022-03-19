@@ -15,6 +15,7 @@
 		width: 52.313rem;
 		text-align: center;
 		font-family: 'Fira Sans', sans-serif;
+		font-size: 1.313rem;
 	}
 
 	.card {
