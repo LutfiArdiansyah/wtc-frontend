@@ -41,11 +41,17 @@
 		line-height: 1.25rem;
 		white-space: pre-line;
 	}
+
+	@media (min-width: 992px) {
+		.w-card {
+			width: 70.25rem;
+		}
+	}
 </style>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 col-sm-12">
-			<div class="card mx-auto" style="width: 70.25rem; border-radius:1.875rem;">
+			<div class="card mx-auto w-card" style=" border-radius:1.875rem;">
 				<div class="card-body">
 					<div class="container-card">
 						<div class="row">
