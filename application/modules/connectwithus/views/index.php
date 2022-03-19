@@ -179,7 +179,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12 text-center">
-					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="https://www.openstreetmap.org/?mlat=-6.27652&amp;mlon=106.66338#map=19/-6.27652/106.66338" target="_blank"><?php echo $contact->caption_maps; ?></a></small>
+					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="<?php echo $data_worship->maps_link; ?>" target="_blank"><?php echo $contact->caption_maps; ?></a></small>
 				</div>
 			</div>
 		</div>
