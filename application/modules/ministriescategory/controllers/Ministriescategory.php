@@ -14,19 +14,19 @@ class Ministriescategory extends MY_Controller
 		if (isset($_GET['sort']) && !empty($_GET['sort'])) {
 			$sort = '&_sort=title:' . $_GET['sort'];
 		}
-		$data['data'] = $this->get("/wtc-ministries-categories/" . $_GET['cat_id'] . '?' . $this->getLocale());
+		$data['data'] = $this->get("/wtc-ministries-categories/" . $_GET['cat_id']);
 		if (!isset($_POST['search']) || empty($_POST['search'])) {
 			$data['search'] = '';
-			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id'] . '&' . $this->getLocale() . $sort);
+			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id'] . $sort);
 		} else {
 			$data['search'] = $_POST['search'];
-			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id'] . '&title_contains=' . urlencode($_POST['search']) . '&' . $this->getLocale());
+			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id'] . '&title_contains=' . urlencode($_POST['search']));
 		}
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode($data['data']->title) . "&_sort=sort:asc&" . $this->getLocale());
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode($data['data']->title) . "&_sort=sort:asc&");
 		$this->load->view('templates/header', $data);
 		$this->load->view('index', $data);
-		$data['head_office'] = $this->get("/wtc-worship-places/1?" . $this->getLocale());
-		$data['minis_cat'] = $this->get("/wtc-ministries-categories?" . $this->getLocale());
+		$data['head_office'] = $this->get("/wtc-worship-places?wtc_location_area.name=pusat")[0];
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
 		$this->load->view('templates/footer', $data);
 	}
 }

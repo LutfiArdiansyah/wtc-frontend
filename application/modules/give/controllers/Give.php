@@ -6,12 +6,12 @@ class Give extends MY_Controller
 
 	public function index()
 	{
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=".urlencode("Give")."&_sort=sort:asc&".$this->getLocale());
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode("Give") . "&_sort=sort:asc");
 		$this->load->view('templates/header', $data);
-		$data["data"] = $this->get("/wtc-online-giving?".$this->getLocale());
+		$data["data"] = $this->get("/wtc-online-giving");
 		$this->load->view('index', $data);
-		$data['head_office'] = $this->get("/wtc-worship-places/1?".$this->getLocale());
-		$data['minis_cat'] = $this->get("/wtc-ministries-categories?".$this->getLocale());
+		$data['head_office'] = $this->get("/wtc-worship-places?wtc_location_area.name=pusat")[0];
+		$data['minis_cat'] = $this->get("/wtc-ministries-categories");
 		$this->load->view('templates/footer', $data);
 	}
 }

@@ -52,10 +52,14 @@ class MY_Controller extends MX_Controller
     }
   }
 
-  public function get($url = '')
+  public function get($url = '', $locale = true)
   {
 
     $curl = curl_init();
+
+    if ($locale) {
+      $url = preg_match('/\?/', $url) ? ($url . '&' . $this->getLocale()) : ($url . '?' . $this->getLocale());
+    }
 
     curl_setopt_array($curl, array(
       CURLOPT_PORT => "1337",
@@ -89,7 +93,8 @@ class MY_Controller extends MX_Controller
     }
   }
 
-  public function getLocale() {
-    return "_locale=".$this->session->userdata('locale');
+  public function getLocale()
+  {
+    return "_locale=" . $this->session->userdata('locale');
   }
 }

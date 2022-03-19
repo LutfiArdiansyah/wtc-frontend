@@ -71,7 +71,7 @@
 	}
 
 	.img-carousel {
-		width: 1125px !important;
+		width: 70vw !important;
 		height: 633px !important;
 	}
 </style>
