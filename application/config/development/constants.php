@@ -84,6 +84,6 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('STRAPI_URL', 'http://localhost:1337');
+define('STRAPI_URL', 'http://wtc.a-aziz.tech:1337');
 
 define('LOG_PATH', '/root/logs');
