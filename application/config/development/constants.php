@@ -86,4 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('STRAPI_URL', 'http://wtc.a-aziz.tech:1337');
 
-define('LOG_PATH', '/root/logs');
+define('LOG_PATH', 'C:\\logs');

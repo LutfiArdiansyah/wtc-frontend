@@ -189,7 +189,7 @@
 					<div class="card card-body">
 						<div class="text-card">
 							<p class="title-card">Address</p>
-							<p class="description-card"><?php echo $value->address; ?></p>
+							<p class="description-card"><?php echo $value->adress; ?></p>
 							<br />
 							<p class="title-card">Services</p>
 							<p class="description-card"><?php echo $value->day; ?></p>

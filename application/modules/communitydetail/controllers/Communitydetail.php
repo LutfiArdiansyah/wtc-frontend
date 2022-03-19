@@ -12,6 +12,7 @@ class Communitydetail extends MY_Controller
 		}
 		$data['data'] = $this->get("/wtc-communities-lists/" . $_GET['id']);
 		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode($data['data']->title) . "&_sort=sort:asc");
+		$data["community"] = $this->get("/wtc-communities");
 		$this->load->view('templates/header', $data);
 		$this->load->view('index',  $data);
 		$data['head_office'] = $this->get("/wtc-worship-places?wtc_location_area.name=pusat")[0];

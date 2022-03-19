@@ -150,7 +150,7 @@
 							<h6 class="fw-bold mb-4 color-primary">
 								<?php echo $data->secretary_office; ?> <!-- Secretary Office Section -->
 							</h6>
-							<p><a class="text-reset"><?php echo $head_office->address; ?></a></p>
+							<p><a class="text-reset"><?php echo $head_office->adress; ?></a></p>
 							<!-- <p>
 								<?php echo $head_office->email; ?>
 							</p>
