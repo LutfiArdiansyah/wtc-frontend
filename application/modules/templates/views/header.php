@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>WTC</title>
+	<title>World Transformation Church</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/bootstrap.css?cachebuster=<?php echo date('Ymdhis'); ?>">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />

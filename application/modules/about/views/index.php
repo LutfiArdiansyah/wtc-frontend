@@ -40,7 +40,7 @@
 
 	.title-about {
 		font-size: 2.063rem !important;
-		font-weight: 600 !important;
+		font-weight: 800 !important;
 		line-height: 2.875rem;
 	}
 
