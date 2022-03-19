@@ -67,12 +67,17 @@
 		width: 80%;
 	}
 
-	.banner-carousel {
-	}
+	.banner-carousel {}
 
 	.img-carousel {
-		width: 70vw !important;
 		height: 633px !important;
+	}
+
+	@media (min-width: 992px) {
+		.img-carousel {
+			width: 1125px !important;
+			height: 633px !important;
+		}
 	}
 </style>
 <div class="container">
@@ -93,12 +98,12 @@
 						<div class="row justify-content-center">
 							<div class="col-6">
 								<a href="<?php echo $data->banner_button_link_1; ?>" target="_blank">
-									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_1; ?></button>
+									<button type="button" class="btn btn-primary w-100 btn-carousel ff-poppin" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_1; ?></button>
 								</a>
 							</div>
 							<div class="col-6">
 								<a href="<?php echo $data->banner_button_link_2; ?>" target="_blank">
-									<button type="button" class="btn btn-primary w-100 btn-carousel" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_2; ?></button>
+									<button type="button" class="btn btn-primary w-100 btn-carousel ff-poppin" style="background-color: #fff; color:#000;"><?php echo $data->banner_button_name_2; ?></button>
 								</a>
 							</div>
 						</div>
@@ -120,24 +125,24 @@
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_1; ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button"><?php echo $data->button_name_1; ?></button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin"><?php echo $data->button_name_1; ?></button>
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_2; ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button"><?php echo $data->button_name_2; ?></button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin"><?php echo $data->button_name_2; ?></button>
 			</a>
 		</div>
 	</div>
 	<div class="row justify-content-center">
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_3; ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button"><?php echo $data->button_name_3; ?></button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin"><?php echo $data->button_name_3; ?></button>
 			</a>
 		</div>
 		<div class="col-lg-4 col-sm-12  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_4; ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button"><?php echo $data->button_name_4; ?></button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin"><?php echo $data->button_name_4; ?></button>
 			</a>
 		</div>
 	</div>
@@ -148,8 +153,8 @@
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 mt-4">
 					<button type="button" class="btn btn-primary w-100 fw-bold home-button" style="background-color:#fff; color:#000;">
-						<a class="home-button" href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="home-button" href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
+						<a class="home-button ff-poppin" href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a class="home-button ff-poppin" href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
 					</button>
 				</div>
 			</div>
@@ -157,7 +162,7 @@
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
 			<h2 class="sosmed-location fw-bold"><?php echo $data->caption_location; ?></h2>
 			<a href="<?php echo base_url() . "connectwithus" ?>">
-				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4" style="background-color:#FFF; color: #000"><img src="<?php echo base_url() . 'assets/icons/map.svg' ?>" />&nbsp;<?php echo $data->caption_area; ?></button>
+				<button type="button" class="btn btn-primary w-100 fw-bold home-button mt-4 ff-poppin" style="background-color:#FFF; color: #000"><img src="<?php echo base_url() . 'assets/icons/map.svg' ?>" />&nbsp;<?php echo $data->caption_area; ?></button>
 			</a>
 		</div>
 	</div>

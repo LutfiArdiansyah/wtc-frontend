@@ -56,8 +56,14 @@
 		}
 
 		.container-breadcrumb {
-			width: 70.25rem;
 			padding-bottom: 0.3rem;
+		}
+
+		@media (min-width: 992px) {
+			.container-breadcrumb {
+				width: 70.25rem;
+				padding-bottom: 0.3rem;
+			}
 		}
 
 		.breadcrumb-text {
@@ -70,6 +76,14 @@
 		.breadcrumb-item+.breadcrumb-item::before {
 			color: black;
 		}
+
+		.ff-poppin {
+			font-family: "Poppins", sans-serif !important;
+		}
+
+		.ff-fira {
+			font-family: 'Fira Sans', sans-serif;
+		}
 	</style>
 </head>
 
@@ -78,7 +92,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
 	CURLOPT_PORT => "1337",
-	CURLOPT_URL => STRAPI_URL . '/wtc-menus?_locale='.$this->session->userdata('locale'),
+	CURLOPT_URL => STRAPI_URL . '/wtc-menus?_locale=' . $this->session->userdata('locale'),
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => "",
 	CURLOPT_MAXREDIRS => 10,
@@ -110,7 +124,7 @@ if ($err) {
 		</a>
 		<?php foreach ($menus as $key => $value) { ?>
 			<li class="nav-item">
-				<a class="nav-link" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
+				<a class="nav-link ff-poppin" href="<?php echo $value->link; ?>"><?php echo $value->name; ?></a>
 			</li>
 		<?php } ?>
 
@@ -119,8 +133,8 @@ if ($err) {
 				<i class="far fa-globe color-primary"></i>&nbsp;<span style="font-weight: bold;"><?php echo strtoupper($this->session->userdata('locale')) ?></span>
 			</button>
 			<ul class="dropdown-menu list-dropdown" aria-labelledby="dropdownMenuButton1">
-				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url().'?locale=en'?>"><span class="list-language">EN</span></a></li>
-				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url().'?locale=id'?>"><span class="list-language">ID</span></a></li>
+				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url() . '?locale=en' ?>"><span class="list-language">EN</span></a></li>
+				<li class="border-list-dropdown"><a class="dropdown-item" href="<?php echo base_url() . '?locale=id' ?>"><span class="list-language">ID</span></a></li>
 			</ul>
 		</div>
 
@@ -137,7 +151,7 @@ if ($err) {
 	<br />
 	<div class="container">
 		<div class="container-breadcrumb mx-auto">
-			
+
 			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { ?>
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
@@ -148,7 +162,7 @@ if ($err) {
 									echo '<i class="fas fa-caret-left"></i>&nbsp;&nbsp;';
 								}
 								?>
-								<a href="<?php echo base_url().$breadcrumb[$i]->url; ?>" class="breadcrumb-text">
+								<a href="<?php echo base_url() . $breadcrumb[$i]->url; ?>" class="breadcrumb-text">
 									<?php echo $breadcrumb[$i]->name; ?>
 								</a>
 							</li>
