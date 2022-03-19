@@ -106,9 +106,9 @@
         margin-bottom: 15px;
     }
 </style>
-<h1 class="fw-bold text-center color-primary title">Spiritual Journey</h1>
+<h1 class="fw-bold text-center color-primary title"><?php echo $spiritual_journey->title; ?></h1>
 <p class="description text-center mx-auto">
-    <?php echo $description; ?>
+    <?php echo $spiritual_journey->description; ?>
 </p>
 <br />
 <br />
@@ -126,7 +126,7 @@
                     <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
-                            <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
+                            <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
                             <p class="title-content"><?php echo $value->title; ?></p>
                             <div class="div-description-content row">
                                 <div class="col-5">
@@ -148,7 +148,7 @@
                     <img src="<?php echo STRAPI_URL.$value->banner->url;?>" class="d-block w-100" alt="...">
                     <div class="title-parallax pt-4" style="">
                         <div class="container">
-                            <p class="title-parallax">Spiritual Journey / <?php echo $value->title; ?></p>
+                            <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
                             <p class="title-content"><?php echo $value->title; ?></p>
                             <div class="div-description-content row">
                                 <div class="col-5">

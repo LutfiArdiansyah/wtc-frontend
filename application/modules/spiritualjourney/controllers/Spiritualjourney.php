@@ -10,6 +10,7 @@ class Spiritualjourney extends MY_Controller
 		$this->load->view('templates/header',$data);
 		$data['datas'] = $this->get("/wtc-spiritual-journey-contents?" . $this->getLocale());
 		$data['description'] = "Menolong dan mendorong jemaat secara pribadi aktif berpartisipasi dalam perjalanan pertumbuhan kerohaniannya di dalam gereja dan terlibat dalam gereja sesuai panggilannya. Gereja dan jemaat saling terkoneksi tanpa batas untuk bersama bersinergi dan bertumbuh sebagai satu kesatuan Tubuh Kristus.";
+		$data['spiritual_journey'] = $this->get('/wtc-spiritual-journey?'.$this->getLocale());
 		$this->load->view('index', $data);
 		$data['head_office'] = $this->get("/wtc-worship-places/1?" . $this->getLocale());
 		$data['minis_cat'] = $this->get("/wtc-ministries-categories?" . $this->getLocale());

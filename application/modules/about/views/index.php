@@ -68,7 +68,7 @@
 <div class="container content">
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Tentang </br>GBI WTC</p>
+			<p class="fw-bold title-about"><?php echo $data->caption_about; ?> </br>GBI WTC</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 1.172rem; padding: 0 1.641rem 0.984rem 1.594rem;">
@@ -112,7 +112,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Vision</p>
+			<p class="fw-bold title-about"><?php echo $data->caption_vision; ?></p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
@@ -125,7 +125,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about">Mision</p>
+			<p class="fw-bold title-about"><?php echo $data->caption_mission; ?></p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0 1.594rem;">
@@ -138,7 +138,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p id="leadership" class="fw-bold title-about">Leadership</p>
+			<p id="leadership" class="fw-bold title-about"><?php echo $data->caption_leadership; ?></p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
@@ -174,7 +174,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p id="values" class="fw-bold title-about">Values</p>
+			<p id="values" class="fw-bold title-about"><?php echo $data->caption_values; ?></p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
@@ -187,7 +187,7 @@
 	<br />
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p id="spiritual-journey" class="fw-bold title-about">Spiritual Journey</p>
+			<p id="spiritual-journey" class="fw-bold title-about"><?php echo $spiritual_journey->title; ?></p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
