@@ -10,6 +10,7 @@
 		margin-bottom: 4.797rem;
 		text-align: center;
 		font-family: 'Fira Sans', sans-serif;
+		font-size: 1.313rem;
 	}
 
 	.card {

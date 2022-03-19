@@ -1,6 +1,6 @@
 <style type="text/css">
     .title {
-        font-size: 6.25rem;
+        font-size: 4.688rem;
     }
 
     div .active div.title-parallax {
