@@ -150,7 +150,7 @@ if ($err) {
 
 							<?php foreach ($data->download_list as $key => $value) { ?>
 								<p>
-									<img class="apps-logo" src="<?php echo STRAPI_URL . $value->icon->url; ?>" />
+								<a href="<?php echo $value->link; ?>" class="text-reset" target="_blank"><img class="apps-logo" src="<?php echo STRAPI_URL . $value->icon->url; ?>" /></a>
 								</p>
 							<?php } ?>
 						</div>
