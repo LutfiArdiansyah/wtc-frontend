@@ -148,12 +148,11 @@ if ($err) {
 								</p>
 							<?php } ?>
 
-							<p>
-								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/android.png'; ?>" />
-							</p>
-							<p>
-								<img class="apps-logo" src="<?php echo base_url() . 'assets/img/ios.png'; ?>" />
-							</p>
+							<?php foreach ($data->download_list as $key => $value) { ?>
+								<p>
+									<img class="apps-logo" src="<?php echo STRAPI_URL . $value->icon->url; ?>" />
+								</p>
+							<?php } ?>
 						</div>
 						<div class="col-lg-5 col-sm-8">
 							<h6 class="fw-bold mb-4 color-primary">
