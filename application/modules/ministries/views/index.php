@@ -143,7 +143,7 @@
 			<div class="col-lg-6 col-sm-12 text-center mb-4">
 				<div class="img-cat">
 					<img src="<?php echo STRAPI_URL . $value->banner->url; ?>" alt="<?php echo $value->banner->alternativeText; ?>" class="w-100 mx-auto br-custom carousel-cat">
-					<p class="title-cateogry"><?php echo $value->name; ?></p>
+					<p class="title-cateogry"><?php echo $value->title; ?></p>
 				</div>
 				<p class="cat-desc text-center mx-auto"><?php echo $value->description; ?></p>
 				<a href="<?php echo base_url() . $value->button_link; ?>">

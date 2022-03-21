@@ -66,8 +66,6 @@
 		transform: translate(-50%, -50%);
 	}
 
-	.title-communities {}
-
 	.description-communities {
 		font-size: 0.938rem;
 		line-height: 1.25rem;
@@ -80,6 +78,15 @@
 		border: none;
 	}
 </style>
+<?php
+	$locale = $this->session->userdata('locale');
+	if ($locale === 'en') {
+		$caption_button = 'Learn More';
+	} else {
+		$caption_button = 'Pelajari';
+	}
+	
+?>
 <div class="container">
 	<h1 class="title fw-bold color-primary mx-auto text-center"><?php echo $data->title; ?></h1>
 	<p class="desciprtion-title mx-auto fw-bold"><?php echo $data->description; ?></p>
@@ -97,7 +104,7 @@
 						</div>
 						<div class="col-3">
 							<a href="./communitydetail?id=<?php echo $value->id; ?>">
-								<button class="btn-learn-more">Learn More</button>
+								<button class="btn-learn-more"><?php echo $caption_button; ?></button>
 							</a>
 						</div>
 					</div>
