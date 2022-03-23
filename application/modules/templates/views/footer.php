@@ -39,7 +39,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-	CURLOPT_PORT => "1337",
+	//CURLOPT_PORT => "1337",
 	CURLOPT_URL => STRAPI_URL . '/wtc-footer?_locale=' . $this->session->userdata('locale'),
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => "",
