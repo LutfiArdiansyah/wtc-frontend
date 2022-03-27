@@ -203,18 +203,6 @@ if ($err) {
 								</a>
 							<?php } ?>
 						</li>
-						<!-- <?php for ($i = 0; $i < count($breadcrumb); $i++) { ?>
-							<li class="breadcrumb-item">
-								<?php
-								if ($i == 0) {
-									echo '<i class="fas fa-caret-left"></i>&nbsp;&nbsp;';
-								}
-								?>
-								<a href="<?php echo base_url() . $breadcrumb[$i]->url; ?>" class="breadcrumb-text">
-									<?php echo $breadcrumb[$i]->name; ?>
-								</a>
-							</li>
-						<?php } ?> -->
 
 					</ol>
 				</nav>
