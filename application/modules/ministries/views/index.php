@@ -147,7 +147,7 @@
 				</div>
 				<p class="cat-desc text-center mx-auto"><?php echo $value->description; ?></p>
 				<a href="<?php echo base_url() . $value->button_link; ?>">
-					<button type="button" class="mx-auto learn-more">
+					<button type="button" class="mx-auto learn-more btn-hover">
 						<?php echo $value->button_name; ?>
 					</button>
 				</a>

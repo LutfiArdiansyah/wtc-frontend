@@ -6,7 +6,13 @@ class Newchristianity extends MY_Controller
 
 	public function index()
 	{
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode("New Christianity") . "&_sort=sort:asc");
+		$locale = $this->session->userdata('locale');
+		if ($locale === 'id') {
+			$param = 'Baru dalam Kekristenan';
+		} else {
+			$param = 'New to Christianity';
+		}
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($param));
 		$this->load->view('templates/header', $data);
 		$data['datas'] = $this->get("/wtc-new-to-christianity");
 		$this->load->view('index', $data);

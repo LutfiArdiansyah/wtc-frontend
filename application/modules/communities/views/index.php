@@ -104,7 +104,7 @@
 						</div>
 						<div class="col-3">
 							<a href="./communitydetail?id=<?php echo $value->id; ?>">
-								<button class="btn-learn-more"><?php echo $caption_button; ?></button>
+								<button class="btn-learn-more btn-hover"><?php echo $caption_button; ?></button>
 							</a>
 						</div>
 					</div>

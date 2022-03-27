@@ -6,7 +6,13 @@ class Spiritualjourney extends MY_Controller
 
 	public function index()
 	{
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode("Spiritualjournery") . "&_sort=sort:asc");
+		$locale = $this->session->userdata('locale');
+		if ($locale === 'id') {
+			$param = 'Perjalanan Spiritual';
+		} else {
+			$param = 'Spiritual Journey';
+		}
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($param));
 		$this->load->view('templates/header', $data);
 		$data['datas'] = $this->get("/wtc-spiritual-journey-contents");
 		$data['spiritual_journey'] = $this->get('/wtc-spiritual-journey');

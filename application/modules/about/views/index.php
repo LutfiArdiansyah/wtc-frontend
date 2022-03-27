@@ -199,7 +199,7 @@
 		<div class="col-lg-3 col-sm-12">
 			<div>
 				<a href="<?php echo base_url() . $spiritual_journey->button_link; ?>">
-					<button type="button" class="btn btn-primary btn-learnmore fw-bold" style="background-color: color-primary; color:#fff;"><?php echo $spiritual_journey->button_name; ?></button>
+					<button type="button" class="btn btn-primary btn-learnmore fw-bold btn-hover" style="background-color: color-primary; color:#fff;"><?php echo $spiritual_journey->button_name; ?></button>
 				</a>
 			</div>
 		</div>

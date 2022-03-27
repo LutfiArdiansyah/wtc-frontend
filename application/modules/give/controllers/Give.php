@@ -6,7 +6,13 @@ class Give extends MY_Controller
 
 	public function index()
 	{
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode("Give") . "&_sort=sort:asc");
+		$locale = $this->session->userdata('locale');
+		if ($locale === 'id') {
+			$param = 'Persembahan';
+		} else {
+			$param = 'Give';
+		}
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($param));
 		$this->load->view('templates/header', $data);
 		$data["data"] = $this->get("/wtc-online-giving");
 		$this->load->view('index', $data);

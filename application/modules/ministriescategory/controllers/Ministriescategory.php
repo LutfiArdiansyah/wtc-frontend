@@ -22,7 +22,7 @@ class Ministriescategory extends MY_Controller
 			$data['search'] = $_POST['search'];
 			$data['articles'] = $this->get("/wtc-ministries-lists?wtc_ministries_category.id=" . $_GET['cat_id'] . '&title_contains=' . urlencode($_POST['search']));
 		}
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode($data['data']->title) . "&_sort=sort:asc&");
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($data['data']->title));
 		$this->load->view('templates/header', $data);
 		$this->load->view('index', $data);
 		$data['head_office'] = $this->get("/wtc-worship-places?wtc_location_area.name=pusat")[0];

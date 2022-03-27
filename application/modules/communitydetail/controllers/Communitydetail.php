@@ -11,7 +11,7 @@ class Communitydetail extends MY_Controller
 			return;
 		}
 		$data['data'] = $this->get("/wtc-communities-lists/" . $_GET['id']);
-		$data['breadcrumb'] = $this->get("/wtc-breadcrumbs?page=" . urlencode($data['data']->title) . "&_sort=sort:asc");
+		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($data['data']->wtc_breadcrumb_list->name));
 		$data["community"] = $this->get("/wtc-communities");
 		$this->load->view('templates/header', $data);
 		$this->load->view('index',  $data);
