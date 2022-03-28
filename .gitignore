@@ -13,3 +13,8 @@ application/logs/*
 /module-generator/node_modules
 /module-generator/package-lock.json
 /module-generator/yarn.lock
+
+### Config DB ###
+/application/config/development/database.php
+/application/config/production/database.php
+/application/config/testing/database.php

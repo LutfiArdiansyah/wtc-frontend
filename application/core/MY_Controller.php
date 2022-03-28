@@ -35,6 +35,20 @@ class MY_Controller extends MX_Controller
 
     $this->load->library('markdown');
 
+    $abort = $this->limiter->limit('global', 500);
+
+    if ($abort) {
+      /**
+       * Please note that the http response 
+       * code has changed (this pleases bots)
+       * and that the client has received a 
+       * cooldown period.
+       */
+      $this->output->set_status_header(429);
+
+      exit;
+    }
+
     if (isset($_GET['locale'])) {
       $newdata = array(
         'locale'  => $_GET['locale']
