@@ -13,6 +13,7 @@ class Newchristianity extends MY_Controller
 			$param = 'New to Christianity';
 		}
 		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($param));
+		$data['home'] = 'Home';
 		$this->load->view('templates/header', $data);
 		$data['datas'] = $this->get("/wtc-new-to-christianity");
 		$this->load->view('index', $data);

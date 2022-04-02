@@ -13,6 +13,7 @@ class Give extends MY_Controller
 			$param = 'Give';
 		}
 		$data['breadcrumb'] = $this->get("/wtc-breadcrumb-lists?name=" . urlencode($param));
+		$data['home'] = 'Home';
 		$this->load->view('templates/header', $data);
 		$data["data"] = $this->get("/wtc-online-giving");
 		$this->load->view('index', $data);

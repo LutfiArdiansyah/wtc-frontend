@@ -96,13 +96,14 @@
 			<div class="card-body">
 				<div class="container-card mx-auto">
 					<div class="row">
+						<div class="col-1"></div>
 						<div class="col-3">
 							<p class="title-communities fw-bold"><?php echo $value->title; ?></p>
 						</div>
-						<div class="col-6">
+						<div class="col-4">
 							<p class="description-communities"><?php echo $value->about; ?></p>
 						</div>
-						<div class="col-3">
+						<div class="col-3 text-end">
 							<a href="./communitydetail?id=<?php echo $value->id; ?>">
 								<button class="btn-learn-more btn-hover"><?php echo $caption_button; ?></button>
 							</a>

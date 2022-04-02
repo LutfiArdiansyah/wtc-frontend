@@ -175,30 +175,34 @@ if ($err) {
 	<div class="container">
 		<div class="container-breadcrumb mx-auto">
 
-			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { /* var_dump($breadcrumb);die; */?>
+			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { /* var_dump($home);die; */?>
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
 							<i class="fas fa-caret-left"></i>&nbsp;&nbsp;
-							<a href="<?php echo base_url() ?>" class="breadcrumb-text">Home
-							</a>
-							<?php if(isset($breadcrumb[0]->wtc_breadcrumb_group)) { ?>
-								<a href="<?php echo base_url() . $breadcrumb[0]->wtc_breadcrumb_group->link; ?>" class="breadcrumb-text">/
-									<?php echo $breadcrumb[0]->wtc_breadcrumb_group->name; ?>
-								</a>
+							<?php if(isset($home)) { ?>
+								<a href="<?php echo base_url() ?>" class="breadcrumb-text">Home 
+								</a> / 
 							<?php } ?>
-							<a href="<?php echo base_url() . $breadcrumb[0]->link; ?>" class="breadcrumb-text">/
+							
+							<?php if(isset($breadcrumb[0]->wtc_breadcrumb_group)) { ?>
+								<a href="<?php echo base_url() . $breadcrumb[0]->wtc_breadcrumb_group->link; ?>" class="breadcrumb-text">
+									<?php echo $breadcrumb[0]->wtc_breadcrumb_group->name; ?>
+								</a>/ 
+							<?php } ?>
+
+							<a href="<?php echo base_url() . $breadcrumb[0]->link; ?>" class="breadcrumb-text">
 									<?php echo $breadcrumb[0]->name; ?>
 								</a>
 
-							<?php if(isset($article->title)) { ?>
-								<a href="<?php echo base_url() . '/articles?id=' . $article->id; ?>" class="breadcrumb-text">/
+							<?php if(isset($article->title)) { ?>/ 
+								<a href="<?php echo base_url() . '/articles?id=' . $article->id; ?>" class="breadcrumb-text">
 									<?php echo $article->title; ?>
 								</a>
 							<?php } ?>
 
-							<?php if(isset($data->wtc_breadcrumb_list)) { ?>
-								<a href="<?php echo base_url() . '/communitydetail?id=' . $data->id; ?>" class="breadcrumb-text">/
+							<?php if(isset($data->wtc_breadcrumb_list)) { ?> /
+								<a href="<?php echo base_url() . '/communitydetail?id=' . $data->id; ?>" class="breadcrumb-text">
 									<?php echo $data->title; ?>
 								</a>
 							<?php } ?>

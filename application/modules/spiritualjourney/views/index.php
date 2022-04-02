@@ -58,7 +58,7 @@
     }
 
     .description {
-        margin-top: 46.5px;
+        /* margin-top: 46.5px; */
         font-family: 'Fira Sans', sans-serif;
         font-style: normal;
         font-weight: 400;

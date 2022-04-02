@@ -67,7 +67,9 @@
 		width: 80%;
 	}
 
-	.banner-carousel {}
+	.banner-carousel {
+		text-align: center;
+	}
 
 	.img-carousel {
 		height: 633px !important;
@@ -87,7 +89,7 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<?php if (!strpos($data->banner->mime, "image")) { ?>
-						<img class="banner-carousel img-carousel" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
+						<img class="banner-carousel img-carousel img-fluid" src="<?php echo STRAPI_URL . $data->banner->url; ?>">
 					<?php } else { ?>
 						<video class="banner-carousel" controls>
 							<source src="<?php echo STRAPI_URL . $data->banner->url; ?>" type="video/mp4">
@@ -123,24 +125,24 @@
 		<h1 class="sosmed-location fw-bold"><?php echo $data->caption_help; ?></h1>
 	</div>
 	<div class="row justify-content-center">
-		<div class="col-lg-4 col-sm-12  mt-4">
+		<div class="col-lg-4 col-sm-6  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_1; ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin btn-hover"><?php echo $data->button_name_1; ?></button>
 			</a>
 		</div>
-		<div class="col-lg-4 col-sm-12  mt-4">
+		<div class="col-lg-4 col-sm-6  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_2; ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin btn-hover"><?php echo $data->button_name_2; ?></button>
 			</a>
 		</div>
 	</div>
 	<div class="row justify-content-center">
-		<div class="col-lg-4 col-sm-12  mt-4">
+		<div class="col-lg-4 col-sm-6  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_3; ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin btn-hover"><?php echo $data->button_name_3; ?></button>
 			</a>
 		</div>
-		<div class="col-lg-4 col-sm-12  mt-4">
+		<div class="col-lg-4 col-sm-6  mt-4">
 			<a href="<?php echo base_url() . $data->button_link_4; ?>">
 				<button type="button" class="btn btn-primary w-100 fw-bold home-button ff-poppin btn-hover"><?php echo $data->button_name_4; ?></button>
 			</a>
