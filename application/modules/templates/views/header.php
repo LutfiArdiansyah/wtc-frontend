@@ -163,15 +163,7 @@ if ($err) {
 		</div>
 
 	</ul>
-	<!-- <div class="dropdown internationalization">
-		<button class="btn dropdown-toggle color-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-			<i class="fas fa-globe"></i>
-		</button>
-		<ul class="dropdown-menu list-dropdown" aria-labelledby="dropdownMenuButton1">
-			<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">EN</span></a></li>
-			<li class="border-list-dropdown"><a class="dropdown-item" href="#"><span class="list-language">ID</span></a></li>
-		</ul>
-	</div> -->
+	<br />
 	<br />
 	<div class="container">
 		<div class="container-breadcrumb mx-auto">

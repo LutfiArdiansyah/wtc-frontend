@@ -122,9 +122,9 @@
 		max-width: 69.141rem !important;
 	}
 </style>
-<div class="content mx-auto">
-	<div class="card br-15">
-		<div class="card-body">
+<div class="">
+	<div class="card">
+		<div class="card-body content mx-auto">
 			<h1 class="color-primary text-center fw-bold title"><?php echo $contact->title; ?></h1>
 			<br />
 			<div class="row">
@@ -190,7 +190,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="locations">
+	<div class="locations content mx-auto">
 		<h1 class="color-primary text-center fw-bold title-location"><?php echo $contact->caption_location; ?></h1>
 		<br />
 		<div class="row  justify-content-md-center">
@@ -207,7 +207,7 @@
 
 	</div>
 
-	<div class="row">
+	<div class="row content mx-auto">
 		<?php foreach ($worship as $key => $value) { ?>
 			<div class="col-6 mb-4">
 				<button class="btn btn-primary w-100 btn-list fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $value->id; ?>" aria-expanded="false" aria-controls="collapseExample">
