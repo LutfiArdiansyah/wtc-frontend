@@ -68,7 +68,7 @@
 <div class="container content">
 	<div class="row justify-content-center">
 		<div class="col-lg-3 col-sm-12">
-			<p class="fw-bold title-about"><?php echo $data->caption_about; ?> </br>GBI WTC</p>
+			<p class="title-about"><?php echo $data->caption_about; ?> GBI WTC</p>
 		</div>
 		<div class="col-lg-9 col-sm-12">
 			<div style="background-color:white; border-radius: 1.172rem; padding: 0 1.641rem 0.984rem 1.594rem;">

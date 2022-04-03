@@ -6,6 +6,10 @@
 		font-size: 4.688rem;
 		line-height: 2.875rem;
 	}
+
+	.title-location {
+		font-size: 4.688rem;
+	}
 	
 	.subtitle {
 		font-family: 'Poppins', sans-serif;
@@ -16,6 +20,10 @@
 		font-family: 'Fira Sans', sans-serif;
 		font-size: 0.938rem;
 		font-weight: normal !important;
+	}
+
+	.phone {
+		font-weight: bold !important;
 	}
 
 	.locations {
@@ -124,55 +132,53 @@
 					<div class="row">
 						<div class="col-lg-6 col-sm-12">
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_office; ?></h5>
-							<hr />
+							<br>
 							<div class="row">
-								<div class="col-2 col-sm-1"><i class="far fa-calendar color-primary"></i></div>
-								<div class="col-10 col-sm-11">
-									<p class="description"><?php echo $data_worship->day; ?></p>
+								<div class="col-12"><i class="far fa-calendar color-primary"></i>
+									<b class="description"><?php echo $data_worship->day; ?></b>
 								</div>
-								<div class="col-2 col-sm-1"><i class="far fa-clock color-primary"></i></div>
-								<div class="col-10 col-sm-11">
-									<p class="description"><?php echo $data_worship->time; ?></p>
+								<div class="col-12"><i class="far fa-clock color-primary"></i>
+									<b class="description"><?php echo $data_worship->time; ?></b>
 								</div>
-								<div class="col-2 col-sm-1"><i class="far fa-map-marker-alt color-primary"></i></div>
-								<div class="col-10 col-sm-11">
-									<p class="address description"><?php echo $data_worship->adress; ?></p>
+								<div class="col-12">
+									<br>
+									<i class="far fa-map-marker-alt color-primary"></i>
+									<b class="address description"><?php echo $data_worship->adress; ?></b>
 								</div>
-								<div class="col-2 col-sm-1"><i class="far fa-solid fa-envelope color-primary"></i></div>
-								<div class="col-10 col-sm-11">
-									<p class="address description"><?php echo $data_worship->email; ?></p>
+								<div class="col-12">
+									<br>
+									<i class="far fa-solid fa-envelope color-primary"></i>
+									<b class="address description"><?php echo $data_worship->email; ?></b>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-sm-12">
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_hotline_number; ?></h5>
-							<hr />
+							<br>
 							<div class="row">
-								<div class="col-2 col-sm-1"><i class="far fa-phone color-primary"></i></div>
-								<div class="col-10 col-sm-11">
-									<p  class="description"><?php echo $data_worship->phone_1; ?></p>
+								<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+									<b class="description phone"><?php echo $data_worship->phone_1; ?></b>
 								</div>
 								<?php if (isset($data_worship->phone_2)) { ?>
-									<div class="col-2 col-sm-1"><i class="far fa-phone color-primary"></i></div>
-									<div class="col-10 col-sm-11">
-										<p class="description"><?php echo $data_worship->phone_2; ?></p>
+									<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+										<b class="description phone"><?php echo $data_worship->phone_2; ?></b>
 									</div>
 								<?php } ?>
 							</div>
 							<br />
+							<br>
+							<br>
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
-							<hr />
+							<br>
 							<div class="row">
-								<div class="col-2 col-sm-1"><i class="fab fa-instagram color-primary"></i></div>
-								<div class="col-10 col-sm-11">
+								<div class="col-12"><i class="fab fa-instagram color-primary"></i>
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
-										<p class="description"><?php echo $data_worship->instagram_name; ?></p>
+										<b class="description"><?php echo $data_worship->instagram_name; ?></b>
 									</a>
 								</div>
-								<div class="col-2 col-sm-1"><i class="fab fa-youtube color-primary"></i></div>
-								<div class="col-10 col-sm-11">
+								<div class="col-12"><i class="fab fa-youtube color-primary"></i>
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
-										<p class="description"><?php echo $data_worship->youtube_name; ?></p>
+										<b class="description"><?php echo $data_worship->youtube_name; ?></b>
 									</a>
 								</div>
 							</div>
@@ -186,7 +192,7 @@
 		</div>
 	</div>
 	<div class="locations">
-		<h1 class="color-primary text-center fw-bold"><?php echo $contact->caption_location; ?></h1>
+		<h1 class="color-primary text-center fw-bold title-location"><?php echo $contact->caption_location; ?></h1>
 		<br />
 		<div class="row  justify-content-md-center">
 			<div class="col-12 text-center">
