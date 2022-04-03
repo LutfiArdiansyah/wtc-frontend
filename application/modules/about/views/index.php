@@ -67,10 +67,10 @@
 </style>
 <div class="container content">
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 			<p class="title-about"><?php echo $data->caption_about; ?> GBI WTC</p>
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<div style="background-color:white; border-radius: 1.172rem; padding: 0 1.641rem 0.984rem 1.594rem;">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
@@ -89,8 +89,8 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12"></div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-2 col-sm-12"></div>
+		<div class="col-lg-10 col-sm-12">
 			<div class="row justify-content-center">
 				<div class="col-5 d-flex flex-wrap align-items-center">
 					<img class="" src="<?php echo STRAPI_URL . $data->logo_2->url; ?>">
@@ -104,10 +104,10 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 			<p class="fw-bold title-about"><?php echo $data->caption_vision; ?></p> <!-- Section Vision -->
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p style="color: var(--bs-primary);" class="visimisi fw-bold">
 					<?php echo $data->vision; ?>
@@ -117,10 +117,10 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 			<p class="fw-bold title-about"><?php echo $data->caption_mission; ?></p> <!-- Section Mission -->
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p style="color: var(--bs-primary);" class="visimisi  fw-bold">
 					<?php echo $data->mission; ?>
@@ -130,10 +130,10 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
-			<p id="leadership" class="fw-bold title-about"><?php echo $data->caption_leadership; ?></p>
+		<div class="col-lg-2 col-sm-12">
+			<p id="leadership" class="fw-bold title-about"><?php echo $data->caption_leadership; ?></p> <!-- Section Leadership -->
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<?php foreach ($data->wtc_leaderships as $key => $value) { ?>
 				<div class="justify-content-center d-flex align-items-center text-center mb-3" style="background-color:white; border-radius: 25px; padding: 15px;">
 					<div class="col-4 text-center">
@@ -168,10 +168,10 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 			<p id="values" class="fw-bold title-about"><?php echo $data->caption_values; ?></p> <!-- Section Values -->
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p class="description-values">
 					<?php echo $data->values; ?>
@@ -181,10 +181,10 @@
 	</div>
 	<br />
 	<div class="row justify-content-center">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 			<p id="spiritual-journey" class="fw-bold title-about"><?php echo $spiritual_journey->title; ?></p>
 		</div>
-		<div class="col-lg-9 col-sm-12">
+		<div class="col-lg-10 col-sm-12">
 			<div style="background-color:white; border-radius: 25px; padding: 0 1.594rem 0.5rem 1.594rem;">
 				<p class="description-spirit">
 					<?php echo $spiritual_journey->description; ?>
@@ -194,7 +194,7 @@
 	</div>
 	<br />
 	<div class="row ">
-		<div class="col-lg-3 col-sm-12">
+		<div class="col-lg-2 col-sm-12">
 		</div>
 		<div class="col-lg-3 col-sm-12">
 			<div>
