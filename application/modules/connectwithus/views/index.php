@@ -165,7 +165,6 @@
 									</div>
 								<?php } ?>
 							</div>
-							<br />
 							<br>
 							<br>
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>

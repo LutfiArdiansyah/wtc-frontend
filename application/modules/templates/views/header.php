@@ -90,7 +90,8 @@
 		}
 
 		.btn-hover:hover {
-			transform: scale(1.3, 1.3);
+			transform: scale(1.1, 1.1);
+			transition: 0.3s;
 		}
 
 		.brand-logo {
