@@ -4,7 +4,7 @@
     }
 
     div .active div.title-parallax {
-        height: 5.375rem;
+        height: 4rem;
         background-color: var(--bs-primary);
         position: absolute;
         top: 0;
@@ -142,7 +142,7 @@
             if ($index === 0) { ?>
                 <div class="carousel-item active">
                     <img src="<?php echo STRAPI_URL . $value->banner->url; ?>" class="d-block w-100" alt="...">
-                    <div class="title-parallax pt-4" style="">
+                    <div class="title-parallax pt-2" style="">
                         <div class="container">
                             <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
                             <p class="title-content"><?php echo $value->title; ?></p>
