@@ -163,12 +163,18 @@ if ($err) {
 		</div>
 
 	</ul>
-	<br />
-	<br />
+	<?php
+	//echo $_SERVER['REQUEST_URI'];
+	if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] !== '/connectwithus') {
+		echo '<br />';
+		echo '<br />';
+	}
+	?>
+	<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { /* var_dump($home);die; */?>
 	<div class="container">
 		<div class="container-breadcrumb mx-auto">
 
-			<?php if (isset($breadcrumb) && count($breadcrumb) > 0) { /* var_dump($home);die; */?>
+			
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
@@ -203,6 +209,7 @@ if ($err) {
 
 					</ol>
 				</nav>
-			<?php } ?>
 		</div>
 	</div>
+	
+	<?php } ?>
