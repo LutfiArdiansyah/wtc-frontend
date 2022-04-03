@@ -1,5 +1,4 @@
 <style type="text/css">
-
 	.title {
 		margin-top: 5.375rem;
 		margin-bottom: 6.938rem;
@@ -10,12 +9,12 @@
 	.title-location {
 		font-size: 4.688rem;
 	}
-	
+
 	.subtitle {
 		font-family: 'Poppins', sans-serif;
 		font-size: 1.406rem;
 	}
-	
+
 	.description {
 		font-family: 'Fira Sans', sans-serif;
 		font-size: 0.938rem;
@@ -117,12 +116,127 @@
 		top: 34px;
 		right: 34px;
 	}
-
-	.content {
-		max-width: 69.141rem !important;
-	}
 </style>
-<div class="">
+<div class="d-lg-none container">
+	<div class="card">
+		<div class="card-body content mx-auto">
+			<h1 class="color-primary text-center fw-bold title"><?php echo $contact->title; ?></h1>
+			<br />
+			<div class="row">
+				<div class="col-lg-6 col-sm-12">
+					<div class="row">
+						<div class="col-lg-6 col-sm-12">
+							<h5 class="fw-bold subtitle"><?php echo $contact->caption_office; ?></h5>
+							<br>
+							<div class="row">
+								<div class="col-12"><i class="far fa-calendar color-primary"></i>
+									<b class="description"><?php echo $data_worship->day; ?></b>
+								</div>
+								<div class="col-12"><i class="far fa-clock color-primary"></i>
+									<b class="description"><?php echo $data_worship->time; ?></b>
+								</div>
+								<div class="col-12">
+									<br>
+									<i class="far fa-map-marker-alt color-primary"></i>
+									<b class="address description"><?php echo $data_worship->adress; ?></b>
+								</div>
+								<div class="col-12">
+									<br>
+									<i class="far fa-solid fa-envelope color-primary"></i>
+									<b class="address description"><?php echo $data_worship->email; ?></b>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-sm-12">
+							<h5 class="fw-bold subtitle"><?php echo $contact->caption_hotline_number; ?></h5>
+							<br>
+							<div class="row">
+								<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+									<b class="description phone"><?php echo $data_worship->phone_1; ?></b>
+								</div>
+								<?php if (isset($data_worship->phone_2)) { ?>
+									<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+										<b class="description phone"><?php echo $data_worship->phone_2; ?></b>
+									</div>
+								<?php } ?>
+							</div>
+							<br>
+							<br>
+							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
+							<br>
+							<div class="row">
+								<div class="col-12"><i class="fab fa-instagram color-primary"></i>
+									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
+										<b class="description"><?php echo $data_worship->instagram_name; ?></b>
+									</a>
+								</div>
+								<div class="col-12"><i class="fab fa-youtube color-primary"></i>
+									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
+										<b class="description"><?php echo $data_worship->youtube_name; ?></b>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-12 text-center">
+					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="<?php echo $data_worship->maps_link; ?>" target="_blank"><?php echo $contact->caption_maps; ?></a></small>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="locations content mx-auto">
+		<h1 class="color-primary text-center fw-bold title-location"><?php echo $contact->caption_location; ?></h1>
+		<br />
+		<div class="row  justify-content-md-center">
+			<div class="col-12 text-center">
+				<select class="form-select br-10 mx-auto">
+					<option selected disabled><?php echo $contact->caption_select_area; ?></option>
+					<?php foreach ($areas as $key => $value) { ?>
+						<option class="fw-bold" value="<?php echo $value->id; ?>"><?php echo $value->area; ?></option>
+					<?php } ?>
+				</select>
+			</div>
+		</div>
+		<br />
+
+	</div>
+
+	<div class="row content mx-auto">
+		<?php foreach ($worship as $key => $value) { ?>
+			<div class="col-6 mb-4">
+				<button class="btn btn-primary w-100 btn-list fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $value->id; ?>" aria-expanded="false" aria-controls="collapseExample">
+					<?php echo $value->name; ?>
+					<span class="carret-dropdown">&nbsp;</span>
+				</button>
+				<div class="collapse" id="collapse<?php echo $value->id; ?>">
+					<div class="card card-body">
+						<div class="text-card">
+							<p class="title-card"><?php echo $contact->caption_address; ?></p>
+							<p class="description-card"><?php echo $value->adress; ?></p>
+							<br />
+							<p class="title-card"><?php echo $contact->caption_service; ?></p>
+							<p class="description-card"><?php echo $value->day; ?></p>
+							<p class="description-card"><?php echo $value->time; ?></p>
+							<br />
+							<p class="title-card"><?php echo $contact->caption_campus_pastor; ?></p>
+							<p class="description-card"><?php echo $value->pastor_name; ?></p>
+							<br />
+							<p class="title-card"><?php echo $contact->caption_contact; ?></p>
+							<p class="description-card"><?php echo $value->email; ?></p>
+							<p class="description-card"><?php echo $value->phone_1; ?></p>
+						</div>
+						<a href="#">
+							<span class="direction">&nbsp;</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
+
+</div>
+<div class="d-md-none d-lg-block">
 	<div class="card">
 		<div class="card-body content mx-auto">
 			<h1 class="color-primary text-center fw-bold title"><?php echo $contact->title; ?></h1>

@@ -8,9 +8,7 @@
 		white-space: pre-line;
 	}
 
-	.content {
-		max-width: 69.141rem !important;
-	}
+	.content {}
 
 	p.title-description {
 		white-space: pre-line;
@@ -41,7 +39,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color:white;
+		color: white;
 	}
 
 	.img-cat {
@@ -90,6 +88,10 @@
 	}
 
 	@media (min-width: 992px) {
+		.content {
+			max-width: 69.141rem !important;
+		}
+
 		.img-carousel {
 			width: 1125px !important;
 			height: 633px !important;

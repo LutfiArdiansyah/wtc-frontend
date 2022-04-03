@@ -44,8 +44,12 @@
 		line-height: 2.875rem;
 	}
 
-	.content {
-		max-width: 69.141rem !important;
+	.content {}
+
+	@media (min-width: 992px) {
+		.content {
+			max-width: 69.141rem !important;
+		}
 	}
 
 	.title-leadership {
