@@ -123,6 +123,10 @@
             max-width: 69.141rem !important;
         }
     }
+
+    .show-container {
+        border: 1px solid black;
+    }
 </style>
 <h1 class="fw-bold text-center color-primary title"><?php echo $spiritual_journey->title; ?></h1>
 <p class="description text-center mx-auto">
@@ -164,7 +168,7 @@
             <?php } else { ?>
                 <div class="carousel-item">
                     <img src="<?php echo STRAPI_URL . $value->banner->url; ?>" class="d-block w-100" alt="...">
-                    <div class="title-parallax pt-4" style="">
+                    <div class="title-parallax pt-2" style="">
                         <div class="container">
                             <p class="title-parallax"><?php echo $spiritual_journey->title; ?> / <?php echo $value->title; ?></p>
                             <p class="title-content"><?php echo $value->title; ?></p>
@@ -189,3 +193,28 @@
         } ?>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        var isScrolled = false
+
+        $("#carousel").bind('mousewheel', function(event) {
+            if (!isScrolled) {
+                if (event.originalEvent.wheelDelta >= 0) {
+                    $(this).carousel('prev');
+                } else {
+                    $(this).carousel('next');
+                }
+                isScrolled = true
+
+                setTimeout(() => {
+                    if (isScrolled) {
+                        isScrolled = false
+                    }
+                }, 2000)
+            }
+
+            return false;
+        });
+    });
+</script>
