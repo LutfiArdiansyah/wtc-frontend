@@ -195,13 +195,13 @@ if ($err) {
 								</a>
 
 							<?php if(isset($article->title)) { ?>/ 
-								<a href="<?php echo base_url() . '/articles?id=' . $article->id; ?>" class="breadcrumb-text">
+								<a href="<?php echo base_url() . 'articles?id=' . $article->id; ?>" class="breadcrumb-text">
 									<?php echo $article->title; ?>
 								</a>
 							<?php } ?>
 
 							<?php if(isset($data->wtc_breadcrumb_list)) { ?> /
-								<a href="<?php echo base_url() . '/communitydetail?id=' . $data->id; ?>" class="breadcrumb-text">
+								<a href="<?php echo base_url() . 'communitydetail?id=' . $data->id; ?>" class="breadcrumb-text">
 									<?php echo $data->title; ?>
 								</a>
 							<?php } ?>
