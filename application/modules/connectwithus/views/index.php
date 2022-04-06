@@ -116,10 +116,14 @@
 		top: 34px;
 		right: 34px;
 	}
+
+	.content {
+		max-width: 69.141rem !important;
+	}
 </style>
-<div class="d-lg-none container">
+<div class="d-lg-none">
 	<div class="card">
-		<div class="card-body content mx-auto">
+		<div class="card-body container mx-auto">
 			<h1 class="color-primary text-center fw-bold title"><?php echo $contact->title; ?></h1>
 			<br />
 			<div class="row">
@@ -147,15 +151,16 @@
 								</div>
 							</div>
 						</div>
+						&nbsp;
 						<div class="col-lg-6 col-sm-12">
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_hotline_number; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+								<div class="col-12 col-sm-6"><i class="far fa-phone color-primary"></i>&nbsp;
 									<b class="description phone"><?php echo $data_worship->phone_1; ?></b>
 								</div>
 								<?php if (isset($data_worship->phone_2)) { ?>
-									<div class="col-12"><i class="far fa-phone color-primary"></i>&nbsp;
+									<div class="col-12 col-sm-6"><i class="far fa-phone color-primary"></i>&nbsp;
 										<b class="description phone"><?php echo $data_worship->phone_2; ?></b>
 									</div>
 								<?php } ?>
@@ -165,12 +170,12 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12"><i class="fab fa-instagram color-primary"></i>
+								<div class="col-12 col-sm-6"><i class="fab fa-instagram color-primary"></i>
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->instagram_name; ?></b>
 									</a>
 								</div>
-								<div class="col-12"><i class="fab fa-youtube color-primary"></i>
+								<div class="col-12 col-sm-6"><i class="fab fa-youtube color-primary"></i>
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->youtube_name; ?></b>
 									</a>
@@ -179,6 +184,7 @@
 						</div>
 					</div>
 				</div>
+				&nbsp;
 				<div class="col-lg-6 col-sm-12 text-center">
 					<iframe class="w-100 iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data_worship->maps_link; ?>" style="border: 1px solid black"></iframe><br /><small><a href="<?php echo $data_worship->maps_link; ?>" target="_blank"><?php echo $contact->caption_maps; ?></a></small>
 				</div>
@@ -202,7 +208,7 @@
 
 	</div>
 
-	<div class="row content mx-auto">
+	<div class="row container mx-auto">
 		<?php foreach ($worship as $key => $value) { ?>
 			<div class="col-6 mb-4">
 				<button class="btn btn-primary w-100 btn-list fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $value->id; ?>" aria-expanded="false" aria-controls="collapseExample">
@@ -234,8 +240,8 @@
 			</div>
 		<?php } ?>
 	</div>
-
 </div>
+
 <div class="d-md-none d-lg-block">
 	<div class="card">
 		<div class="card-body content mx-auto">

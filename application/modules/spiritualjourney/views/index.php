@@ -69,10 +69,6 @@
         white-space: pre-line;
     }
 
-    #carousel {}
-
-    #carousel img {}
-
     div .container {}
 
     .badge-number {
@@ -96,14 +92,13 @@
     }
 
 
-    #carousel {
+    /* #carousel {
         width: calc(100vw - 15px);
-        height: 100vh;
-    }
+    } */
 
     #carousel img {
         width: calc(100vw - 15px);
-        height: 100vh;
+        height: 50.625rem;
     }
 
     div .active div.title-parallax {
@@ -129,7 +124,7 @@
     }
 </style>
 <h1 class="fw-bold text-center color-primary title"><?php echo $spiritual_journey->title; ?></h1>
-<p class="description text-center mx-auto">
+<p class="description text-center container mx-auto">
     <?php echo $spiritual_journey->description; ?>
 </p>
 <br />

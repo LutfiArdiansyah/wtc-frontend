@@ -95,7 +95,7 @@
 		<div class="card mx-auto">
 			<div class="card-body">
 				<div class="container-card mx-auto">
-					<div class="row">
+					<div class="row align-items-center">
 						<div class="col-1"></div>
 						<div class="col-3">
 							<p class="title-communities fw-bold"><?php echo $value->title; ?></p>

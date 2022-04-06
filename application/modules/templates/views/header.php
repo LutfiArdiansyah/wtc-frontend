@@ -89,9 +89,12 @@
 			font-family: 'Fira Sans', sans-serif;
 		}
 
+		.btn-hover {
+			transition: all 0.4s ease-in-out;
+		}
+
 		.btn-hover:hover {
 			transform: scale(1.1, 1.1);
-			transition: 0.3s;
 		}
 
 		.brand-logo {
