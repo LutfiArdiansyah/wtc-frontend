@@ -25,7 +25,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 35vh;
+        padding-top: 50vh;
         font-style: normal;
         font-weight: 600;
         font-size: 75px;
@@ -38,7 +38,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 50vh;
+        padding-top: 75vh;
     }
 
     .description-content {
@@ -54,7 +54,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 80vh;
+        padding-top: 110vh;
     }
 
     .description {

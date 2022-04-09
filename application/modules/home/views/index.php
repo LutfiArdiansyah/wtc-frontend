@@ -72,7 +72,7 @@
 	}
 
 	.img-carousel {
-		height: 633px !important;
+		height: 433px !important;
 	}
 
 	@media (min-width: 992px) {
@@ -149,14 +149,20 @@
 		</div>
 	</div>
 	<br>
-	<div class="row justify-content-center">
+	<div class="row justify-content-center align-items-center">
 		<div class="col-lg-4 col-sm-12 text-center mt-4">
 			<h2 class="sosmed-location fw-bold"><?php echo $data->caption_socmed; ?></h2>
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-12 col-sm-12 mt-4">
 					<button type="button" class="btn btn-primary w-100 fw-bold home-button btn-hover" style="background-color:#fff; color:#000;">
-						<a class="home-button ff-poppin" href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a class="home-button ff-poppin" href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
+						<div class="row align-items-center">
+							<div class="col-sm-6">
+								<a class="home-button ff-poppin" href="<?php echo $data->instagram_link; ?>" target="_blank"><i class="fab fa-instagram"></i>&nbsp;<?php echo $data->instagram_name; ?></a>
+							</div>
+							<div class="col-sm-6">
+								<a class="home-button ff-poppin" href="<?php echo $data->youtube_link; ?>" target="_blank"><i class="fab fa-youtube"></i>&nbsp;<?php echo $data->youtube_name; ?></a>
+							</div>
+						</div>
 					</button>
 				</div>
 			</div>
