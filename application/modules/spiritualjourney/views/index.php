@@ -28,7 +28,7 @@
         padding-top: 10vh;
         font-style: normal;
         font-weight: 600;
-        font-size: 75px;
+        font-size: 36px;
         line-height: 46px;
         color: white;
         align-items: center;
@@ -133,6 +133,10 @@
 
         div .active div.title-parallax {
             width: 99.1vw;
+        }
+
+        div .active .title-content {
+            font-size: 75px;
         }
     }
 
