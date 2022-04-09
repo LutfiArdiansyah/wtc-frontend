@@ -25,7 +25,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 50vh;
+        padding-top: 10vh;
         font-style: normal;
         font-weight: 600;
         font-size: 75px;
@@ -38,7 +38,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 75vh;
+        padding-top: 15vh;
     }
 
     .description-content {
@@ -54,7 +54,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 110vh;
+        padding-top: 26vh;
     }
 
     .description {
@@ -89,6 +89,7 @@
         border-bottom: 1px solid;
         display: inline-block;
         margin-bottom: 15px;
+        width: 720px;
     }
 
 
@@ -102,7 +103,7 @@
     }
 
     div .active div.title-parallax {
-        width: 99.1vw;
+        width: 100vw;
     }
 
     @media (min-width: 992px) {
@@ -116,6 +117,22 @@
 
         div .container {
             max-width: 69.141rem !important;
+        }
+
+        div .active .title-content {
+            padding-top: 50vh;
+        }
+
+        div .active .div-description-content {
+            padding-top: 75vh;
+        }
+
+        .footer-hr {
+            padding-top: 110vh;
+        }
+
+        div .active div.title-parallax {
+            width: 99.1vw;
         }
     }
 
