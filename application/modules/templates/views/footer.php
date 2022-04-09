@@ -186,8 +186,8 @@ if ($err) {
 	<div class="p-4 border-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-1 col-sm-1"></div>
-				<div class="col-lg-5 col-sm-5">
+				<div class="col-lg-1 col-sm-12"></div>
+				<div class="col-lg-5 col-sm-6 text-start">
 					<a href="<?php echo base_url(); ?>">
 						<i class="fab fa-twitter black"></i>
 					</a>
@@ -200,7 +200,7 @@ if ($err) {
 						<i class="fab fa-facebook-square black"></i>
 					</a>
 				</div>
-				<div class="col-lg-5 col-sm-5 text-end">
+				<div class="col-lg-5 col-sm-6 text-end">
 					<span class="copyright fw-bold">©<?php echo date("Y"); ?> World Transformation Church</span>
 				</div>
 			</div>
