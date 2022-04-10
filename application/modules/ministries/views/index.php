@@ -84,7 +84,7 @@
 	}
 
 	.img-carousel {
-		height: 633px !important;
+		height: 433px !important;
 	}
 
 	@media (min-width: 992px) {

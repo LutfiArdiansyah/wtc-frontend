@@ -210,7 +210,7 @@
 
 	<div class="row container mx-auto">
 		<?php foreach ($worship as $key => $value) { ?>
-			<div class="col-6 mb-4">
+			<div class="col-sm-12 mb-4">
 				<button class="btn btn-primary w-100 btn-list fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $value->id; ?>" aria-expanded="false" aria-controls="collapseExample">
 					<?php echo $value->name; ?>
 					<span class="carret-dropdown">&nbsp;</span>
