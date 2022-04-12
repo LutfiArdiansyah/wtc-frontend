@@ -120,15 +120,15 @@
         }
 
         div .active .title-content {
-            padding-top: 50vh;
+            padding-top: 40vh;
         }
 
         div .active .div-description-content {
-            padding-top: 75vh;
+            padding-top: 60vh;
         }
 
         .footer-hr {
-            padding-top: 110vh;
+            padding-top: 90vh;
         }
 
         div .active div.title-parallax {
