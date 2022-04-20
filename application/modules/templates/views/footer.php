@@ -188,20 +188,20 @@ if ($err) {
 			<div class="row">
 				<div class="col-lg-1 col-sm-12"></div>
 				<div class="col-lg-5 col-sm-6 text-start">
-					<a href="<?php echo base_url(); ?>">
+					<a href="<?php echo $data->twitter_link;; ?>">
 						<i class="fab fa-twitter black"></i>
 					</a>
 					<!-- &nbsp; -->
-					<a href="<?php echo base_url(); ?>">
+					<a href="<?php echo $data->instagram_link;; ?>">
 						<i class="fab fa-instagram black"></i>
 					</a>
 					<!-- &nbsp; -->
-					<a href="<?php echo base_url(); ?>">
+					<a href="<?php echo $data->facebook_link; ?>">
 						<i class="fab fa-facebook-square black"></i>
 					</a>
 				</div>
 				<div class="col-lg-5 col-sm-6 text-end">
-					<span class="copyright fw-bold">©<?php echo date("Y"); ?> World Transformation Church</span>
+					<span class="copyright fw-bold"><?php echo $data->copyright; ?></span>
 				</div>
 			</div>
 		</div>
