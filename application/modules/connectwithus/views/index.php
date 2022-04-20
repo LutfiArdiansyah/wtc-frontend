@@ -133,20 +133,18 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_office; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12"><i class="far fa-calendar color-primary"></i>
-									<b class="description"><?php echo $data_worship->day; ?></b>
-								</div>
 								<div class="col-12"><i class="far fa-clock color-primary"></i>
+									<b class="description"><?php echo $data_worship->day; ?></b>&nbsp;
 									<b class="description"><?php echo $data_worship->time; ?></b>
 								</div>
 								<div class="col-12">
 									<br>
-									<i class="far fa-map-marker-alt color-primary"></i>
+									<img src="<?php base_url(); ?>assets/icons/location.png" alt="location">
 									<b class="address description"><?php echo $data_worship->adress; ?></b>
 								</div>
 								<div class="col-12">
 									<br>
-									<i class="far fa-solid fa-envelope color-primary"></i>
+									<img src="<?php base_url(); ?>assets/icons/envelope.png" alt="envelope">
 									<b class="address description"><?php echo $data_worship->email; ?></b>
 								</div>
 							</div>
@@ -156,11 +154,11 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_hotline_number; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12 col-sm-6"><i class="far fa-phone color-primary"></i>&nbsp;
+								<div class="col-12 col-sm-6"><img src="<?php base_url(); ?>assets/icons/phone.png" alt="phone">&nbsp;
 									<b class="description phone"><?php echo $data_worship->phone_1; ?></b>
 								</div>
 								<?php if (isset($data_worship->phone_2)) { ?>
-									<div class="col-12 col-sm-6"><i class="far fa-phone color-primary"></i>&nbsp;
+									<div class="col-12 col-sm-6"><img src="<?php base_url(); ?>assets/icons/phone.png" alt="phone">&nbsp;
 										<b class="description phone"><?php echo $data_worship->phone_2; ?></b>
 									</div>
 								<?php } ?>
@@ -170,12 +168,12 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12 col-sm-6"><i class="fab fa-instagram color-primary"></i>
+								<div class="col-12 col-sm-6"><img src="<?php base_url(); ?>assets/icons/ig.png" alt="ig">
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->instagram_name; ?></b>
 									</a>
 								</div>
-								<div class="col-12 col-sm-6"><i class="fab fa-youtube color-primary"></i>
+								<div class="col-12 col-sm-6"><img src="<?php base_url(); ?>assets/icons/yt.png" alt="yt">
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->youtube_name; ?></b>
 									</a>
@@ -298,12 +296,12 @@
 							<h5 class="fw-bold subtitle"><?php echo $contact->caption_socmed; ?></h5>
 							<br>
 							<div class="row">
-								<div class="col-12"><img src="<?php base_url(); ?>assets/icons/ig.png" alt="ig"></i>
+								<div class="col-12"><img src="<?php base_url(); ?>assets/icons/ig.png" alt="ig">
 									<a href="<?php echo $data_worship->instagram_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->instagram_name; ?></b>
 									</a>
 								</div>
-								<div class="col-12"><img src="<?php base_url(); ?>assets/icons/yt.png" alt="yt"></i>
+								<div class="col-12"><img src="<?php base_url(); ?>assets/icons/yt.png" alt="yt">
 									<a href="<?php echo $data_worship->youtube_link; ?>" target="_blank">
 										<b class="description"><?php echo $data_worship->youtube_name; ?></b>
 									</a>
