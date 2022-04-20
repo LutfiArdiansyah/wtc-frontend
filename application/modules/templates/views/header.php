@@ -95,6 +95,7 @@
 
 		.btn-hover:hover {
 			transform: scale(1.1, 1.1);
+			color: #fff;
 		}
 
 		.brand-logo {
