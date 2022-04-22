@@ -189,7 +189,7 @@ if ($err) {
 				<div class="col-lg-1 col-sm-12"></div>
 				<div class="col-lg-7 col-sm-6 text-start">
 					<?php foreach ($data->social_media as $key => $value) { ?>
-					<a href="<?php echo $value->link;; ?>">
+					<a href="<?php echo $value->link; ?>" target="_blank">
 						<img src="<?php echo STRAPI_URL . $value->icon->url; ?>" alt="ig">
 					</a>
 					&nbsp;&nbsp;
