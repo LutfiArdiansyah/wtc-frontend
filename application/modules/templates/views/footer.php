@@ -187,20 +187,15 @@ if ($err) {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-1 col-sm-12"></div>
-				<div class="col-lg-5 col-sm-6 text-start">
-					<a href="<?php echo $data->twitter_link;; ?>">
-						<i class="fab fa-twitter black"></i>
+				<div class="col-lg-7 col-sm-6 text-start">
+					<?php foreach ($data->social_media as $key => $value) { ?>
+					<a href="<?php echo $value->link;; ?>">
+						<img src="<?php echo STRAPI_URL . $value->icon->url; ?>" alt="ig">
 					</a>
-					<!-- &nbsp; -->
-					<a href="<?php echo $data->instagram_link;; ?>">
-						<i class="fab fa-instagram black"></i>
-					</a>
-					<!-- &nbsp; -->
-					<a href="<?php echo $data->facebook_link; ?>">
-						<i class="fab fa-facebook-square black"></i>
-					</a>
+					&nbsp;&nbsp;
+					<?php } ?>
 				</div>
-				<div class="col-lg-5 col-sm-6 text-end">
+				<div class="col-lg-4 col-sm-6 text-end">
 					<span class="copyright fw-bold"><?php echo $data->copyright; ?></span>
 				</div>
 			</div>
