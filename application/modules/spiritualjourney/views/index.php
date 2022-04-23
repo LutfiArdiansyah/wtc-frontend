@@ -54,7 +54,7 @@
         position: absolute;
         top: 0;
         z-index: 99;
-        padding-top: 26vh;
+        padding-top: 30vh;
     }
 
     .description {
@@ -128,7 +128,7 @@
         }
 
         .footer-hr {
-            padding-top: 90vh;
+            padding-top: 105vh;
         }
 
         div .active div.title-parallax {
