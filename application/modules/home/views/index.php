@@ -71,14 +71,9 @@
 		text-align: center;
 	}
 
-	.img-carousel {
-		height: 433px !important;
-	}
-
 	@media (min-width: 992px) {
 		.img-carousel {
 			width: 1125px !important;
-			height: 633px !important;
 		}
 	}
 </style>
